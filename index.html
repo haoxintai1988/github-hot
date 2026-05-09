@@ -5,57 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GitHub AI 热点监控</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1c1410;
-    --paper: #fefcf8;
-    --warm-white: #faf6f0;
-    --border: #e8e0d5;
-    --muted: #8b7e6e;
-    --accent: #d4453b;
-    --gold: #c7943c;
-    --teal: #1a6b5e;
-    --water-bg: #eaf2f4;
-    --water-border: #bcd4db;
-    --water-text: #1e4a5f;
-    --card-shadow: 0 1px 3px rgba(28,20,16,0.04), 0 1px 2px rgba(28,20,16,0.03);
-    --card-hover-shadow: 0 4px 16px rgba(28,20,16,0.08), 0 2px 4px rgba(28,20,16,0.04);
+    --bg: #fcfaf6;
+    --surface: #ffffff;
+    --border: #e7e2d6;
+    --text: #1b1b1b;
+    --text-secondary: #5c5752;
+    --text-tertiary: #8c8680;
+    --accent: #e04030;
+    --accent-soft: #fef3f1;
+    --gold: #b8750e;
+    --gold-soft: #fffcf5;
+    --green: #0d7d5e;
+    --green-soft: #edf8f4;
+    --blue: #1e6091;
+    --blue-soft: #eef5fa;
+    --purple: #7c3aed;
+    --purple-soft: #f6f0ff;
+    --water-bg: #f2f6f9;
+    --water-border: #d4e0e9;
+    --water-text: #1a5c7c;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03);
+    --card-hover-shadow: 0 4px 16px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
   }
 
   * { box-sizing: border-box; }
 
   body {
-    font-family: 'DM Sans', 'Noto Sans SC', system-ui, sans-serif;
-    background: var(--paper);
-    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', 'Noto Sans SC', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle, #e8e3d8 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
   }
 
-  /* Typography */
+  /* ── Typography ── */
   .display-font {
-    font-family: 'DM Serif Display', 'Noto Serif SC', Georgia, serif;
+    font-family: 'Playfair Display', 'Noto Sans SC', serif;
+    font-weight: 700;
     letter-spacing: -0.01em;
   }
 
-  /* Cards */
-  .card {
-    background: var(--warm-white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    transition: all 0.25s ease;
-    box-shadow: var(--card-shadow);
+  .section-label {
+    font-family: 'Playfair Display', 'Noto Sans SC', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
   }
-  .card:hover {
-    border-color: #d4c8b4;
-    box-shadow: var(--card-hover-shadow);
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    margin-top: 2px;
   }
 
-  /* Skeleton loading */
+  .data-num {
+    font-family: 'JetBrains Mono', 'Noto Sans SC', monospace;
+    font-weight: 600;
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+  }
+  .card:hover {
+    border-color: #d5cebf;
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-1px);
+  }
+
+  /* ── Skeleton ── */
   .skeleton {
-    animation: shimmer 1.8s infinite;
-    background: linear-gradient(90deg, #ece6dc 25%, #f0ebe2 50%, #ece6dc 75%);
+    animation: shimmer 2s infinite;
+    background: linear-gradient(90deg, #eae6dc 25%, #f3f0e8 50%, #eae6dc 75%);
     background-size: 200% 100%;
     border-radius: 6px;
   }
@@ -64,255 +99,334 @@
     100% { background-position: -200% 0; }
   }
 
-  /* Animations */
+  /* ── Animations ── */
   .fade-in {
-    animation: slideUp 0.5s ease forwards;
+    animation: slideUp 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
     opacity: 0;
     transform: translateY(12px);
   }
   @keyframes slideUp {
     to { opacity: 1; transform: translateY(0); }
   }
+  .stagger-1 { animation-delay: 0.03s; }
+  .stagger-2 { animation-delay: 0.06s; }
+  .stagger-3 { animation-delay: 0.09s; }
+  .stagger-4 { animation-delay: 0.12s; }
+  .stagger-5 { animation-delay: 0.15s; }
+  .stagger-6 { animation-delay: 0.18s; }
+  .stagger-7 { animation-delay: 0.21s; }
+  .stagger-8 { animation-delay: 0.24s; }
+  .stagger-9 { animation-delay: 0.27s; }
+  .stagger-10 { animation-delay: 0.30s; }
 
-  .stagger-1 { animation-delay: 0.05s; }
-  .stagger-2 { animation-delay: 0.10s; }
-  .stagger-3 { animation-delay: 0.15s; }
-  .stagger-4 { animation-delay: 0.20s; }
-  .stagger-5 { animation-delay: 0.25s; }
-  .stagger-6 { animation-delay: 0.30s; }
-  .stagger-7 { animation-delay: 0.35s; }
-  .stagger-8 { animation-delay: 0.40s; }
-  .stagger-9 { animation-delay: 0.45s; }
-  .stagger-10 { animation-delay: 0.50s; }
-
-  /* Tab */
+  /* ── Tabs ── */
   .tab-active {
-    background: var(--ink);
+    background: var(--text);
     color: #fff;
-    border-radius: 8px;
-    font-weight: 500;
+    border-radius: 7px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
   .tab-inactive {
     background: transparent;
-    color: var(--muted);
-    border-radius: 8px;
+    color: var(--text-secondary);
+    border-radius: 7px;
+    font-weight: 500;
   }
-  .tab-inactive:hover {
-    background: #f0ebe2;
-    color: var(--ink);
-  }
+  .tab-inactive:hover { background: #e8e3d8; color: var(--text); }
 
-  /* Badges */
+  /* ── Badges ── */
   .treasure-badge {
-    background: linear-gradient(135deg, #e8a020, #d4453b);
+    background: linear-gradient(135deg, #d97706, #dc2626);
     color: #fff;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 9px;
+    border-radius: 100px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
   }
 
-  /* Gradient text for scores */
-  .score-text {
-    background: linear-gradient(135deg, #d4453b, #c7943c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* ── Rank Circles ── */
+  .rank-circle {
+    width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
+    font-family: 'JetBrains Mono', monospace;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
+  .rank-1 { background: #e04030; color: #fff; box-shadow: 0 2px 8px rgba(224,64,48,0.35); }
+  .rank-2 { background: #b8750e; color: #fff; box-shadow: 0 2px 8px rgba(184,117,14,0.3); }
+  .rank-3 { background: #6b5e4a; color: #fff; }
+  .rank-rest { background: #f0ede5; color: #999; }
 
-  /* Headline card — full-width banner */
-  .headline-card {
-    background: var(--ink);
-    color: #f0e6d8;
-    border: 1px solid #3a3028;
+  /* ── Water Section ── */
+  .water-section {
+    background: var(--water-bg);
+    border: 1px solid var(--water-border);
     border-radius: 12px;
     position: relative;
     overflow: hidden;
   }
-  .headline-card::after {
+  .water-section::before {
     content: '';
     position: absolute;
-    top: -40px;
-    right: -40px;
-    width: 180px;
-    height: 180px;
-    background: radial-gradient(circle, rgba(212,69,59,0.12) 0%, transparent 70%);
+    top: -30px; right: -30px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: rgba(30,96,145,0.04);
     pointer-events: none;
   }
-  .headline-card:hover {
-    border-color: #5a4e42;
-    box-shadow: 0 8px 32px rgba(28,20,16,0.25);
-  }
 
-  /* Dark horse cards — horizontal row */
-  .dh-card {
-    background: #fff;
-    border: 1px solid #ebd8b8;
-    border-radius: 10px;
-    transition: all 0.25s ease;
-  }
-  .dh-card:hover {
-    border-color: #c7943c;
-    box-shadow: 0 4px 16px rgba(199,148,60,0.12);
-    transform: translateY(-2px);
-  }
-
-  /* Water section */
-  .water-section {
-    background: var(--water-bg);
-    border: 1px solid var(--water-border);
-    border-radius: 14px;
-  }
-
-  /* Rank number */
-  .rank-circle {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.85rem;
-    flex-shrink: 0;
-  }
-  .rank-1 { background: #d4453b; color: #fff; }
-  .rank-2 { background: #c7943c; color: #fff; }
-  .rank-3 { background: #8b6d4a; color: #fff; }
-  .rank-rest { background: #f0ebe2; color: #8b7e6e; }
-
-  /* Trend chip — bold accent colors */
-  .trend-chip {
-    border-radius: 8px;
-    padding: 10px 18px;
-    font-size: 0.82rem;
-    font-weight: 500;
-    transition: all 0.2s;
-    border: 1px solid;
-  }
-  .trend-chip-0 { background: #fef5f3; color: #c0392b; border-color: #f5c6bf; }
-  .trend-chip-1 { background: #f6f3fc; color: #6c47b0; border-color: #d5c8f0; }
-  .trend-chip-2 { background: #edf7f4; color: #1a6b5e; border-color: #bcdbd2; }
-  .trend-chip:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(28,20,16,0.06); }
-
-  /* Link hover */
-  .hover-link { transition: color 0.15s; }
-  .hover-link:hover { color: #d4453b; }
-
-  /* Subtle divider */
   .hairline { border-top: 1px solid var(--border); }
+  .hover-link:hover { color: var(--accent) !important; }
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .headline-card { border-radius: 10px; }
-    .water-section { border-radius: 10px; }
+  /* ── Update Button ── */
+  .btn-update {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 6px 14px; border-radius: 7px;
+    font-size: 0.78rem; font-weight: 600;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    user-select: none;
+  }
+  .btn-update:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .btn-update.loading {
+    border-color: #d97706; color: #b45309;
+    background: #fffbeb; pointer-events: none;
+    animation: pulse-border 1.5s ease-in-out infinite;
+  }
+  .btn-update.done {
+    border-color: var(--green); color: var(--green);
+    background: var(--green-soft); pointer-events: none;
+  }
+  .btn-update.error {
+    border-color: var(--accent); color: var(--accent);
+    background: var(--accent-soft);
+  }
+  @keyframes pulse-border {
+    0%,100% { border-color: #d97706; }
+    50% { border-color: #f59e0b; }
+  }
+  .btn-update .spin {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* ── Token Modal ── */
+  .overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 200;
+  }
+  .overlay.hidden { display: none; }
+  .dialog {
+    background: white;
+    border-radius: 12px;
+    padding: 28px 24px 20px;
+    max-width: 420px; width: 92%;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+  }
+  .dialog-input {
+    width: 100%; padding: 10px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px; font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .dialog-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(224,64,48,0.1);
+  }
+  .dialog-btn {
+    padding: 8px 20px; border-radius: 7px;
+    font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; transition: all 0.15s;
+    border: none;
+  }
+  .dialog-btn.primary {
+    background: var(--text); color: #fff;
+  }
+  .dialog-btn.primary:hover { opacity: 0.85; }
+  .dialog-btn.ghost {
+    background: transparent; color: var(--text-secondary);
+  }
+  .dialog-btn.ghost:hover { background: #f0ede5; }
+
+  /* ── Header Logo Mark ── */
+  .logo-mark {
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #e04030 0%, #d97706 100%);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(224,64,48,0.2);
+  }
+
+  /* ── Decorative accent line ── */
+  .accent-line {
+    height: 3px;
+    width: 40px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .rank-circle { width: 28px; height: 28px; font-size: 0.7rem; }
+    .section-label { font-size: 1rem; }
   }
 </style>
 </head>
 <body class="min-h-screen">
 
-<!-- Header -->
-<header class="border-b bg-white/90 backdrop-blur sticky top-0 z-50" style="border-color: var(--border);">
-  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between flex-wrap gap-3">
-    <div>
-      <h1 class="text-xl display-font tracking-tight" style="color: var(--ink);">
-        GitHub AI <span style="color: var(--accent);">热点</span>监控
-      </h1>
-      <p class="text-xs mt-0.5" style="color: var(--muted);" id="updateTime">加载中...</p>
+<header class="border-b bg-white/95 backdrop-blur sticky top-0 z-50" style="border-color: var(--border);">
+  <div class="max-w-5xl mx-auto px-5 py-3 flex items-center justify-between flex-wrap gap-3">
+    <div class="flex items-center gap-3">
+      <div class="logo-mark">&#9670;</div>
+      <div>
+        <h1 class="text-[15px] font-bold tracking-tight" style="color: var(--text);">GitHub AI 热点监控</h1>
+        <p class="text-[11px]" style="color: var(--text-tertiary);" id="updateTime">加载中...</p>
+      </div>
     </div>
-    <div class="flex gap-1 p-0.5 rounded-lg" style="background: #f0ebe2;">
-      <button onclick="switchTab('daily')" id="tab-daily" class="tab-active px-4 py-2 text-sm transition-all duration-200">
-        今日最热
-      </button>
-      <button onclick="switchTab('weekly')" id="tab-weekly" class="tab-inactive px-4 py-2 text-sm transition-all duration-200">
-        一周最热
+    <div class="flex items-center gap-3">
+      <div class="flex gap-0.5 p-0.5 rounded-lg" style="background: #f0ede5;">
+        <button onclick="switchTab('daily')" id="tab-daily" class="tab-active px-4 py-1.5 text-sm transition-all duration-200">今日</button>
+        <button onclick="switchTab('weekly')" id="tab-weekly" class="tab-inactive px-4 py-1.5 text-sm transition-all duration-200">本周</button>
+      </div>
+      <button id="btnUpdate" class="btn-update" onclick="onUpdateClick()" title="触发数据管道更新">
+        <span id="btnUpdateIcon">↻</span>
+        <span id="btnUpdateText">更新</span>
       </button>
     </div>
   </div>
 </header>
 
-<main class="max-w-6xl mx-auto px-5 py-8 space-y-10">
+<main class="max-w-5xl mx-auto px-5 py-5 space-y-5">
 
 <!-- ============================================ -->
-<!-- Section 1: AI Insights                        -->
+<!-- AI Insights                                   -->
 <!-- ============================================ -->
 <section id="insightsSection">
-  <div class="flex items-center gap-3 mb-5">
-    <span class="text-xl">🤖</span>
-    <h2 class="text-lg font-semibold display-font tracking-tight">AI 洞察</h2>
-  </div>
 
-  <!-- Headline — full-width dark banner -->
-  <div class="headline-card p-6" id="headlineCard">
-    <div class="skeleton h-4 w-20 mb-3"></div>
-    <div class="skeleton h-7 w-1/2 mb-3"></div>
-    <div class="skeleton h-4 w-3/4 mb-2"></div>
-    <div class="skeleton h-4 w-1/2"></div>
-  </div>
-
-  <!-- Dark Horses — horizontal row -->
-  <div class="mt-4" id="darkHorseCard">
-    <div class="skeleton h-4 w-16 mb-3"></div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="darkHorseGrid">
-      <div class="skeleton h-20 w-full rounded-lg"></div>
-      <div class="skeleton h-20 w-full rounded-lg"></div>
-      <div class="skeleton h-20 w-full rounded-lg"></div>
-    </div>
-  </div>
-
-  <!-- Trend Signals -->
-  <div class="mt-4 flex flex-wrap gap-3" id="trendSignals">
-    <div class="skeleton h-9 w-44 rounded-lg"></div>
-    <div class="skeleton h-9 w-52 rounded-lg"></div>
-    <div class="skeleton h-9 w-36 rounded-lg"></div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!-- Section 2: Project Hot List                   -->
-<!-- ============================================ -->
-<section>
-  <div class="flex items-center justify-between mb-5">
-    <h2 class="text-lg font-semibold display-font tracking-tight" id="listTitle">🔥 今日热榜</h2>
-    <span class="text-xs" style="color: var(--muted);">按综合热度排序</span>
-  </div>
-
-  <div class="space-y-3" id="projectList">
-    <!-- Skeleton loading -->
-    <div class="card p-5"><div class="flex items-start gap-4"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-5 w-2/3 mb-2"></div><div class="skeleton h-3 w-full mb-2"></div><div class="skeleton h-3 w-1/2"></div></div></div></div>
-    <div class="card p-5"><div class="flex items-start gap-4"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-5 w-3/4 mb-2"></div><div class="skeleton h-3 w-full mb-2"></div><div class="skeleton h-3 w-2/3"></div></div></div></div>
-    <div class="card p-5"><div class="flex items-start gap-4"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-5 w-1/2 mb-2"></div><div class="skeleton h-3 w-full mb-2"></div><div class="skeleton h-3 w-3/4"></div></div></div></div>
-    <div class="card p-5"><div class="flex items-start gap-4"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-5 w-2/3 mb-2"></div><div class="skeleton h-3 w-full mb-2"></div><div class="skeleton h-3 w-1/2"></div></div></div></div>
-    <div class="card p-5"><div class="flex items-start gap-4"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-5 w-3/5 mb-2"></div><div class="skeleton h-3 w-full mb-2"></div><div class="skeleton h-3 w-2/3"></div></div></div></div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!-- Section 3: Water Insights                    -->
-<!-- ============================================ -->
-<section>
-  <div class="water-section p-6" id="waterSection">
-    <div class="flex items-center gap-3 mb-4">
-      <span class="text-xl">🌊</span>
-      <h2 class="text-lg font-semibold display-font tracking-tight" style="color: var(--water-text);">水利行业参考</h2>
-    </div>
-    <p class="text-sm mb-5 leading-relaxed" style="color: #3a7a95;" id="waterSummary">
-      <span class="skeleton inline-block h-4 w-3/4"></span>
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="waterRecommendations">
-      <div class="card p-4" style="background: rgba(255,255,255,0.6);">
-        <div class="skeleton h-5 w-32 mb-2"></div>
-        <div class="skeleton h-4 w-full mb-2"></div>
-        <div class="skeleton h-4 w-2/3"></div>
+  <!-- Headline -->
+  <div id="headlineCard">
+    <div class="card p-5">
+      <div class="flex items-center gap-3">
+        <div class="flex-1">
+          <div class="skeleton h-3 w-14 mb-2"></div>
+          <div class="skeleton h-6 w-2/3 mb-2"></div>
+          <div class="skeleton h-3 w-full mb-1"></div>
+          <div class="skeleton h-3 w-1/2"></div>
+        </div>
+        <div class="skeleton w-16 h-16 rounded-lg shrink-0 hidden sm:block"></div>
       </div>
-      <div class="card p-4" style="background: rgba(255,255,255,0.6);">
-        <div class="skeleton h-5 w-32 mb-2"></div>
-        <div class="skeleton h-4 w-full mb-2"></div>
-        <div class="skeleton h-4 w-2/3"></div>
+    </div>
+  </div>
+
+  <!-- Dark Horses + Trend Signals -->
+  <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-5">
+    <!-- Dark Horses -->
+    <div class="lg:col-span-2" id="darkHorseCard">
+      <div class="section-label" style="margin-bottom:12px;">&#9670; 潜力黑马</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="darkHorseGrid">
+        <div class="skeleton h-[72px] w-full rounded-lg"></div>
+        <div class="skeleton h-[72px] w-full rounded-lg"></div>
+        <div class="skeleton h-[72px] w-full rounded-lg"></div>
+        <div class="skeleton h-[72px] w-full rounded-lg"></div>
+      </div>
+    </div>
+    <!-- Trend Signals -->
+    <div>
+      <div class="section-label" style="margin-bottom:12px;">&#9670; 趋势信号</div>
+      <div class="flex flex-col gap-2" id="trendSignals">
+        <div class="skeleton h-[60px] w-full rounded-lg"></div>
+        <div class="skeleton h-[60px] w-full rounded-lg"></div>
+        <div class="skeleton h-[60px] w-full rounded-lg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Project Hot List                              -->
+<!-- ============================================ -->
+<section>
+  <div class="flex items-center justify-between mb-3.5">
+    <div class="flex items-center gap-3">
+      <h2 class="section-label" style="margin-bottom:0;" id="listTitle">今日热榜</h2>
+    </div>
+    <span class="text-xs data-num" style="color: var(--text-tertiary);">综合热度排序</span>
+  </div>
+  <div class="space-y-2.5" id="projectList">
+    <div class="card p-4"><div class="flex items-start gap-3"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-4 w-2/3 mb-2"></div><div class="skeleton h-3 w-full mb-1"></div><div class="skeleton h-3 w-1/2"></div></div><div class="skeleton w-12 h-8 rounded shrink-0"></div></div></div>
+    <div class="card p-4"><div class="flex items-start gap-3"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-4 w-3/4 mb-2"></div><div class="skeleton h-3 w-full mb-1"></div><div class="skeleton h-3 w-2/3"></div></div><div class="skeleton w-12 h-8 rounded shrink-0"></div></div></div>
+    <div class="card p-4"><div class="flex items-start gap-3"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-4 w-1/2 mb-2"></div><div class="skeleton h-3 w-full mb-1"></div><div class="skeleton h-3 w-3/4"></div></div><div class="skeleton w-12 h-8 rounded shrink-0"></div></div></div>
+    <div class="card p-4"><div class="flex items-start gap-3"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-4 w-3/5 mb-2"></div><div class="skeleton h-3 w-full mb-1"></div><div class="skeleton h-3 w-1/2"></div></div><div class="skeleton w-12 h-8 rounded shrink-0"></div></div></div>
+    <div class="card p-4"><div class="flex items-start gap-3"><div class="skeleton w-8 h-8 rounded-full shrink-0"></div><div class="flex-1"><div class="skeleton h-4 w-2/3 mb-2"></div><div class="skeleton h-3 w-full mb-1"></div><div class="skeleton h-3 w-2/3"></div></div><div class="skeleton w-12 h-8 rounded shrink-0"></div></div></div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Water Insights                                -->
+<!-- ============================================ -->
+<section>
+  <div class="water-section p-5" id="waterSection">
+    <div class="flex items-center gap-2.5 mb-3 relative z-[1]">
+      <span style="font-size:1.2rem;">&#9675;</span>
+      <h2 class="section-label" style="margin-bottom:0;">水利行业参考</h2>
+    </div>
+    <p class="text-sm mb-4 leading-relaxed relative z-[1]" style="color: #3a7a9c;" id="waterSummary">
+      <span class="skeleton inline-block h-3 w-3/4"></span>
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 relative z-[1]" id="waterRecommendations">
+      <div class="card p-3.5" style="background: rgba(255,255,255,0.7);">
+        <div class="skeleton h-4 w-32 mb-2"></div>
+        <div class="skeleton h-3 w-full mb-1"></div>
+        <div class="skeleton h-3 w-2/3"></div>
+      </div>
+      <div class="card p-3.5" style="background: rgba(255,255,255,0.7);">
+        <div class="skeleton h-4 w-28 mb-2"></div>
+        <div class="skeleton h-3 w-full mb-1"></div>
+        <div class="skeleton h-3 w-2/3"></div>
       </div>
     </div>
   </div>
 </section>
 
 </main>
+
+<!-- Token Input Modal -->
+<div id="tokenOverlay" class="overlay hidden">
+  <div class="dialog">
+    <h3 class="display-font" style="font-size:1.2rem;margin-bottom:6px;color:var(--text);">GitHub 授权</h3>
+    <p class="text-sm mb-3" style="color:var(--text-secondary);">输入你的 GitHub Personal Access Token 以触发数据更新。Token 仅保存在你的浏览器本地。</p>
+    <input id="tokenInput" class="dialog-input mb-3" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+    <div class="text-xs mb-4" style="color:var(--text-tertiary);line-height:1.5;">
+      Token 需要 <code style="background:#f0ede5;padding:1px 5px;border-radius:3px;font-size:0.7rem;">workflow</code> 权限。
+      <a href="https://github.com/settings/tokens" target="_blank" class="hover-link" style="color:var(--accent);">去创建 →</a>
+    </div>
+    <div class="flex gap-2 justify-end">
+      <button class="dialog-btn ghost" onclick="closeTokenModal()">取消</button>
+      <button class="dialog-btn primary" onclick="saveToken()">保存并更新</button>
+    </div>
+  </div>
+</div>
 
 <script>
 // ── State ──
@@ -346,15 +460,14 @@ async function loadData(mode) {
 async function switchTab(mode) {
   if (currentMode === mode) return;
   currentMode = mode;
-  document.getElementById('tab-daily').className = mode === 'daily' ? 'tab-active px-4 py-2 text-sm transition-all duration-200' : 'tab-inactive px-4 py-2 text-sm transition-all duration-200';
-  document.getElementById('tab-weekly').className = mode === 'weekly' ? 'tab-active px-4 py-2 text-sm transition-all duration-200' : 'tab-inactive px-4 py-2 text-sm transition-all duration-200';
-  document.getElementById('listTitle').innerHTML = mode === 'daily' ? '&#128293; 今日热榜' : '&#128200; 本周热榜';
+  document.getElementById('tab-daily').className = mode === 'daily' ? 'tab-active px-4 py-1.5 text-sm transition-all duration-200' : 'tab-inactive px-4 py-1.5 text-sm transition-all duration-200';
+  document.getElementById('tab-weekly').className = mode === 'weekly' ? 'tab-active px-4 py-1.5 text-sm transition-all duration-200' : 'tab-inactive px-4 py-1.5 text-sm transition-all duration-200';
+  document.getElementById('listTitle').textContent = mode === 'daily' ? '今日热榜' : '本周热榜';
   showSkeletons();
   await loadData(mode);
   renderAll();
 }
 
-// ── Render ──
 function showSkeletons() {}
 
 function renderAll() {
@@ -368,7 +481,7 @@ function renderMeta() {
   const el = document.getElementById('updateTime');
   if (metaData && metaData.last_updated) {
     const d = new Date(metaData.last_updated);
-    el.textContent = `更新于 ${d.toLocaleString('zh-CN')}  ·  共 ${metaData.total_ai_projects || '?'} 个 AI 项目`;
+    el.textContent = `更新于 ${d.toLocaleString('zh-CN')}  ·  ${metaData.total_ai_projects || '?'} 个项目`;
   }
 }
 
@@ -376,65 +489,80 @@ function renderMeta() {
 function renderInsights() {
   if (!insightsData) return;
 
-  // Headline
+  // Headline — feature card with colored top banner
   const hl = insightsData.headline;
   const hlCard = document.getElementById('headlineCard');
   if (hl && hl.project) {
     const p = hl.project;
-    const isTreasure = p.is_treasure ? '<span class="treasure-badge text-xs px-2 py-0.5 rounded-full ml-2">宝藏</span>' : '';
+    const badging = p.is_treasure ? '<span class="treasure-badge">宝藏</span>' : '';
     hlCard.innerHTML = `
-      <div class="flex items-center gap-2 mb-3">
-        <span class="text-xs font-semibold tracking-wide uppercase" style="color: #d4453b;">Today's Headline</span>
-        ${isTreasure}
+      <div class="card" style="overflow:hidden;">
+        <div style="height:4px;background:linear-gradient(90deg, var(--accent), #d97706);"></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:4px;">头条</span>
+            ${badging}
+            ${p.language ? `<span style="font-size:0.7rem;color:var(--text-tertiary);">${escHtml(p.language)}</span>` : ''}
+          </div>
+          <a href="${escHtml(p.url)}" target="_blank" class="display-font hover-link block mb-2" style="font-size:1.4rem;line-height:1.2;color:var(--text);">
+            ${escHtml(p.name)}
+          </a>
+          <p class="text-sm mb-3 leading-relaxed" style="color: var(--text-secondary);">${escHtml(p.description || '')}</p>
+          <div class="flex flex-wrap items-center gap-x-5 gap-y-1 text-xs" style="color: var(--text-tertiary);">
+            <span class="data-num">${fmtNum(p.stars)} stars${p.stars_added ? `<span style="color:var(--green);font-weight:600;">  +${p.stars_added} today</span>` : ''}</span>
+            ${hl.hn_url ? `<a href="${escHtml(hl.hn_url)}" target="_blank" class="hover-link font-medium" style="color:var(--text-secondary);">HN discussion &#8599;</a>` : ''}
+            ${hl.reddit_url ? `<a href="${escHtml(hl.reddit_url)}" target="_blank" class="hover-link font-medium" style="color:var(--text-secondary);">Reddit &#8599;</a>` : ''}
+          </div>
+          <p class="mt-2.5 text-xs" style="color: var(--text-tertiary);font-style:italic;">${escHtml(hl.why_hot || '')}</p>
+        </div>
       </div>
-      <a href="${escHtml(p.url)}" target="_blank" class="text-2xl display-font text-white hover-link block mb-3" style="color: #f0e6d8;">
-        ${escHtml(p.name)}
-      </a>
-      <p class="text-sm mb-3 leading-relaxed" style="color: #b8a898;">${escHtml(p.description || '')}</p>
-      <div class="flex flex-wrap items-center gap-4 text-xs" style="color: #8b7a68;">
-        <span>${fmtNum(p.stars)}${p.stars_added ? ` <span style="color: #4ec49b;">+${p.stars_added}</span>` : ''} stars</span>
-        <span>Heat ${p.heat_score}</span>
-        <span>${escHtml(p.language || '')}</span>
-      </div>
-      <p class="mt-3 text-sm italic" style="color: #8b7a68;">${escHtml(hl.why_hot || '')}</p>
     `;
   }
 
-  // Dark Horses — horizontal grid
-  const dhContainer = document.getElementById('darkHorseCard');
+  // Dark Horses — compact cards in grid
   const dhGrid = document.getElementById('darkHorseGrid');
   const dhs = insightsData.dark_horses || [];
   if (dhGrid && dhs.length > 0) {
-    const labels = ['🥇', '🥈', '🥉', '💎', '💎'];
-    dhGrid.innerHTML = dhs.map((dh, i) => {
+    dhGrid.innerHTML = dhs.slice(0, 4).map((dh, i) => {
       const p = dh.project;
       return `
-        <a href="${escHtml(p.url)}" target="_blank" class="dh-card p-4 block">
-          <div class="flex items-center gap-2 mb-1">
-            <span class="text-sm">${labels[i] || '💎'}</span>
-            <span class="text-sm font-semibold truncate" style="color: var(--ink);">${escHtml(p.name)}</span>
+        <a href="${escHtml(p.url)}" target="_blank" class="card p-3.5 block hover-link" style="border-left: 3px solid var(--gold);">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-sm font-semibold truncate mr-2" style="color: var(--text);">${escHtml(p.name)}</span>
+            <span class="data-num text-xs shrink-0" style="color: var(--gold);">${fmtNum(p.stars)}*</span>
           </div>
-          <p class="text-xs truncate mb-2" style="color: var(--muted);">${escHtml(p.description || '')}</p>
-          <div class="flex items-center justify-between text-xs">
-            <span style="color: var(--gold);">${fmtNum(p.stars)} stars</span>
-            <span style="color: #c7943c; font-weight: 600;">Buzz ${Math.round(dh.community_heat)}</span>
+          <p class="text-xs truncate mb-1.5" style="color: var(--text-tertiary);">${escHtml(p.description || '')}</p>
+          <div style="display:flex;align-items:center;gap:4px;font-size:0.7rem;font-weight:600;color:var(--gold);">
+            <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);"></span>
+            社区热度 ${Math.round(dh.community_heat)}
           </div>
         </a>
       `;
     }).join('');
-    dhGrid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3';
-  } else if (dhContainer) {
-    dhContainer.innerHTML = '<p class="text-sm" style="color: var(--muted);">暂无符合条件的宝藏项目</p>';
+    dhGrid.parentElement.style.display = '';
+  } else if (dhGrid) {
+    dhGrid.parentElement.style.display = 'none';
   }
 
-  // Trend Signals — bold colored chips
+  // Trend Signals — bold colored cards
   const trendsEl = document.getElementById('trendSignals');
   const trends = insightsData.trend_signals || [];
   if (trendsEl && trends.length > 0) {
+    const palettes = [
+      { bg: '#fef3f1', border: '#f4aca4', text: '#c0392b', dot: '#e04030' },
+      { bg: '#f6f0ff', border: '#c4b5fd', text: '#6d28d9', dot: '#7c3aed' },
+      { bg: '#edf8f4', border: '#86d4b9', text: '#0d7d5e', dot: '#0d7d5e' },
+    ];
     trendsEl.innerHTML = trends.map((t, i) => {
-      return `<span class="trend-chip trend-chip-${i % 3}">
-        <strong>${escHtml(t.trend)}</strong>  ${escHtml(t.description)}
-      </span>`;
+      const c = palettes[i % 3];
+      return `<div style="background:${c.bg};border:1px solid ${c.border};border-radius:8px;padding:12px 14px;line-height:1.4;">
+        <div style="font-size:0.82rem;font-weight:700;color:${c.text};margin-bottom:3px;display:flex;align-items:center;gap:6px;">
+          <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${c.dot};"></span>
+          ${escHtml(t.trend)}
+          ${t.match_count ? `<span style="font-size:0.65rem;font-weight:500;background:rgba(0,0,0,0.06);padding:1px 7px;border-radius:100px;">${t.match_count} 项目</span>` : ''}
+        </div>
+        <div style="color:var(--text-secondary);font-size:0.72rem;line-height:1.5;">${escHtml(t.description)}</div>
+      </div>`;
     }).join('');
   }
 }
@@ -443,7 +571,7 @@ function renderInsights() {
 function renderProjectList() {
   const container = document.getElementById('projectList');
   if (!projectData || !projectData.projects || projectData.projects.length === 0) {
-    container.innerHTML = '<div class="card p-10 text-center" style="color: var(--muted);">暂无数据，请稍后刷新</div>';
+    container.innerHTML = '<div class="card p-8 text-center" style="color: var(--text-tertiary);">暂无数据，请稍后刷新</div>';
     return;
   }
 
@@ -453,52 +581,49 @@ function renderProjectList() {
     const rankClass = i === 0 ? 'rank-1' : (i === 1 ? 'rank-2' : (i === 2 ? 'rank-3' : 'rank-rest'));
     const stagger = `stagger-${Math.min(i + 1, 10)}`;
 
-    // Stats
     let statsParts = [];
-    if (p.stars_added) statsParts.push(`<span style="color:#1a6b5e;font-weight:500;">+${fmtNum(p.stars_added)} today</span>`);
-    if (p.stars) statsParts.push(`${fmtNum(p.stars)} total stars`);
-    if (p.hn_score || p.hn_points) statsParts.push(`<span style="color:#d4453b;">HN ${fmtNum(p.hn_score || p.hn_points)}</span>`);
-    if (p.reddit_ups) statsParts.push(`<span style="color:#c7943c;">Reddit ${fmtNum(p.reddit_ups)}</span>`);
-    const statsHtml = statsParts.join('  ·  ');
+    if (p.stars_added) statsParts.push(`<span style="color:var(--green);font-weight:600;">+${fmtNum(p.stars_added)} today</span>`);
+    if (p.stars) statsParts.push(`<span class="data-num">${fmtNum(p.stars)} total</span>`);
+    if (p.hn_score || p.hn_points) statsParts.push(`<span style="color:var(--accent);font-weight:500;">HN ${fmtNum(p.hn_score || p.hn_points)}</span>`);
+    if (p.reddit_ups) statsParts.push(`<span style="color:var(--gold);font-weight:500;">Reddit ${fmtNum(p.reddit_ups)}</span>`);
+    const statsHtml = statsParts.join('  <span style="color:#ccc;">·</span>  ');
 
-    // Topics
     const topics = (p.topics || []).slice(0, 4);
     let topicsHtml = topics.map(t =>
-      `<span style="padding:2px 8px;border-radius:4px;font-size:0.7rem;background:#f0ebe2;color:var(--muted);">${escHtml(t)}</span>`
-    ).join('');
+      `<span style="padding:1px 8px;border-radius:4px;font-size:0.68rem;background:#f0ede5;color:var(--text-tertiary);">${escHtml(t)}</span>`
+    ).join(' ');
 
-    // Links
     const ghUrl = p.url || `https://github.com/${p.full_name}`;
-    let linksHtml = `<a href="${ghUrl}" target="_blank" class="hover-link" style="color:var(--muted);font-size:0.8rem;">GitHub &#8599;</a>`;
-    if (p.hn_url) linksHtml += `<a href="${p.hn_url}" target="_blank" class="hover-link" style="color:#d4453b;font-size:0.8rem;margin-left:12px;">HN &#8599;</a>`;
-    if (p.reddit_posts && p.reddit_posts[0] && p.reddit_posts[0].url) linksHtml += `<a href="${p.reddit_posts[0].url}" target="_blank" class="hover-link" style="color:#c7943c;font-size:0.8rem;margin-left:12px;">Reddit &#8599;</a>`;
+    let linksHtml = `<a href="${ghUrl}" target="_blank" class="hover-link" style="color:var(--text-tertiary);font-size:0.75rem;font-weight:500;">GitHub &#8599;</a>`;
+    if (p.hn_url) linksHtml += ` <a href="${p.hn_url}" target="_blank" class="hover-link" style="color:var(--accent);font-size:0.75rem;margin-left:10px;font-weight:500;">HN &#8599;</a>`;
+    if (p.reddit_posts && p.reddit_posts[0] && p.reddit_posts[0].url) linksHtml += ` <a href="${p.reddit_posts[0].url}" target="_blank" class="hover-link" style="color:var(--gold);font-size:0.75rem;margin-left:10px;font-weight:500;">Reddit &#8599;</a>`;
 
     const name = p.name || p.full_name || '';
 
     return `
-      <div class="card p-5 fade-in ${stagger}">
-        <div class="flex items-start gap-4">
+      <div class="card p-4 fade-in ${stagger}">
+        <div class="flex items-start gap-3.5">
           <span class="rank-circle ${rankClass}">${i + 1}</span>
           <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 flex-wrap mb-1.5">
-              <a href="${ghUrl}" target="_blank" class="text-base font-semibold hover-link" style="color: var(--ink);">
+            <div class="flex items-center gap-2 flex-wrap mb-1">
+              <a href="${ghUrl}" target="_blank" class="text-sm font-semibold hover-link" style="color: var(--text);">
                 ${escHtml(name)}
               </a>
-              ${isTreasure ? '<span class="treasure-badge text-xs px-1.5 py-0.5 rounded-full shrink-0">宝藏</span>' : ''}
-              ${p.language ? `<span class="text-xs shrink-0" style="color: var(--muted);">${escHtml(p.language)}</span>` : ''}
+              ${isTreasure ? '<span class="treasure-badge">宝藏</span>' : ''}
+              ${p.language ? `<span class="text-xs" style="color:var(--text-tertiary);">${escHtml(p.language)}</span>` : ''}
             </div>
-            <p class="text-sm mb-2 leading-relaxed" style="color: #5c5048; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${escHtml(p.description || '')}</p>
-            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs mb-2" style="color: var(--muted);">
+            <p class="text-xs mb-1.5 leading-relaxed" style="color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${escHtml(p.description || '')}</p>
+            <div class="flex items-center gap-2 flex-wrap text-xs" style="color: var(--text-tertiary);">
               ${statsHtml}
             </div>
-            <div class="flex items-center gap-2 flex-wrap">
+            <div class="flex items-center gap-2 flex-wrap mt-1.5 text-xs">
               ${topicsHtml}
               ${linksHtml}
             </div>
           </div>
-          <div class="text-right shrink-0 ml-2">
-            <div class="text-2xl font-bold score-text display-font">${p.heat_score || '?'}</div>
-            <div class="text-xs" style="color: var(--muted);">热度</div>
+          <div class="text-right shrink-0 ml-2" style="min-width:44px;">
+            <div class="data-num" style="font-size:1.5rem;font-weight:700;color:${i === 0 ? '#e04030' : (i === 1 ? '#b8750e' : (i === 2 ? '#6b5e4a' : '#999'))};">${p.heat_score || '?'}</div>
+            <div style="font-size:0.6rem;color:var(--text-tertiary);">热度</div>
           </div>
         </div>
       </div>
@@ -512,7 +637,7 @@ function renderWaterInsights() {
   const recsEl = document.getElementById('waterRecommendations');
 
   if (!waterData || !waterData.recommendations || waterData.recommendations.length === 0) {
-    summaryEl.innerHTML = '<span style="color: var(--muted);">暂无足够数据生成水利行业建议</span>';
+    summaryEl.innerHTML = '<span style="color: var(--text-tertiary);">暂无足够数据生成水利行业建议</span>';
     recsEl.innerHTML = '';
     return;
   }
@@ -522,32 +647,25 @@ function renderWaterInsights() {
   recsEl.innerHTML = waterData.recommendations.map((rec, idx) => {
     const projectsNames = (rec.hot_projects || []).map(p => p.name).join(', ');
     const scenarios = (rec.water_scenarios || []).slice(0, 4);
-    const collapsed = idx > 1 ? 'collapsed' : '';
+    const collapsed = idx > 1;
 
     return `
-      <div class="card p-4" style="background: rgba(255,255,255,0.7);">
-        <div class="flex items-center justify-between cursor-pointer" onclick="
-          const content=this.nextElementSibling;
-          const icon=this.querySelector('.expand-icon');
-          const collapsed=content.classList.toggle('hidden');
-          icon.textContent=collapsed?'▼':'▲';
-        ">
-          <h4 class="font-semibold text-sm" style="color: #1e4a5f;">
+      <div class="card p-3.5" style="background: rgba(255,255,255,0.7);">
+        <div class="flex items-center justify-between cursor-pointer" onclick="var c=this.nextElementSibling;var h=c.classList.toggle('hidden');this.querySelector('.arr').textContent=h?'▸':'▾';">
+          <h4 class="font-semibold text-sm" style="color: var(--water-text);">
             ${escHtml(rec.tech_direction)}
-            <span class="text-xs font-normal ml-2" style="color: var(--muted);">${escHtml(projectsNames || '—')}</span>
+            <span class="text-xs font-normal ml-1.5" style="color: var(--text-tertiary);">${escHtml(projectsNames || '—')}</span>
           </h4>
-          <span class="expand-icon text-xs" style="color: var(--muted);">${idx > 1 ? '▼' : '▲'}</span>
+          <span class="arr text-xs" style="color: var(--text-tertiary);">${collapsed ? '▸' : '▾'}</span>
         </div>
         <div class="expand-content ${collapsed ? 'hidden' : ''} mt-2">
-          <p class="text-sm mb-3 leading-relaxed" style="color: #3a5a68;">${escHtml(rec.suggestion || '')}</p>
-          <div class="flex flex-wrap gap-1.5 mb-3">
-            ${scenarios.map(s => `<span style="padding:3px 10px;border-radius:100px;font-size:0.7rem;background:rgba(30,74,95,0.08);color:#1e4a5f;font-weight:500;">${escHtml(s)}</span>`).join('')}
+          <p class="text-xs mb-2 leading-relaxed" style="color: #3a7a9c;">${escHtml(rec.suggestion || '')}</p>
+          <div class="flex flex-wrap gap-1 mb-2">
+            ${scenarios.map(s => `<span style="padding:2px 9px;border-radius:100px;font-size:0.68rem;background:rgba(26,92,124,0.08);color:#1a5c7c;">${escHtml(s)}</span>`).join(' ')}
           </div>
-          <div class="hairline pt-3 flex gap-4">
+          <div class="hairline pt-2 flex gap-3 text-xs">
             ${(rec.hot_projects || []).map(p =>
-              `<a href="${escHtml(p.url)}" target="_blank" class="text-xs hover-link" style="color: var(--muted);">
-                ${escHtml(p.name)} &middot; ${fmtNum(p.stars)} stars
-              </a>`
+              `<a href="${escHtml(p.url)}" target="_blank" class="hover-link" style="color: var(--text-tertiary);">${escHtml(p.name)} &middot; ${fmtNum(p.stars)}*</a>`
             ).join('')}
           </div>
         </div>
@@ -568,6 +686,153 @@ function escHtml(str) {
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
+}
+
+// ── Data Update (trigger GitHub Actions) ──
+const GH_REPO = 'haoxintai1988/github-hot';
+const WF_FILE = 'update-data.yml';
+const TOKEN_KEY = 'gh_pat';
+
+function getToken() {
+  const t = localStorage.getItem(TOKEN_KEY);
+  if (!t) {
+    document.getElementById('tokenOverlay').classList.remove('hidden');
+    return null;
+  }
+  return t;
+}
+
+function saveToken() {
+  const input = document.getElementById('tokenInput');
+  const token = input.value.trim();
+  if (!token) return;
+  localStorage.setItem(TOKEN_KEY, token);
+  document.getElementById('tokenOverlay').classList.add('hidden');
+  input.value = '';
+  doUpdate(token);
+}
+
+function closeTokenModal() {
+  document.getElementById('tokenOverlay').classList.add('hidden');
+  document.getElementById('tokenInput').value = '';
+  resetUpdateBtn();
+}
+
+function setUpdateBtn(state) {
+  const btn = document.getElementById('btnUpdate');
+  const icon = document.getElementById('btnUpdateIcon');
+  const text = document.getElementById('btnUpdateText');
+  btn.classList.remove('loading', 'done', 'error');
+  if (state === 'loading') {
+    btn.classList.add('loading');
+    icon.innerHTML = '<span class="spin">⟳</span>';
+    text.textContent = '触发中...';
+  } else if (state === 'running') {
+    btn.classList.add('loading');
+    icon.innerHTML = '<span class="spin">⟳</span>';
+    text.textContent = '运行中...';
+  } else if (state === 'done') {
+    btn.classList.add('done');
+    icon.innerHTML = '';
+    icon.textContent = '✓';
+    text.textContent = '已更新';
+  } else if (state === 'error') {
+    btn.classList.add('error');
+    icon.innerHTML = '';
+    icon.textContent = '⚠';
+    text.textContent = '失败';
+  }
+}
+
+function resetUpdateBtn() {
+  const btn = document.getElementById('btnUpdate');
+  btn.classList.remove('loading', 'done', 'error');
+  document.getElementById('btnUpdateIcon').textContent = '↻';
+  document.getElementById('btnUpdateText').textContent = '更新';
+}
+
+function onUpdateClick() {
+  const token = getToken();
+  if (token) doUpdate(token);
+}
+
+async function doUpdate(token) {
+  setUpdateBtn('loading');
+
+  // 1. Trigger workflow
+  try {
+    const dispRes = await fetch(
+      `https://api.github.com/repos/${GH_REPO}/actions/workflows/${WF_FILE}/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'X-GitHub-Api-Version': '2022-11-28'
+        },
+        body: JSON.stringify({ ref: 'master' })
+      }
+    );
+    if (!dispRes.ok) {
+      const err = await dispRes.text();
+      throw new Error(`Dispatch failed: ${dispRes.status} ${err}`);
+    }
+  } catch (e) {
+    console.error('Trigger error:', e);
+    setUpdateBtn('error');
+    setTimeout(resetUpdateBtn, 4000);
+    return;
+  }
+
+  setUpdateBtn('running');
+
+  // 2. Wait a moment, then find the triggered run
+  await new Promise(r => setTimeout(r, 3000));
+
+  // 3. Poll for workflow completion
+  let runId = null;
+  for (let i = 0; i < 30; i++) {
+    try {
+      const runsRes = await fetch(
+        `https://api.github.com/repos/${GH_REPO}/actions/workflows/${WF_FILE}/runs?per_page=3&event=workflow_dispatch`,
+        { headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' } }
+      );
+      if (!runsRes.ok) { await new Promise(r => setTimeout(r, 4000)); continue; }
+      const runsData = await runsRes.json();
+      const runs = runsData.workflow_runs || [];
+      if (runs.length === 0) { await new Promise(r => setTimeout(r, 4000)); continue; }
+
+      // Pick the latest run
+      if (!runId) runId = runs[0].id;
+      const run = runs.find(r => r.id === runId) || runs[0];
+
+      if (run.status === 'completed') {
+        if (run.conclusion === 'success') {
+          // Extra wait for GitHub Pages deployment
+          await new Promise(r => setTimeout(r, 15000));
+          setUpdateBtn('done');
+          await loadData(currentMode);
+          renderAll();
+          setTimeout(resetUpdateBtn, 4000);
+        } else {
+          setUpdateBtn('error');
+          setTimeout(resetUpdateBtn, 5000);
+        }
+        return;
+      }
+      // Still running, update text with elapsed
+      const elapsed = i * 10;
+      document.getElementById('btnUpdateText').textContent = `运行中 ${elapsed}s...`;
+    } catch (e) {
+      console.error('Poll error:', e);
+    }
+    await new Promise(r => setTimeout(r, 10000));
+  }
+
+  // Timeout
+  setUpdateBtn('error');
+  document.getElementById('btnUpdateText').textContent = '超时';
+  setTimeout(resetUpdateBtn, 6000);
 }
 
 // ── Init ──
