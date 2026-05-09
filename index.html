@@ -118,22 +118,41 @@
     background-clip: text;
   }
 
-  /* Headline card */
+  /* Headline card — full-width banner */
   .headline-card {
     background: var(--ink);
     color: #f0e6d8;
     border: 1px solid #3a3028;
     border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .headline-card::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(212,69,59,0.12) 0%, transparent 70%);
+    pointer-events: none;
   }
   .headline-card:hover {
     border-color: #5a4e42;
     box-shadow: 0 8px 32px rgba(28,20,16,0.25);
   }
 
-  /* Dark horse card */
-  .darkhorse-card {
-    background: #fef9f0;
+  /* Dark horse cards — horizontal row */
+  .dh-card {
+    background: #fff;
     border: 1px solid #ebd8b8;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+  }
+  .dh-card:hover {
+    border-color: #c7943c;
+    box-shadow: 0 4px 16px rgba(199,148,60,0.12);
+    transform: translateY(-2px);
   }
 
   /* Water section */
@@ -160,20 +179,19 @@
   .rank-3 { background: #8b6d4a; color: #fff; }
   .rank-rest { background: #f0ebe2; color: #8b7e6e; }
 
-  /* Trend chip */
+  /* Trend chip — bold accent colors */
   .trend-chip {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    padding: 6px 16px;
-    font-size: 0.8rem;
-    color: var(--ink);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 0.82rem;
+    font-weight: 500;
     transition: all 0.2s;
+    border: 1px solid;
   }
-  .trend-chip:hover {
-    border-color: #c7943c;
-    background: #fef9f0;
-  }
+  .trend-chip-0 { background: #fef5f3; color: #c0392b; border-color: #f5c6bf; }
+  .trend-chip-1 { background: #f6f3fc; color: #6c47b0; border-color: #d5c8f0; }
+  .trend-chip-2 { background: #edf7f4; color: #1a6b5e; border-color: #bcdbd2; }
+  .trend-chip:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(28,20,16,0.06); }
 
   /* Link hover */
   .hover-link { transition: color 0.15s; }
@@ -222,35 +240,29 @@
     <h2 class="text-lg font-semibold display-font tracking-tight">AI 洞察</h2>
   </div>
 
-  <!-- Headline + Dark Horses grid -->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-5" id="insightsGrid">
-    <!-- Headline (spans 2) -->
-    <div class="lg:col-span-2">
-      <div class="headline-card p-6" id="headlineCard">
-        <div class="skeleton h-4 w-20 mb-4"></div>
-        <div class="skeleton h-7 w-3/4 mb-3"></div>
-        <div class="skeleton h-4 w-full mb-2"></div>
-        <div class="skeleton h-4 w-2/3"></div>
-      </div>
-    </div>
-    <!-- Dark Horses (spans 1) -->
-    <div>
-      <div class="card darkhorse-card p-5 h-full" id="darkHorseCard">
-        <div class="skeleton h-4 w-16 mb-4"></div>
-        <div class="space-y-3">
-          <div class="skeleton h-12 w-full"></div>
-          <div class="skeleton h-12 w-full"></div>
-          <div class="skeleton h-12 w-full"></div>
-        </div>
-      </div>
+  <!-- Headline — full-width dark banner -->
+  <div class="headline-card p-6" id="headlineCard">
+    <div class="skeleton h-4 w-20 mb-3"></div>
+    <div class="skeleton h-7 w-1/2 mb-3"></div>
+    <div class="skeleton h-4 w-3/4 mb-2"></div>
+    <div class="skeleton h-4 w-1/2"></div>
+  </div>
+
+  <!-- Dark Horses — horizontal row -->
+  <div class="mt-4" id="darkHorseCard">
+    <div class="skeleton h-4 w-16 mb-3"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="darkHorseGrid">
+      <div class="skeleton h-20 w-full rounded-lg"></div>
+      <div class="skeleton h-20 w-full rounded-lg"></div>
+      <div class="skeleton h-20 w-full rounded-lg"></div>
     </div>
   </div>
 
   <!-- Trend Signals -->
-  <div class="mt-4 flex flex-wrap gap-2" id="trendSignals">
-    <div class="skeleton h-7 w-40 rounded-full"></div>
-    <div class="skeleton h-7 w-52 rounded-full"></div>
-    <div class="skeleton h-7 w-36 rounded-full"></div>
+  <div class="mt-4 flex flex-wrap gap-3" id="trendSignals">
+    <div class="skeleton h-9 w-44 rounded-lg"></div>
+    <div class="skeleton h-9 w-52 rounded-lg"></div>
+    <div class="skeleton h-9 w-36 rounded-lg"></div>
   </div>
 </section>
 
@@ -388,37 +400,40 @@ function renderInsights() {
     `;
   }
 
-  // Dark Horses
-  const dhCard = document.getElementById('darkHorseCard');
+  // Dark Horses — horizontal grid
+  const dhContainer = document.getElementById('darkHorseCard');
+  const dhGrid = document.getElementById('darkHorseGrid');
   const dhs = insightsData.dark_horses || [];
-  if (dhCard && dhs.length > 0) {
-    let html = '<h3 class="text-sm font-semibold mb-3 display-font" style="color: #c7943c;">Dark Horses</h3>';
-    dhs.forEach(dh => {
+  if (dhGrid && dhs.length > 0) {
+    const labels = ['🥇', '🥈', '🥉', '💎', '💎'];
+    dhGrid.innerHTML = dhs.map((dh, i) => {
       const p = dh.project;
-      html += `
-        <a href="${escHtml(p.url)}" target="_blank" class="block mb-2.5 p-3 rounded-lg transition-all duration-200" style="background: rgba(199,148,60,0.05);" onmouseover="this.style.background='rgba(199,148,60,0.12)'" onmouseout="this.style.background='rgba(199,148,60,0.05)'">
-          <div class="flex items-center justify-between">
-            <span class="text-sm font-semibold" style="color: var(--ink);">${escHtml(p.name)}</span>
-            <span class="text-xs font-medium" style="color: var(--gold);">${fmtNum(p.stars)} stars</span>
+      return `
+        <a href="${escHtml(p.url)}" target="_blank" class="dh-card p-4 block">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-sm">${labels[i] || '💎'}</span>
+            <span class="text-sm font-semibold truncate" style="color: var(--ink);">${escHtml(p.name)}</span>
           </div>
-          <p class="text-xs mt-1 truncate" style="color: var(--muted);">${escHtml(p.description || '')}</p>
-          <div class="text-xs mt-1.5 font-medium" style="color: #c7943c;">Buzz ${Math.round(dh.community_heat)}</div>
+          <p class="text-xs truncate mb-2" style="color: var(--muted);">${escHtml(p.description || '')}</p>
+          <div class="flex items-center justify-between text-xs">
+            <span style="color: var(--gold);">${fmtNum(p.stars)} stars</span>
+            <span style="color: #c7943c; font-weight: 600;">Buzz ${Math.round(dh.community_heat)}</span>
+          </div>
         </a>
       `;
-    });
-    dhCard.innerHTML = html;
-  } else if (dhCard) {
-    dhCard.innerHTML = '<h3 class="text-sm font-semibold mb-2 display-font" style="color: #c7943c;">Dark Horses</h3><p class="text-sm" style="color: var(--muted);">暂无符合条件的宝藏项目</p>';
+    }).join('');
+    dhGrid.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3';
+  } else if (dhContainer) {
+    dhContainer.innerHTML = '<p class="text-sm" style="color: var(--muted);">暂无符合条件的宝藏项目</p>';
   }
 
-  // Trend Signals
+  // Trend Signals — bold colored chips
   const trendsEl = document.getElementById('trendSignals');
   const trends = insightsData.trend_signals || [];
   if (trendsEl && trends.length > 0) {
-    const icons = ['🤖', '📚', '⚡'];
     trendsEl.innerHTML = trends.map((t, i) => {
-      return `<span class="trend-chip">
-        ${icons[i] || '📊'} <strong>${escHtml(t.trend)}</strong><span class="hidden sm:inline"> — ${escHtml(t.description)}</span>
+      return `<span class="trend-chip trend-chip-${i % 3}">
+        <strong>${escHtml(t.trend)}</strong>  ${escHtml(t.description)}
       </span>`;
     }).join('');
   }
