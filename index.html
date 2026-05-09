@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub AI 热点监控</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+  body { font-family: 'Inter', 'Noto Sans SC', sans-serif; background: #0f172a; color: #e2e8f0; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; transition: all 0.2s; }
+  .card:hover { border-color: #475569; transform: translateY(-1px); box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+  .gradient-text { background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .glow-blue { box-shadow: 0 0 20px rgba(59,130,246,0.15); }
+  .glow-purple { box-shadow: 0 0 20px rgba(139,92,246,0.15); }
+  .tab-active { background: #3b82f6; color: #fff; }
+  .tab-inactive { background: #1e293b; color: #94a3b8; }
+  .tab-inactive:hover { background: #334155; color: #e2e8f0; }
+  .treasure-badge { background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff; }
+  .water-section { background: linear-gradient(135deg, #0c1929 0%, #0f2847 100%); border: 1px solid #1e4976; }
+  .skeleton { animation: pulse 1.5s infinite; background: #334155; border-radius: 8px; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .fade-in { animation: fadeIn 0.4s ease-in; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- Header -->
+<header class="border-b border-slate-700 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between flex-wrap gap-3">
+    <div>
+      <h1 class="text-2xl font-bold">
+        <span class="gradient-text">GitHub AI 热点监控</span>
+      </h1>
+      <p class="text-slate-400 text-sm mt-0.5" id="updateTime">加载中...</p>
+    </div>
+    <div class="flex gap-2">
+      <button onclick="switchTab('daily')" id="tab-daily" class="tab-active px-4 py-2 rounded-lg text-sm font-medium transition">
+        🔥 今日最热
+      </button>
+      <button onclick="switchTab('weekly')" id="tab-weekly" class="tab-inactive px-4 py-2 rounded-lg text-sm font-medium transition">
+        📈 一周最热
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
+
+<!-- Section 1: AI Insights -->
+<section id="insightsSection">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" id="insightsGrid">
+    <!-- Headline card (spans 2 cols) -->
+    <div class="lg:col-span-2">
+      <div class="card p-5 glow-blue" id="headlineCard">
+        <div class="skeleton h-6 w-24 mb-3" id="hl-skeleton-1"></div>
+        <div class="skeleton h-8 w-3/4 mb-3" id="hl-skeleton-2"></div>
+        <div class="skeleton h-4 w-full mb-2" id="hl-skeleton-3"></div>
+        <div class="skeleton h-4 w-2/3" id="hl-skeleton-4"></div>
+      </div>
+    </div>
+    <!-- Dark Horses (spans 1 col) -->
+    <div>
+      <div class="card p-5 glow-purple h-full" id="darkHorseCard">
+        <div class="skeleton h-6 w-20 mb-3"></div>
+        <div class="space-y-3">
+          <div class="skeleton h-14 w-full"></div>
+          <div class="skeleton h-14 w-full"></div>
+          <div class="skeleton h-14 w-full"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Trend signals -->
+  <div class="mt-4 flex flex-wrap gap-2" id="trendSignals">
+    <div class="skeleton h-8 w-48 rounded-full"></div>
+    <div class="skeleton h-8 w-56 rounded-full"></div>
+    <div class="skeleton h-8 w-40 rounded-full"></div>
+  </div>
+</section>
+
+<!-- Section 2: Project Hot List -->
+<section>
+  <h2 class="text-lg font-semibold text-slate-300 mb-4" id="listTitle">🔥 今日热榜</h2>
+  <div class="space-y-3" id="projectList">
+    <!-- Skeleton loading -->
+    <div class="card p-4"><div class="skeleton h-6 w-3/4 mb-2"></div><div class="skeleton h-4 w-full mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+    <div class="card p-4"><div class="skeleton h-6 w-2/3 mb-2"></div><div class="skeleton h-4 w-full mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+    <div class="card p-4"><div class="skeleton h-6 w-3/4 mb-2"></div><div class="skeleton h-4 w-full mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+    <div class="card p-4"><div class="skeleton h-6 w-2/3 mb-2"></div><div class="skeleton h-4 w-full mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+    <div class="card p-4"><div class="skeleton h-6 w-3/4 mb-2"></div><div class="skeleton h-4 w-full mb-2"></div><div class="skeleton h-4 w-1/2"></div></div>
+  </div>
+</section>
+
+<!-- Section 3: Water Insights -->
+<section>
+  <div class="water-section rounded-xl p-5" id="waterSection">
+    <h2 class="text-lg font-semibold text-blue-300 mb-1">
+      🌊 水利行业参考
+    </h2>
+    <p class="text-blue-400/70 text-sm mb-4" id="waterSummary">
+      <span class="skeleton inline-block h-4 w-3/4"></span>
+    </p>
+    <div class="space-y-3" id="waterRecommendations">
+      <div class="card p-4 bg-slate-800/50"><div class="skeleton h-5 w-40 mb-2"></div><div class="skeleton h-4 w-full mb-2"></div><div class="skeleton h-4 w-2/3"></div></div>
+      <div class="card p-4 bg-slate-800/50"><div class="skeleton h-5 w-40 mb-2"></div><div class="skeleton h-4 w-full mb-2"></div><div class="skeleton h-4 w-2/3"></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+// ── State ──
+let currentMode = 'daily';
+let projectData = null;
+let insightsData = null;
+let waterData = null;
+let metaData = null;
+
+// ── Data Fetching ──
+async function loadData(mode) {
+  try {
+    const [projResp, insResp, waterResp, metaResp] = await Promise.all([
+      fetch(`data/${mode === 'daily' ? 'today' : 'week'}.json`),
+      fetch('data/insights.json'),
+      fetch('data/water_insights.json'),
+      fetch('data/meta.json')
+    ]);
+    projectData = await projResp.json();
+    insightsData = await insResp.json();
+    waterData = await waterResp.json();
+    metaData = await metaResp.json();
+    return true;
+  } catch (e) {
+    console.error('Data load error:', e);
+    return false;
+  }
+}
+
+// ── Tab Switching ──
+async function switchTab(mode) {
+  if (currentMode === mode) return;
+  currentMode = mode;
+  document.getElementById('tab-daily').className = mode === 'daily' ? 'tab-active px-4 py-2 rounded-lg text-sm font-medium transition' : 'tab-inactive px-4 py-2 rounded-lg text-sm font-medium transition';
+  document.getElementById('tab-weekly').className = mode === 'weekly' ? 'tab-active px-4 py-2 rounded-lg text-sm font-medium transition' : 'tab-inactive px-4 py-2 rounded-lg text-sm font-medium transition';
+  document.getElementById('listTitle').textContent = mode === 'daily' ? '🔥 今日热榜' : '📈 本周热榜';
+  showSkeletons();
+  await loadData(mode);
+  renderAll();
+}
+
+// ── Render ──
+function showSkeletons() {
+  // Reset to skeleton state (already shown by default)
+}
+
+function renderAll() {
+  renderMeta();
+  renderInsights();
+  renderProjectList();
+  renderWaterInsights();
+}
+
+function renderMeta() {
+  const el = document.getElementById('updateTime');
+  if (metaData && metaData.last_updated) {
+    const d = new Date(metaData.last_updated);
+    el.textContent = `数据更新于 ${d.toLocaleString('zh-CN')} · 共 ${metaData.total_ai_projects || '?'} 个 AI 项目`;
+  }
+}
+
+// ── Insights Rendering ──
+function renderInsights() {
+  if (!insightsData) return;
+
+  // Headline
+  const hl = insightsData.headline;
+  const hlCard = document.getElementById('headlineCard');
+  if (hl && hl.project) {
+    const p = hl.project;
+    const isTreasure = p.is_treasure ? '<span class="treasure-badge text-xs px-2 py-0.5 rounded-full ml-2">宝藏</span>' : '';
+    hlCard.innerHTML = `
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-sm text-orange-400 font-medium">🔥 今日头条</span>
+        ${isTreasure}
+      </div>
+      <a href="${escHtml(p.url)}" target="_blank" class="text-xl font-bold text-white hover:text-blue-400 transition block mb-2">
+        ${escHtml(p.name)}
+      </a>
+      <p class="text-slate-300 text-sm mb-2">${escHtml(p.description || '')}</p>
+      <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
+        <span class="flex items-center gap-1">⭐ ${fmtNum(p.stars)}${p.stars_added ? ` <span class="text-green-400">+${p.stars_added}</span>` : ''}</span>
+        <span>🔥 热度 ${p.heat_score}</span>
+        <span>💬 ${escHtml(p.language || '')}</span>
+      </div>
+      <p class="mt-2 text-sm text-slate-400 italic">${escHtml(hl.why_hot || '')}</p>
+    `;
+  }
+
+  // Dark Horses
+  const dhCard = document.getElementById('darkHorseCard');
+  const dhs = insightsData.dark_horses || [];
+  if (dhCard && dhs.length > 0) {
+    let html = '<h3 class="text-sm font-medium text-purple-400 mb-3">💎 潜力黑马</h3>';
+    dhs.forEach(dh => {
+      const p = dh.project;
+      html += `
+        <a href="${escHtml(p.url)}" target="_blank" class="block mb-2 p-2 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-medium text-white">${escHtml(p.name)}</span>
+            <span class="text-xs text-yellow-400">⭐ ${fmtNum(p.stars)}</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-0.5 truncate">${escHtml(p.description || '')}</p>
+          <div class="text-xs text-purple-400/80 mt-1">🔥 社区热度 ${dh.community_heat}</div>
+        </a>
+      `;
+    });
+    dhCard.innerHTML = html;
+  } else if (dhCard) {
+    dhCard.innerHTML = '<h3 class="text-sm font-medium text-purple-400 mb-2">💎 潜力黑马</h3><p class="text-sm text-slate-500">暂无符合条件的宝藏项目</p>';
+  }
+
+  // Trend Signals
+  const trendsEl = document.getElementById('trendSignals');
+  const trends = insightsData.trend_signals || [];
+  if (trendsEl && trends.length > 0) {
+    trendsEl.innerHTML = trends.map(t => {
+      const colors = ['bg-blue-900/50 text-blue-300 border-blue-700', 'bg-purple-900/50 text-purple-300 border-purple-700', 'bg-emerald-900/50 text-emerald-300 border-emerald-700'];
+      const idx = trends.indexOf(t) % 3;
+      return `<span class="px-3 py-1.5 rounded-full text-xs border ${colors[idx]}">
+        📊 ${escHtml(t.trend)}：${escHtml(t.description)}
+      </span>`;
+    }).join('');
+  }
+}
+
+// ── Project List Rendering ──
+function renderProjectList() {
+  const container = document.getElementById('projectList');
+  if (!projectData || !projectData.projects || projectData.projects.length === 0) {
+    container.innerHTML = '<div class="card p-8 text-center text-slate-500">暂无数据，请稍后刷新</div>';
+    return;
+  }
+
+  container.innerHTML = projectData.projects.map((p, i) => {
+    const scores = p.scores || {};
+    const isTreasure = scores.is_treasure;
+    const rankColors = ['text-yellow-400', 'text-slate-300', 'text-amber-600'];
+    const rankColor = i < 3 ? rankColors[i] : 'text-slate-500';
+
+    // Build stats row
+    let statsHtml = '';
+    if (p.stars_added) statsHtml += `<span class="text-green-400">+${fmtNum(p.stars_added)} 今日</span>`;
+    if (p.stars) statsHtml += `<span>${statsHtml ? ' · ' : ''}⭐ ${fmtNum(p.stars)} 总计</span>`;
+    if (p.hn_score || p.hn_points) statsHtml += `<span class="text-orange-400"> · HN ${fmtNum(p.hn_score || p.hn_points)}分</span>`;
+    if (p.reddit_ups) statsHtml += `<span class="text-red-400"> · Reddit ${fmtNum(p.reddit_ups)}赞</span>`;
+
+    // Topics tags
+    const topics = (p.topics || []).slice(0, 4);
+    let topicsHtml = topics.map(t => `<span class="px-1.5 py-0.5 rounded text-xs bg-slate-700 text-slate-300">${escHtml(t)}</span>`).join(' ');
+
+    // Links
+    const ghUrl = p.url || `https://github.com/${p.full_name}`;
+    let linksHtml = `<a href="${ghUrl}" target="_blank" class="text-slate-400 hover:text-white text-xs">GitHub ↗</a>`;
+    if (p.hn_url) linksHtml += `<a href="${p.hn_url}" target="_blank" class="text-orange-400 hover:text-orange-300 text-xs ml-3">HN ↗</a>`;
+    if (p.reddit_posts && p.reddit_posts[0] && p.reddit_posts[0].url) linksHtml += `<a href="${p.reddit_posts[0].url}" target="_blank" class="text-red-400 hover:text-red-300 text-xs ml-3">Reddit ↗</a>`;
+
+    const name = p.name || p.full_name || '';
+
+    return `
+      <div class="card p-4 fade-in">
+        <div class="flex items-start gap-3">
+          <span class="text-lg font-bold ${rankColor} mt-0.5 shrink-0" style="min-width:28px">#${i + 1}</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap mb-1">
+              <a href="${ghUrl}" target="_blank" class="text-base font-semibold text-white hover:text-blue-400 transition truncate">
+                ${escHtml(name)}
+              </a>
+              ${isTreasure ? '<span class="treasure-badge text-xs px-1.5 py-0.5 rounded-full shrink-0">宝藏</span>' : ''}
+              ${p.language ? `<span class="text-xs text-slate-500 shrink-0">${escHtml(p.language)}</span>` : ''}
+            </div>
+            <p class="text-sm text-slate-400 mb-2 line-clamp-2">${escHtml(p.description || '')}</p>
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-400 mb-2">
+              ${statsHtml}
+            </div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-xs">${topicsHtml}</span>
+              <span class="text-xs">${linksHtml}</span>
+            </div>
+          </div>
+          <div class="text-right shrink-0">
+            <div class="text-xl font-bold gradient-text">${p.heat_score || '?'}</div>
+            <div class="text-xs text-slate-500">热度分</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ── Water Insights Rendering ──
+function renderWaterInsights() {
+  const summaryEl = document.getElementById('waterSummary');
+  const recsEl = document.getElementById('waterRecommendations');
+
+  if (!waterData || !waterData.recommendations || waterData.recommendations.length === 0) {
+    summaryEl.innerHTML = '<span class="text-slate-400">暂无足够数据生成水利行业建议</span>';
+    recsEl.innerHTML = '';
+    return;
+  }
+
+  summaryEl.textContent = waterData.summary || '';
+
+  recsEl.innerHTML = waterData.recommendations.map((rec, idx) => {
+    const projectsNames = (rec.hot_projects || []).map(p => p.name).join('、');
+    const scenarios = (rec.water_scenarios || []).slice(0, 4);
+    const collapsed = idx > 1 ? 'collapsed' : '';
+
+    return `
+      <div class="card p-4 bg-slate-800/50">
+        <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="this.parentElement.classList.toggle('expanded')">
+          <h4 class="font-medium text-blue-300">
+            ${escHtml(rec.tech_direction)}
+            <span class="text-xs text-slate-500 font-normal ml-2">关联项目：${escHtml(projectsNames || '无')}</span>
+          </h4>
+          <span class="text-xs text-slate-500 expand-icon">▼</span>
+        </div>
+        <div class="expand-content ${collapsed ? 'hidden' : ''}">
+          <p class="text-sm text-slate-300 mb-2">${escHtml(rec.suggestion || '')}</p>
+          <div class="flex flex-wrap gap-1 mt-2">
+            ${scenarios.map(s => `<span class="px-2 py-0.5 text-xs rounded bg-blue-900/40 text-blue-300">${escHtml(s)}</span>`).join('')}
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-700 flex gap-3">
+            ${(rec.hot_projects || []).map(p =>
+              `<a href="${escHtml(p.url)}" target="_blank" class="text-xs text-slate-400 hover:text-white transition">
+                ${escHtml(p.name)} ⭐${fmtNum(p.stars)}
+              </a>`
+            ).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Reset collapsed state for the first 2
+  const cards = recsEl.querySelectorAll('.card');
+  cards.forEach((card, i) => {
+    if (i <= 1) {
+      card.classList.add('expanded');
+      const content = card.querySelector('.expand-content');
+      const icon = card.querySelector('.expand-icon');
+      if (content) content.classList.remove('hidden');
+      if (icon) icon.textContent = '▲';
+    }
+  });
+}
+
+// ── Utils ──
+function fmtNum(n) {
+  if (!n) return '0';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'k';
+  return n.toLocaleString();
+}
+
+function escHtml(str) {
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ── Init ──
+(async function init() {
+  const ok = await loadData('daily');
+  if (ok) renderAll();
+})();
+</script>
+
+</body>
+</html>

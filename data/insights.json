@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-05-09T09:12:40.073651+00:00",
+  "mode": "daily",
+  "headline": {
+    "project": {
+      "full_name": "Hmbown/DeepSeek-TUI",
+      "name": "DeepSeek-TUI",
+      "owner": "Hmbown",
+      "description": "Coding agent for DeepSeek models that runs in your terminal",
+      "stars": 0,
+      "stars_added": 3731,
+      "heat_score": 41.4,
+      "url": "https://github.com/Hmbown/DeepSeek-TUI",
+      "topics": [],
+      "language": "Rust",
+      "is_treasure": false
+    },
+    "why_hot": "🔥 DeepSeek-TUI 今日爆火：单日新增 3731⭐",
+    "hn_url": "https://news.ycombinator.com/item?id=48042201",
+    "reddit_url": ""
+  },
+  "dark_horses": [],
+  "trend_signals": [
+    {
+      "trend": "Agent 框架 / MCP 协议",
+      "description": "Agent 框架与 MCP 协议类项目集中爆发，AI 工具互联互通和自主任务执行成为当前焦点",
+      "representative_projects": [
+        "DeepSeek-TUI",
+        "AI-Trader",
+        "lobehub"
+      ],
+      "match_count": 33
+    },
+    {
+      "trend": "RAG 与知识检索",
+      "description": "RAG 与知识检索技术持续演进，企业级知识管理需求驱动创新",
+      "representative_projects": [
+        "langchain",
+        "quivr",
+        "langgraph"
+      ],
+      "match_count": 17
+    },
+    {
+      "trend": "LLM 推理与部署",
+      "description": "LLM 推理优化与本地部署工具集中涌现，模型效率成为工程焦点",
+      "representative_projects": [
+        "local-deep-research",
+        "transformers",
+        "quivr"
+      ],
+      "match_count": 6
+    }
+  ]
+}

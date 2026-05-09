@@ -1,0 +1,42 @@
+name: Update AI Hot Data
+
+on:
+  schedule:
+    # Every 6 hours, at 13 minutes past (avoid :00 thundering herd)
+    - cron: '13 */6 * * *'
+  workflow_dispatch:  # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch daily data
+        run: python scripts/fetch.py daily
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch weekly data
+        run: python scripts/fetch.py weekly
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "Update AI hot data [skip ci]"
+          git push
