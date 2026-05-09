@@ -24,7 +24,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from bs4 import BeautifulSoup
+
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 from scorer import Scorer
 from insight_generator import InsightGenerator
@@ -104,13 +107,13 @@ def _get_session():
     return _SESSION
 
 
-def api_get(url, params=None, headers=None, retries=3):
+def api_get(url, params=None, headers=None, retries=3, ssl_no_verify=False):
     """GET with retry and backoff. Uses shared session for connection reuse."""
     session = _get_session()
     req_headers = {**HEADERS, **(headers or {})}
     for attempt in range(retries):
         try:
-            r = session.get(url, params=params, headers=req_headers, timeout=30)
+            r = session.get(url, params=params, headers=req_headers, timeout=30, verify=not ssl_no_verify)
             if r.status_code == 403 and "rate limit" in r.text.lower():
                 wait = min(60 * (attempt + 1), 300)
                 log.warning("Rate limited, waiting %ds", wait)
@@ -118,6 +121,14 @@ def api_get(url, params=None, headers=None, retries=3):
                 continue
             r.raise_for_status()
             return r
+        except requests.exceptions.SSLError as e:
+            if not ssl_no_verify:
+                log.warning("SSL verify failed, retrying without verification: %s", e)
+                return api_get(url, params=params, headers=headers, retries=retries, ssl_no_verify=True)
+            wait = 2 ** attempt
+            log.warning("SSL request failed (attempt %d/%d, retry in %ds): %s", attempt + 1, retries, wait, e)
+            if attempt < retries - 1:
+                time.sleep(wait)
         except requests.RequestException as e:
             wait = 2 ** attempt
             log.warning("Request failed (attempt %d/%d, retry in %ds): %s", attempt + 1, retries, wait, e)
