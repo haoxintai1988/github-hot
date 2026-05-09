@@ -1,55 +1,78 @@
 {
-  "generated_at": "2026-05-09T09:12:40.073651+00:00",
-  "mode": "daily",
+  "generated_at": "2026-05-09T13:37:51.882715+00:00",
+  "mode": "weekly",
   "headline": {
     "project": {
-      "full_name": "Hmbown/DeepSeek-TUI",
-      "name": "DeepSeek-TUI",
-      "owner": "Hmbown",
-      "description": "Coding agent for DeepSeek models that runs in your terminal",
-      "stars": 0,
-      "stars_added": 3731,
-      "heat_score": 41.4,
-      "url": "https://github.com/Hmbown/DeepSeek-TUI",
+      "full_name": "browserbase/skills",
+      "name": "skills",
+      "owner": "browserbase",
+      "description": "Claude Agent SDK with a web browsing tool",
+      "stars": 2886,
+      "stars_added": 1621,
+      "heat_score": 50.9,
+      "url": "https://github.com/browserbase/skills",
       "topics": [],
-      "language": "Rust",
+      "language": "JavaScript",
       "is_treasure": false
     },
-    "why_hot": "🔥 DeepSeek-TUI 今日爆火：单日新增 3731⭐",
-    "hn_url": "https://news.ycombinator.com/item?id=48042201",
+    "why_hot": "🔥 skills 今日爆火：单日新增 1621⭐、HN 134 分热议",
+    "hn_url": "https://news.ycombinator.com/item?id=47780971",
     "reddit_url": ""
   },
-  "dark_horses": [],
+  "dark_horses": [
+    {
+      "project": {
+        "full_name": "regent-vcs/re_gent",
+        "name": "re_gent",
+        "owner": "regent-vcs",
+        "description": "Git for AI coding agents.",
+        "stars": 232,
+        "language": "Go",
+        "topics": [
+          "ai-agent",
+          "claude-code",
+          "developer-tools",
+          "devtools",
+          "golang"
+        ],
+        "url": "https://github.com/regent-vcs/re_gent"
+      },
+      "insight": "💎 re_gent — Git for AI coding agents.，仅 232⭐，HN 讨论热度 109 分",
+      "community_heat": 62.010984150972234,
+      "hn_url": "https://news.ycombinator.com/item?id=48063548",
+      "reddit_url": ""
+    }
+  ],
   "trend_signals": [
     {
       "trend": "Agent 框架 / MCP 协议",
       "description": "Agent 框架与 MCP 协议类项目集中爆发，AI 工具互联互通和自主任务执行成为当前焦点",
       "representative_projects": [
-        "DeepSeek-TUI",
-        "AI-Trader",
-        "lobehub"
+        "skills",
+        "ruflo",
+        "TradingAgents"
       ],
-      "match_count": 33
+      "match_count": 43
     },
     {
       "trend": "RAG 与知识检索",
       "description": "RAG 与知识检索技术持续演进，企业级知识管理需求驱动创新",
       "representative_projects": [
-        "langchain",
-        "quivr",
-        "langgraph"
+        "ruflo",
+        "cocoindex",
+        "InsForge"
       ],
-      "match_count": 17
+      "match_count": 21
     },
     {
-      "trend": "LLM 推理与部署",
-      "description": "LLM 推理优化与本地部署工具集中涌现，模型效率成为工程焦点",
+      "trend": "AI 编程与开发工具",
+      "description": "AI 编程工具生态加速成熟，开发者工作流正在被重新定义",
       "representative_projects": [
-        "local-deep-research",
-        "transformers",
-        "quivr"
+        "skills",
+        "ruflo",
+        "jcode"
       ],
-      "match_count": 6
+      "match_count": 9
     }
   ]
 }
