@@ -1,24 +1,19 @@
 {
-  "generated_at": "2026-05-09T15:13:43.741650+00:00",
+  "generated_at": "2026-05-09T20:37:13.378680+00:00",
   "mode": "weekly",
-  "total_projects": 10,
+  "total_projects": 9,
   "projects": [
     {
       "owner": "browserbase",
       "name": "skills",
       "full_name": "browserbase/skills",
-      "description": "Claude Agent SDK with a web browsing tool",
+      "description": "Browserbase's official collection of agent skills to access the web.",
       "language": "JavaScript",
       "stars_added": 1621,
       "source": "github-trending-weekly",
       "raw_stars_text": "1,621 stars this week",
-      "stars": 2895,
-      "forks": 191,
-      "topics": [],
-      "created_at": "2025-10-12T08:44:05Z",
-      "updated_at": "2026-05-09T15:07:54Z",
       "ai_reasons": [
-        "desc:claude"
+        "desc:agent"
       ],
       "hn_points": 134,
       "hn_comments": 56,
@@ -60,11 +55,6 @@
       "stars_added": 14928,
       "source": "github-trending-weekly",
       "raw_stars_text": "14,928 stars this week",
-      "stars": 67643,
-      "forks": 5822,
-      "topics": [],
-      "created_at": "2026-02-03T11:15:53Z",
-      "updated_at": "2026-05-09T15:10:44Z",
       "ai_reasons": [
         "desc:claude"
       ],
@@ -85,90 +75,19 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 10,
-        "avg_reactions": 0.4
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
         "stars_growth": 100,
         "hn_heat": 14.142859885809544,
         "reddit_heat": 0,
-        "topic_potential": 20,
-        "total": 46.5,
+        "topic_potential": 0,
+        "total": 43.5,
         "is_treasure": false
       },
-      "heat_score": 46.5,
+      "heat_score": 43.5,
       "rank": 2
-    },
-    {
-      "owner": "ruvnet",
-      "name": "ruflo",
-      "full_name": "ruvnet/ruflo",
-      "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
-      "language": "TypeScript",
-      "stars_added": 12226,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "12,226 stars this week",
-      "stars": 47488,
-      "forks": 5260,
-      "topics": [
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-rag",
-        "agentic-workflow",
-        "agents",
-        "ai-agent",
-        "ai-assistant",
-        "ai-coding",
-        "ai-skills",
-        "anthropic-claude",
-        "autonomous-agents",
-        "claude-code",
-        "claude-code-skills",
-        "codex",
-        "mcp-server",
-        "model-context-protocol",
-        "multi-agent",
-        "multi-agent-systems",
-        "swarm",
-        "swarm-intelligence"
-      ],
-      "created_at": "2025-06-02T21:24:20Z",
-      "updated_at": "2026-05-09T15:10:23Z",
-      "ai_reasons": [
-        "topics:ai-agent,model-context-protocol",
-        "desc:rag",
-        "lang:TypeScript"
-      ],
-      "hn_points": 1,
-      "hn_comments": 1,
-      "hn_stories": [
-        {
-          "title": "Is any one using ruflo?",
-          "points": 1,
-          "comments": 1,
-          "url": "https://news.ycombinator.com/item?id=47943679",
-          "created_at": "2026-04-29T02:50:51Z"
-        }
-      ],
-      "hn_score": 1,
-      "hn_url": "https://news.ycombinator.com/item?id=47943679",
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 100,
-        "hn_heat": 9.931176739741858,
-        "reddit_heat": 0,
-        "topic_potential": 10,
-        "total": 44.0,
-        "is_treasure": false
-      },
-      "heat_score": 44.0,
-      "rank": 3
     },
     {
       "owner": "TauricResearch",
@@ -179,19 +98,7 @@
       "stars_added": 12981,
       "source": "github-trending-weekly",
       "raw_stars_text": "12,981 stars this week",
-      "stars": 72303,
-      "forks": 14043,
-      "topics": [
-        "agent",
-        "finance",
-        "llm",
-        "multiagent",
-        "trading"
-      ],
-      "created_at": "2024-12-28T03:31:08Z",
-      "updated_at": "2026-05-09T15:08:50Z",
       "ai_reasons": [
-        "topics:llm,agent",
         "desc:llm",
         "lang:Python"
       ],
@@ -212,18 +119,62 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 2,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
         "stars_growth": 100,
         "hn_heat": 9.931176739741858,
         "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 43.4,
+        "topic_potential": 0,
+        "total": 42.5,
         "is_treasure": false
       },
-      "heat_score": 43.4,
+      "heat_score": 42.5,
+      "rank": 3
+    },
+    {
+      "owner": "ruvnet",
+      "name": "ruflo",
+      "full_name": "ruvnet/ruflo",
+      "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+      "language": "TypeScript",
+      "stars_added": 12226,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "12,226 stars this week",
+      "ai_reasons": [
+        "desc:rag",
+        "lang:TypeScript"
+      ],
+      "hn_points": 1,
+      "hn_comments": 1,
+      "hn_stories": [
+        {
+          "title": "Is any one using ruflo?",
+          "points": 1,
+          "comments": 1,
+          "url": "https://news.ycombinator.com/item?id=47943679",
+          "created_at": "2026-04-29T02:50:51Z"
+        }
+      ],
+      "hn_score": 1,
+      "hn_url": "https://news.ycombinator.com/item?id=47943679",
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 100,
+        "hn_heat": 9.931176739741858,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 42.5,
+        "is_treasure": false
+      },
+      "heat_score": 42.5,
       "rank": 4
     },
     {
@@ -235,24 +186,7 @@
       "stars_added": 2925,
       "source": "github-trending-weekly",
       "raw_stars_text": "2,925 stars this week",
-      "stars": 5263,
-      "forks": 523,
-      "topics": [
-        "ai",
-        "claude",
-        "cli",
-        "coding-agent",
-        "llm",
-        "mcp",
-        "openai",
-        "rust",
-        "terminal",
-        "tui"
-      ],
-      "created_at": "2026-01-05T09:43:36Z",
-      "updated_at": "2026-05-09T15:10:43Z",
       "ai_reasons": [
-        "topics:mcp,llm,openai",
         "desc:agent",
         "lang:Rust"
       ],
@@ -273,18 +207,18 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 7,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
         "stars_growth": 93.70697607764018,
         "hn_heat": 10.942410098300419,
         "reddit_heat": 0,
-        "topic_potential": 20,
-        "total": 43.2,
+        "topic_potential": 0,
+        "total": 40.2,
         "is_treasure": false
       },
-      "heat_score": 43.2,
+      "heat_score": 40.2,
       "rank": 5
     },
     {
@@ -296,11 +230,6 @@
       "stars_added": 3278,
       "source": "github-trending-weekly",
       "raw_stars_text": "3,278 stars this week",
-      "stars": 24990,
-      "forks": 3042,
-      "topics": [],
-      "created_at": "2025-10-14T21:02:00Z",
-      "updated_at": "2026-05-09T15:07:44Z",
       "ai_reasons": [
         "desc:agent",
         "lang:TypeScript"
@@ -312,8 +241,8 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 4,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
         "stars_growth": 95.0442654685631,
@@ -335,34 +264,7 @@
       "stars_added": 1781,
       "source": "github-trending-weekly",
       "raw_stars_text": "1,781 stars this week",
-      "stars": 6235,
-      "forks": 1133,
-      "topics": [
-        "ai-agents",
-        "ai-gateway",
-        "anthropic",
-        "chatgpt",
-        "claude",
-        "claude-code",
-        "cline",
-        "codex",
-        "copilot",
-        "cursor",
-        "deepseek",
-        "free-ai",
-        "gemini",
-        "gemini-cli",
-        "llm",
-        "llm-gateway",
-        "openai",
-        "openai-proxy",
-        "qwen",
-        "token-saver"
-      ],
-      "created_at": "2026-01-05T02:59:30Z",
-      "updated_at": "2026-05-09T15:10:07Z",
       "ai_reasons": [
-        "topics:llm,openai,chatgpt",
         "desc:gpt"
       ],
       "hn_points": 0,
@@ -372,57 +274,65 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 7,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
         "stars_growth": 87.88477245771847,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 17,
-        "total": 37.7,
+        "topic_potential": 0,
+        "total": 35.2,
         "is_treasure": false
       },
-      "heat_score": 37.7,
+      "heat_score": 35.2,
       "rank": 7
     },
     {
-      "owner": "cocoindex-io",
-      "name": "cocoindex",
-      "full_name": "cocoindex-io/cocoindex",
-      "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
-      "language": "Python",
-      "stars_added": 1909,
+      "owner": "InsForge",
+      "name": "InsForge",
+      "full_name": "InsForge/InsForge",
+      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+      "language": "TypeScript",
+      "stars_added": 1201,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,909 stars this week",
-      "stars": 9266,
-      "forks": 692,
-      "topics": [
-        "agentic-data-framework",
-        "ai",
-        "ai-agents",
-        "change-data-capture",
-        "codebase-intelligence",
-        "context-engineering",
-        "data-engineering",
-        "data-indexing",
-        "data-processing",
-        "etl",
-        "help-wanted",
-        "indexing",
-        "knowledge-graph",
-        "llm",
-        "long-horizon-agent",
-        "python",
-        "rag",
-        "real-time",
-        "rust",
-        "semantic-search"
-      ],
-      "created_at": "2025-03-03T23:03:09Z",
-      "updated_at": "2026-05-09T15:05:35Z",
+      "raw_stars_text": "1,201 stars this week",
       "ai_reasons": [
-        "topics:rag,llm,ai",
+        "desc:agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 83.26188509052643,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 33.3,
+        "is_treasure": false
+      },
+      "heat_score": 33.3,
+      "rank": 8
+    },
+    {
+      "owner": "Q00",
+      "name": "ouroboros",
+      "full_name": "Q00/ouroboros",
+      "description": "Agent OS: Stop prompting. Start specifying.",
+      "language": "Python",
+      "stars_added": 867,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "867 stars this week",
+      "ai_reasons": [
+        "desc:agent",
         "lang:Python"
       ],
       "hn_points": 0,
@@ -436,118 +346,15 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 88.6991872864561,
+        "stars_growth": 79.43970154348501,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 9,
-        "total": 36.8,
+        "topic_potential": 0,
+        "total": 31.8,
         "is_treasure": false
       },
-      "heat_score": 36.8,
-      "rank": 8
-    },
-    {
-      "owner": "InsForge",
-      "name": "InsForge",
-      "full_name": "InsForge/InsForge",
-      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
-      "language": "TypeScript",
-      "stars_added": 1201,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "1,201 stars this week",
-      "stars": 9187,
-      "forks": 755,
-      "topics": [
-        "ai",
-        "ai-agents",
-        "coding",
-        "deno",
-        "embeddings",
-        "insforge",
-        "nextjs",
-        "oauth2",
-        "pgvector",
-        "postgresql",
-        "realtime",
-        "vectors",
-        "websockets"
-      ],
-      "created_at": "2025-07-29T05:56:00Z",
-      "updated_at": "2026-05-09T15:07:16Z",
-      "ai_reasons": [
-        "topics:embeddings,ai",
-        "desc:agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 83.26188509052643,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 13,
-        "total": 35.3,
-        "is_treasure": false
-      },
-      "heat_score": 35.3,
+      "heat_score": 31.8,
       "rank": 9
-    },
-    {
-      "owner": "fspecii",
-      "name": "ace-step-ui",
-      "full_name": "fspecii/ace-step-ui",
-      "description": "🎵 The Ultimate Open Source Suno Alternative - Professional UI for ACE-Step 1.5 AI Music Generation. Free, local, unlimited. Stop paying for Suno!",
-      "language": "JavaScript",
-      "stars_added": 1122,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "1,122 stars this week",
-      "stars": 3475,
-      "forks": 492,
-      "topics": [
-        "ace-step",
-        "ai",
-        "ai-music",
-        "local-first",
-        "music",
-        "music-generation",
-        "open-source",
-        "react",
-        "suno-alternative",
-        "typescript"
-      ],
-      "created_at": "2026-02-04T01:09:45Z",
-      "updated_at": "2026-05-09T15:04:15Z",
-      "ai_reasons": [
-        "topics:ai"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.2
-      },
-      "scores": {
-        "stars_growth": 82.46371646089413,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 13,
-        "total": 34.9,
-        "is_treasure": false
-      },
-      "heat_score": 34.9,
-      "rank": 10
     }
   ]
 }
