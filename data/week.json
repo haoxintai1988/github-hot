@@ -1,51 +1,244 @@
 {
-  "generated_at": "2026-05-09T13:37:51.884899+00:00",
+  "generated_at": "2026-05-09T15:07:05.032956+00:00",
   "mode": "weekly",
-  "total_projects": 69,
+  "total_projects": 10,
   "projects": [
     {
-      "owner": "browserbase",
-      "name": "skills",
-      "full_name": "browserbase/skills",
-      "description": "Claude Agent SDK with a web browsing tool",
-      "language": "JavaScript",
-      "stars_added": 1621,
+      "owner": "InsForge",
+      "name": "InsForge",
+      "full_name": "InsForge/InsForge",
+      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+      "language": "TypeScript",
+      "stars_added": 1201,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,621 stars this week",
-      "stars": 2886,
-      "forks": 188,
-      "topics": [],
-      "created_at": "2025-10-12T08:44:05Z",
-      "updated_at": "2026-05-09T13:23:57Z",
-      "ai_reasons": [
-        "desc:claude"
+      "raw_stars_text": "1,201 stars this week",
+      "stars": 9186,
+      "forks": 755,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "coding",
+        "deno",
+        "embeddings",
+        "insforge",
+        "nextjs",
+        "oauth2",
+        "pgvector",
+        "postgresql",
+        "realtime",
+        "vectors",
+        "websockets"
       ],
-      "hn_points": 134,
-      "hn_comments": 56,
-      "hn_stories": [
+      "created_at": "2025-07-29T05:56:00Z",
+      "updated_at": "2026-05-09T14:55:11Z",
+      "ai_reasons": [
+        "topics:embeddings,ai",
+        "desc:agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 293,
+      "reddit_comments": 109,
+      "reddit_posts": [
         {
-          "title": "Show HN: Libretto – Making AI browser automations deterministic",
-          "points": 134,
-          "comments": 56,
-          "url": "https://news.ycombinator.com/item?id=47780971",
-          "created_at": "2026-04-15T15:57:54Z"
+          "subreddit": "MachineLearning",
+          "title": "[P] A Python library processing geospatial data for GNNs with PyTorch Geometric",
+          "ups": 293,
+          "comments": 11,
+          "url": "https://reddit.com/r/MachineLearning/comments/1r02y6y/p_a_python_library_processing_geospatial_data_for/",
+          "created_utc": 1770640234.0
+        },
+        {
+          "subreddit": "MachineLearning",
+          "title": "[N] Pondering how many of the papers at AI conferences are just AI generated garbage.",
+          "ups": 177,
+          "comments": 65,
+          "url": "https://reddit.com/r/MachineLearning/comments/1od3j63/n_pondering_how_many_of_the_papers_at_ai/",
+          "created_utc": 1761125120.0
+        },
+        {
+          "subreddit": "MachineLearning",
+          "title": "[P] Sample Forge - Research tool for deterministic inference and convergent sampling parameters in large language models.",
+          "ups": 4,
+          "comments": 0,
+          "url": "https://reddit.com/r/MachineLearning/comments/1nrvlle/p_sample_forge_research_tool_for_deterministic/",
+          "created_utc": 1758980620.0
+        },
+        {
+          "subreddit": "MachineLearning",
+          "title": "[P] Looking for datasets/tools for testing document forgery detection in medical claims",
+          "ups": 4,
+          "comments": 2,
+          "url": "https://reddit.com/r/MachineLearning/comments/1mtekhm/p_looking_for_datasetstools_for_testing_document/",
+          "created_utc": 1755499325.0
+        },
+        {
+          "subreddit": "MachineLearning",
+          "title": "[P] Built a comprehensive NLP system with multilingual sentiment analysis and document based QA .. feedback welcome",
+          "ups": 5,
+          "comments": 0,
+          "url": "https://reddit.com/r/MachineLearning/comments/1kvfn00/p_built_a_comprehensive_nlp_system_with/",
+          "created_utc": 1748214361.0
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "title": "MTPLX | 2.24x faster TPS | The native MTP inference engine for Apple Silicon",
+          "ups": 74,
+          "comments": 57,
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1t3zuvy/mtplx_224x_faster_tps_the_native_mtp_inference/",
+          "created_utc": 1777941072.0
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "title": "Opus 4.7 Max subscriber. Switching to Kimi 2.6",
+          "ups": 261,
+          "comments": 109,
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1srd2cc/opus_47_max_subscriber_switching_to_kimi_26/",
+          "created_utc": 1776744864.0
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "title": "Kimi K2.6-Code-Preview, Opus 4.7, GLM 5.1, Minimax M2.7 and more tested in coding",
+          "ups": 66,
+          "comments": 30,
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sno8ba/kimi_k26codepreview_opus_47_glm_51_minimax_m27/",
+          "created_utc": 1776393313.0
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "title": "Creating Pi Extension with Pi and Qwen3.5 27B",
+          "ups": 7,
+          "comments": 1,
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1shpinc/creating_pi_extension_with_pi_and_qwen35_27b/",
+          "created_utc": 1775834268.0
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "title": "Sorry for the novice question, but, does anyone know which apps and AI-related things got hit/potentially hit by this LiteLLM malware attack that just happened? And which ones don't use it and thus seem like they should probably be unaffected by it?",
+          "ups": 7,
+          "comments": 3,
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s3elyv/sorry_for_the_novice_question_but_does_anyone/",
+          "created_utc": 1774453950.0
+        },
+        {
+          "subreddit": "singularity",
+          "title": "Three new models added to the LLM Creative Short Story-Writing Benchmark",
+          "ups": 41,
+          "comments": 25,
+          "url": "https://reddit.com/r/singularity/comments/1qwagyw/three_new_models_added_to_the_llm_creative_short/",
+          "created_utc": 1770262794.0
+        },
+        {
+          "subreddit": "singularity",
+          "title": "Suno partners with Warner Music Group, this is why this sucks.",
+          "ups": 44,
+          "comments": 16,
+          "url": "https://reddit.com/r/singularity/comments/1p6tb5u/suno_partners_with_warner_music_group_this_is_why/",
+          "created_utc": 1764116627.0
+        },
+        {
+          "subreddit": "singularity",
+          "title": "\"Drugmakers Hail Early Wins in AI-Driven Transformation of Manufacturing\"",
+          "ups": 18,
+          "comments": 4,
+          "url": "https://reddit.com/r/singularity/comments/1n10j4a/drugmakers_hail_early_wins_in_aidriven/",
+          "created_utc": 1756248759.0
+        },
+        {
+          "subreddit": "singularity",
+          "title": "GPT4.5 creative writing skills",
+          "ups": 17,
+          "comments": 17,
+          "url": "https://reddit.com/r/singularity/comments/1izsvxn/gpt45_creative_writing_skills/",
+          "created_utc": 1740696637.0
+        },
+        {
+          "subreddit": "singularity",
+          "title": "AI Alignment and Technological Risk: Is Alignment Solvable?",
+          "ups": 1,
+          "comments": 15,
+          "url": "https://reddit.com/r/singularity/comments/1iyo3sg/ai_alignment_and_technological_risk_is_alignment/",
+          "created_utc": 1740578293.0
         }
       ],
-      "hn_score": 134,
-      "hn_url": "https://news.ycombinator.com/item?id=47780971",
+      "reddit_subreddit": "MachineLearning",
+      "reddit_url": "https://reddit.com/r/MachineLearning/comments/1r02y6y/p_a_python_library_processing_geospatial_data_for/",
       "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
+        "recent_issues": 5,
+        "avg_reactions": 0.0
       },
       "scores": {
-        "stars_growth": 86.78025172629233,
-        "hn_heat": 64.73323356399894,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 50.9,
+        "stars_growth": 83.26188509052643,
+        "hn_heat": 0,
+        "reddit_heat": 75.53590502668835,
+        "topic_potential": 13,
+        "total": 50.4,
         "is_treasure": false
       },
-      "heat_score": 50.9
+      "heat_score": 50.4,
+      "rank": 1
+    },
+    {
+      "owner": "fspecii",
+      "name": "ace-step-ui",
+      "full_name": "fspecii/ace-step-ui",
+      "description": "🎵 The Ultimate Open Source Suno Alternative - Professional UI for ACE-Step 1.5 AI Music Generation. Free, local, unlimited. Stop paying for Suno!",
+      "language": "JavaScript",
+      "stars_added": 1122,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "1,122 stars this week",
+      "stars": 3474,
+      "forks": 492,
+      "topics": [
+        "ace-step",
+        "ai",
+        "ai-music",
+        "local-first",
+        "music",
+        "music-generation",
+        "open-source",
+        "react",
+        "suno-alternative",
+        "typescript"
+      ],
+      "created_at": "2026-02-04T01:09:45Z",
+      "updated_at": "2026-05-09T14:55:40Z",
+      "ai_reasons": [
+        "topics:ai"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 188,
+      "reddit_comments": 50,
+      "reddit_posts": [
+        {
+          "subreddit": "LocalLLaMA",
+          "title": "1 Day Left Until ACE-Step 1.5 — Open-Source Music Gen That Runs on &lt;4GB VRAM  Open suno alternative (and yes, i made this frontend)",
+          "ups": 188,
+          "comments": 50,
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1qtqspu/1_day_left_until_acestep_15_opensource_music_gen/",
+          "created_utc": 1770025652.0
+        }
+      ],
+      "reddit_subreddit": "LocalLLaMA",
+      "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1qtqspu/1_day_left_until_acestep_15_opensource_music_gen/",
+      "issues_activity": {
+        "recent_issues": 5,
+        "avg_reactions": 0.2
+      },
+      "scores": {
+        "stars_growth": 82.46371646089413,
+        "hn_heat": 0,
+        "reddit_heat": 66.83758462966317,
+        "topic_potential": 13,
+        "total": 48.3,
+        "is_treasure": false
+      },
+      "heat_score": 48.3,
+      "rank": 2
     },
     {
       "owner": "mattpocock",
@@ -56,11 +249,11 @@
       "stars_added": 14928,
       "source": "github-trending-weekly",
       "raw_stars_text": "14,928 stars this week",
-      "stars": 67541,
-      "forks": 5811,
+      "stars": 67637,
+      "forks": 5820,
       "topics": [],
       "created_at": "2026-02-03T11:15:53Z",
-      "updated_at": "2026-05-09T13:35:57Z",
+      "updated_at": "2026-05-09T14:58:22Z",
       "ai_reasons": [
         "desc:claude"
       ],
@@ -77,6 +270,9 @@
       ],
       "hn_score": 5,
       "hn_url": "https://news.ycombinator.com/item?id=47904220",
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
       "issues_activity": {
         "recent_issues": 10,
         "avg_reactions": 0.4
@@ -89,7 +285,8 @@
         "total": 46.5,
         "is_treasure": false
       },
-      "heat_score": 46.5
+      "heat_score": 46.5,
+      "rank": 3
     },
     {
       "owner": "ruvnet",
@@ -100,8 +297,8 @@
       "stars_added": 12226,
       "source": "github-trending-weekly",
       "raw_stars_text": "12,226 stars this week",
-      "stars": 47402,
-      "forks": 5251,
+      "stars": 47479,
+      "forks": 5258,
       "topics": [
         "agentic-ai",
         "agentic-framework",
@@ -125,7 +322,7 @@
         "swarm-intelligence"
       ],
       "created_at": "2025-06-02T21:24:20Z",
-      "updated_at": "2026-05-09T13:36:02Z",
+      "updated_at": "2026-05-09T15:00:30Z",
       "ai_reasons": [
         "topics:ai-agent,model-context-protocol",
         "desc:rag",
@@ -144,19 +341,23 @@
       ],
       "hn_score": 1,
       "hn_url": "https://news.ycombinator.com/item?id=47943679",
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 5,
+        "recent_issues": 6,
         "avg_reactions": 0.0
       },
       "scores": {
         "stars_growth": 100,
         "hn_heat": 9.931176739741858,
         "reddit_heat": 0,
-        "topic_potential": 10,
-        "total": 44.0,
+        "topic_potential": 12,
+        "total": 44.3,
         "is_treasure": false
       },
-      "heat_score": 44.0
+      "heat_score": 44.3,
+      "rank": 4
     },
     {
       "owner": "TauricResearch",
@@ -165,10 +366,10 @@
       "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
       "language": "Python",
       "stars_added": 12981,
-      "source": "github-search",
+      "source": "github-trending-weekly",
       "raw_stars_text": "12,981 stars this week",
-      "stars": 72254,
-      "forks": 14027,
+      "stars": 72299,
+      "forks": 14041,
       "topics": [
         "agent",
         "finance",
@@ -177,10 +378,9 @@
         "trading"
       ],
       "created_at": "2024-12-28T03:31:08Z",
-      "updated_at": "2026-05-09T13:32:51Z",
-      "url": "https://github.com/TauricResearch/TradingAgents",
+      "updated_at": "2026-05-09T15:01:52Z",
       "ai_reasons": [
-        "topics:agent,llm",
+        "topics:llm,agent",
         "desc:llm",
         "lang:Python"
       ],
@@ -197,6 +397,9 @@
       ],
       "hn_score": 1,
       "hn_url": "https://news.ycombinator.com/item?id=47987347",
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
       "issues_activity": {
         "recent_issues": 2,
         "avg_reactions": 0.0
@@ -209,7 +412,8 @@
         "total": 43.4,
         "is_treasure": false
       },
-      "heat_score": 43.4
+      "heat_score": 43.4,
+      "rank": 5
     },
     {
       "owner": "1jehuang",
@@ -220,8 +424,8 @@
       "stars_added": 2925,
       "source": "github-trending-weekly",
       "raw_stars_text": "2,925 stars this week",
-      "stars": 5250,
-      "forks": 522,
+      "stars": 5260,
+      "forks": 523,
       "topics": [
         "ai",
         "claude",
@@ -235,9 +439,9 @@
         "tui"
       ],
       "created_at": "2026-01-05T09:43:36Z",
-      "updated_at": "2026-05-09T13:36:48Z",
+      "updated_at": "2026-05-09T14:52:59Z",
       "ai_reasons": [
-        "topics:openai,mcp,ai",
+        "topics:llm,ai,mcp",
         "desc:agent",
         "lang:Rust"
       ],
@@ -254,6 +458,9 @@
       ],
       "hn_score": 3,
       "hn_url": "https://news.ycombinator.com/item?id=47961940",
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
       "issues_activity": {
         "recent_issues": 7,
         "avg_reactions": 0.0
@@ -266,98 +473,8 @@
         "total": 43.2,
         "is_treasure": false
       },
-      "heat_score": 43.2
-    },
-    {
-      "owner": "virattt",
-      "name": "dexter",
-      "full_name": "virattt/dexter",
-      "description": "An autonomous agent for deep financial research",
-      "language": "TypeScript",
-      "stars_added": 3278,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "3,278 stars this week",
-      "stars": 24981,
-      "forks": 3039,
-      "topics": [],
-      "created_at": "2025-10-14T21:02:00Z",
-      "updated_at": "2026-05-09T13:35:44Z",
-      "ai_reasons": [
-        "desc:agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 4,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 95.0442654685631,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 38.0,
-        "is_treasure": false
-      },
-      "heat_score": 38.0
-    },
-    {
-      "owner": "decolua",
-      "name": "9router",
-      "full_name": "decolua/9router",
-      "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
-      "language": "JavaScript",
-      "stars_added": 1781,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "1,781 stars this week",
-      "stars": 6177,
-      "forks": 1124,
-      "topics": [
-        "ai-agents",
-        "ai-gateway",
-        "anthropic",
-        "chatgpt",
-        "claude",
-        "claude-code",
-        "cline",
-        "codex",
-        "copilot",
-        "cursor",
-        "deepseek",
-        "free-ai",
-        "gemini",
-        "gemini-cli",
-        "llm",
-        "llm-gateway",
-        "openai",
-        "openai-proxy",
-        "qwen",
-        "token-saver"
-      ],
-      "created_at": "2026-01-05T02:59:30Z",
-      "updated_at": "2026-05-09T13:36:20Z",
-      "ai_reasons": [
-        "topics:llm,openai,chatgpt",
-        "desc:gpt"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 7,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 87.88477245771847,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 17,
-        "total": 37.7,
-        "is_treasure": false
-      },
-      "heat_score": 37.7
+      "heat_score": 43.2,
+      "rank": 6
     },
     {
       "owner": "cocoindex-io",
@@ -368,8 +485,8 @@
       "stars_added": 1909,
       "source": "github-trending-weekly",
       "raw_stars_text": "1,909 stars this week",
-      "stars": 9255,
-      "forks": 691,
+      "stars": 9264,
+      "forks": 692,
       "topics": [
         "agentic-data-framework",
         "ai",
@@ -393,14 +510,36 @@
         "semantic-search"
       ],
       "created_at": "2025-03-03T23:03:09Z",
-      "updated_at": "2026-05-09T13:34:45Z",
+      "updated_at": "2026-05-09T14:59:51Z",
       "ai_reasons": [
-        "topics:rag,ai,llm",
+        "topics:llm,rag,ai",
         "lang:Python"
       ],
       "hn_points": 0,
       "hn_comments": 0,
       "hn_stories": [],
+      "reddit_ups": 5,
+      "reddit_comments": 0,
+      "reddit_posts": [
+        {
+          "subreddit": "LocalLLaMA",
+          "title": "CocoIndex 0.3.1 - Open-Source Data Engine for Dynamic Context Engineering",
+          "ups": 2,
+          "comments": 0,
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1pfi3m1/cocoindex_031_opensource_data_engine_for_dynamic/",
+          "created_utc": 1765001404.0
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "title": "GitHub - cocoindex-io/cocoindex: 🥥 CocoIndex - Build RAG pipeline like LEGO, with incremental update",
+          "ups": 5,
+          "comments": 0,
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1j9iqzw/github_cocoindexiococoindex_cocoindex_build_rag/",
+          "created_utc": 1741782027.0
+        }
+      ],
+      "reddit_subreddit": "LocalLLaMA",
+      "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1pfi3m1/cocoindex_031_opensource_data_engine_for_dynamic/",
       "issues_activity": {
         "recent_issues": 0,
         "avg_reactions": 0
@@ -408,2722 +547,150 @@
       "scores": {
         "stars_growth": 88.6991872864561,
         "hn_heat": 0,
-        "reddit_heat": 0,
+        "reddit_heat": 13.426949530018378,
         "topic_potential": 9,
-        "total": 36.8,
+        "total": 39.5,
         "is_treasure": false
       },
-      "heat_score": 36.8
+      "heat_score": 39.5,
+      "rank": 7
     },
     {
-      "owner": "InsForge",
-      "name": "InsForge",
-      "full_name": "InsForge/InsForge",
-      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+      "owner": "virattt",
+      "name": "dexter",
+      "full_name": "virattt/dexter",
+      "description": "An autonomous agent for deep financial research",
       "language": "TypeScript",
-      "stars_added": 1201,
+      "stars_added": 3278,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,201 stars this week",
-      "stars": 9175,
-      "forks": 754,
-      "topics": [
-        "ai",
-        "ai-agents",
-        "coding",
-        "deno",
-        "embeddings",
-        "insforge",
-        "nextjs",
-        "oauth2",
-        "pgvector",
-        "postgresql",
-        "realtime",
-        "vectors",
-        "websockets"
-      ],
-      "created_at": "2025-07-29T05:56:00Z",
-      "updated_at": "2026-05-09T13:34:37Z",
+      "raw_stars_text": "3,278 stars this week",
+      "stars": 24989,
+      "forks": 3042,
+      "topics": [],
+      "created_at": "2025-10-14T21:02:00Z",
+      "updated_at": "2026-05-09T14:57:27Z",
       "ai_reasons": [
-        "topics:ai,embeddings",
         "desc:agent",
         "lang:TypeScript"
       ],
       "hn_points": 0,
       "hn_comments": 0,
       "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 5,
+        "recent_issues": 4,
         "avg_reactions": 0.0
       },
       "scores": {
-        "stars_growth": 83.26188509052643,
+        "stars_growth": 95.0442654685631,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 13,
-        "total": 35.3,
+        "topic_potential": 0,
+        "total": 38.0,
         "is_treasure": false
       },
-      "heat_score": 35.3
+      "heat_score": 38.0,
+      "rank": 8
     },
     {
-      "owner": "fspecii",
-      "name": "ace-step-ui",
-      "full_name": "fspecii/ace-step-ui",
-      "description": "🎵 The Ultimate Open Source Suno Alternative - Professional UI for ACE-Step 1.5 AI Music Generation. Free, local, unlimited. Stop paying for Suno!",
+      "owner": "decolua",
+      "name": "9router",
+      "full_name": "decolua/9router",
+      "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
       "language": "JavaScript",
-      "stars_added": 1122,
+      "stars_added": 1781,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,122 stars this week",
-      "stars": 3463,
-      "forks": 490,
+      "raw_stars_text": "1,781 stars this week",
+      "stars": 6231,
+      "forks": 1133,
       "topics": [
-        "ace-step",
-        "ai",
-        "ai-music",
-        "local-first",
-        "music",
-        "music-generation",
-        "open-source",
-        "react",
-        "suno-alternative",
-        "typescript"
-      ],
-      "created_at": "2026-02-04T01:09:45Z",
-      "updated_at": "2026-05-09T13:27:14Z",
-      "ai_reasons": [
-        "topics:ai"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.2
-      },
-      "scores": {
-        "stars_growth": 82.46371646089413,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 13,
-        "total": 34.9,
-        "is_treasure": false
-      },
-      "heat_score": 34.9
-    },
-    {
-      "owner": "Q00",
-      "name": "ouroboros",
-      "full_name": "Q00/ouroboros",
-      "description": "Agent OS: Stop prompting. Start specifying.",
-      "language": "Python",
-      "stars_added": 867,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "867 stars this week",
-      "stars": 3775,
-      "forks": 365,
-      "topics": [
-        "agent-os",
-        "ai-agent",
-        "mcp"
-      ],
-      "created_at": "2026-01-14T01:14:04Z",
-      "updated_at": "2026-05-09T13:24:52Z",
-      "ai_reasons": [
-        "topics:ai-agent,mcp",
-        "desc:agent",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 8,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 79.43970154348501,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 16,
-        "total": 34.2,
-        "is_treasure": false
-      },
-      "heat_score": 34.2
-    },
-    {
-      "full_name": "antirez/ds4",
-      "owner": "antirez",
-      "name": "ds4",
-      "hn_score": 483,
-      "hn_comments": 152,
-      "hn_title": "DeepSeek 4 Flash local inference engine for Metal",
-      "hn_url": "https://news.ycombinator.com/item?id=48050751",
-      "source": "hn-firebase",
-      "stars": 3362,
-      "forks": 229,
-      "topics": [],
-      "description": "DeepSeek 4 Flash local inference engine for Metal",
-      "created_at": "2026-05-06T17:17:05Z",
-      "updated_at": "2026-05-09T13:36:53Z",
-      "language": "C",
-      "ai_reasons": [
-        "desc:inference",
-        "hn:inference"
-      ],
-      "issues_activity": {
-        "recent_issues": 6,
-        "avg_reactions": 0.5
-      },
-      "scores": {
-        "stars_growth": 21.160342824339462,
-        "hn_heat": 81.16467390251016,
-        "reddit_heat": 0,
-        "topic_potential": 12,
-        "total": 30.6,
-        "is_treasure": false
-      },
-      "heat_score": 30.6
-    },
-    {
-      "owner": "OpenSPG",
-      "name": "KAG",
-      "full_name": "OpenSPG/KAG",
-      "description": "KAG is a logical form-guided reasoning and retrieval framework based on OpenSPG engine and LLMs.  It is used to build logical reasoning and factual Q&A solutions for professional domain knowledge bases. It can effectively overcome the shortcomings of the traditional RAG vector similarity calculation model.",
-      "language": "Python",
-      "stars": 8722,
-      "forks": 676,
-      "topics": [
-        "knowledge-graph",
-        "large-language-model",
-        "logical-reasoning",
-        "multi-hop-question-answering",
-        "trustfulness"
-      ],
-      "created_at": "2024-09-21T13:56:44Z",
-      "updated_at": "2026-05-09T08:41:45Z",
-      "url": "https://github.com/OpenSPG/KAG",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:large-language-model",
-        "desc:rag",
-        "lang:Python"
-      ],
-      "hn_points": 44,
-      "hn_comments": 31,
-      "hn_stories": [
-        {
-          "title": "Show HN: Stage CLI – An easier way of reading your AI generated changes locally",
-          "points": 44,
-          "comments": 31,
-          "url": "https://news.ycombinator.com/item?id=48050732",
-          "created_at": "2026-05-07T15:38:36Z"
-        }
-      ],
-      "hn_score": 44,
-      "hn_url": "https://news.ycombinator.com/item?id=48050732",
-      "scores": {
-        "stars_growth": 23.643974698062173,
-        "hn_heat": 52.34691284278837,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 22.5,
-        "is_treasure": false
-      },
-      "heat_score": 22.5
-    },
-    {
-      "full_name": "regent-vcs/re_gent",
-      "owner": "regent-vcs",
-      "name": "re_gent",
-      "hn_score": 109,
-      "hn_comments": 47,
-      "hn_title": "Show HN: Git for AI Agents",
-      "hn_url": "https://news.ycombinator.com/item?id=48063548",
-      "source": "hn-firebase",
-      "stars": 232,
-      "forks": 12,
-      "topics": [
-        "ai-agent",
-        "claude-code",
-        "developer-tools",
-        "devtools",
-        "golang",
-        "version-control"
-      ],
-      "description": "Git for AI coding agents.",
-      "created_at": "2026-04-30T09:09:41Z",
-      "updated_at": "2026-05-09T13:26:35Z",
-      "language": "Go",
-      "ai_reasons": [
-        "topics:ai-agent"
-      ],
-      "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
-      },
-      "scores": {
-        "stars_growth": 14.204123188673158,
-        "hn_heat": 62.010984150972234,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 21.2,
-        "is_treasure": true
-      },
-      "heat_score": 21.2
-    },
-    {
-      "owner": "agent0ai",
-      "name": "agent-zero",
-      "full_name": "agent0ai/agent-zero",
-      "description": "Agent Zero AI framework",
-      "language": "Python",
-      "stars": 17598,
-      "forks": 3589,
-      "topics": [
-        "agent",
-        "ai",
-        "assistant",
-        "autonomous",
-        "linux",
-        "zero"
-      ],
-      "created_at": "2024-06-10T09:10:45Z",
-      "updated_at": "2026-05-09T04:50:18Z",
-      "url": "https://github.com/agent0ai/agent-zero",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:ai,agent",
-        "desc:agent",
-        "lang:Python"
-      ],
-      "hn_points": 9,
-      "hn_comments": 3,
-      "hn_stories": [
-        {
-          "title": "One Developer, Two Dozen Agents, Zero Alignment",
-          "points": 9,
-          "comments": 3,
-          "url": "https://news.ycombinator.com/item?id=47766181",
-          "created_at": "2026-04-14T14:32:16Z"
-        },
-        {
-          "title": "One Developer, Two Dozen Agents, Zero Alignment",
-          "points": 3,
-          "comments": 0,
-          "url": "https://news.ycombinator.com/item?id=47772988",
-          "created_at": "2026-04-14T23:52:32Z"
-        },
-        {
-          "title": "One Developer, Two Dozen Agents, Zero Alignment",
-          "points": 1,
-          "comments": 1,
-          "url": "https://news.ycombinator.com/item?id=47904672",
-          "created_at": "2026-04-25T21:28:06Z"
-        }
-      ],
-      "hn_score": 9,
-      "hn_url": "https://news.ycombinator.com/item?id=47766181",
-      "issues_activity": {
-        "recent_issues": 6,
-        "avg_reactions": 0.2
-      },
-      "scores": {
-        "stars_growth": 25.472905822367377,
-        "hn_heat": 27.09489314684497,
-        "reddit_heat": 0,
-        "topic_potential": 18,
-        "total": 19.7,
-        "is_treasure": false
-      },
-      "heat_score": 19.7
-    },
-    {
-      "owner": "PrefectHQ",
-      "name": "fastmcp",
-      "full_name": "PrefectHQ/fastmcp",
-      "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
-      "language": "Python",
-      "stars": 25088,
-      "forks": 1996,
-      "topics": [
-        "agents",
-        "fastmcp",
-        "llms",
-        "mcp",
-        "mcp-clients",
-        "mcp-servers",
-        "mcp-tools",
-        "model-context-protocol",
-        "python"
-      ],
-      "created_at": "2024-11-30T01:47:40Z",
-      "updated_at": "2026-05-09T12:57:58Z",
-      "url": "https://github.com/PrefectHQ/fastmcp",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp,model-context-protocol",
-        "desc:mcp",
-        "lang:Python"
-      ],
-      "hn_points": 5,
-      "hn_comments": 1,
-      "hn_stories": [
-        {
-          "title": "Supabase Auth and FastMCP Example",
-          "points": 2,
-          "comments": 1,
-          "url": "https://news.ycombinator.com/item?id=47910232",
-          "created_at": "2026-04-26T13:36:29Z"
-        },
-        {
-          "title": "Show HN: Prefab – A generative UI framework for Python",
-          "points": 5,
-          "comments": 0,
-          "url": "https://news.ycombinator.com/item?id=47697566",
-          "created_at": "2026-04-08T23:37:49Z"
-        }
-      ],
-      "hn_score": 5,
-      "hn_url": "https://news.ycombinator.com/item?id=47910232",
-      "scores": {
-        "stars_growth": 26.396877181105157,
-        "hn_heat": 18.602831576401194,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 15.2,
-        "is_treasure": false
-      },
-      "heat_score": 15.2
-    },
-    {
-      "owner": "googleapis",
-      "name": "mcp-toolbox",
-      "full_name": "googleapis/mcp-toolbox",
-      "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
-      "language": "Go",
-      "stars": 15084,
-      "forks": 1520,
-      "topics": [
-        "agent",
-        "agents",
-        "ai",
-        "bigquery",
-        "clickhouse",
-        "cockroachdb",
-        "database",
-        "elasticsearch",
-        "firestore",
-        "genai",
-        "llm",
-        "mcp",
-        "mongodb",
-        "mysql",
-        "oracle",
-        "postgresql",
-        "redis",
-        "server",
-        "spanner",
-        "tidb"
-      ],
-      "created_at": "2024-06-07T20:52:54Z",
-      "updated_at": "2026-05-09T12:48:31Z",
-      "url": "https://github.com/googleapis/mcp-toolbox",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp,ai,agent",
-        "desc:mcp"
-      ],
-      "hn_points": 2,
-      "hn_comments": 1,
-      "hn_stories": [
-        {
-          "title": "Google: MCP Toolbox",
-          "points": 2,
-          "comments": 1,
-          "url": "https://news.ycombinator.com/item?id=47717241",
-          "created_at": "2026-04-10T12:41:05Z"
-        }
-      ],
-      "hn_score": 2,
-      "hn_url": "https://news.ycombinator.com/item?id=47717241",
-      "scores": {
-        "stars_growth": 25.07125011056377,
-        "hn_heat": 13.131626527250981,
-        "reddit_heat": 0,
-        "topic_potential": 9,
-        "total": 14.7,
-        "is_treasure": false
-      },
-      "heat_score": 14.7
-    },
-    {
-      "owner": "AstrBotDevs",
-      "name": "AstrBot",
-      "full_name": "AstrBotDevs/AstrBot",
-      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
-      "language": "Python",
-      "stars": 31704,
-      "forks": 2190,
-      "topics": [
-        "agent",
-        "ai",
-        "chatbot",
-        "chatgpt",
-        "discord",
-        "docker",
-        "gemini",
-        "gpt",
-        "llama",
-        "llm",
-        "mcp",
-        "openai",
-        "python",
-        "qq",
-        "qqbot",
-        "telegram"
-      ],
-      "created_at": "2022-12-08T13:27:46Z",
-      "updated_at": "2026-05-09T13:25:05Z",
-      "url": "https://github.com/AstrBotDevs/AstrBot",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:openai,llm,chatgpt",
-        "desc:ai agent",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 8,
-        "avg_reactions": 0.1
-      },
-      "scores": {
-        "stars_growth": 27.006743087496172,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 25,
-        "total": 14.6,
-        "is_treasure": false
-      },
-      "heat_score": 14.6
-    },
-    {
-      "owner": "langchain-ai",
-      "name": "langchain",
-      "full_name": "langchain-ai/langchain",
-      "description": "The agent engineering platform. Available in TypeScript!",
-      "language": "Python",
-      "stars": 136229,
-      "forks": 22515,
-      "topics": [
-        "agents",
-        "ai",
         "ai-agents",
-        "anthropic",
-        "chatgpt",
-        "deepagents",
-        "enterprise",
-        "framework",
-        "gemini",
-        "generative-ai",
-        "langchain",
-        "langgraph",
-        "llm",
-        "multiagent",
-        "open-source",
-        "openai",
-        "pydantic",
-        "python",
-        "rag",
-        "typescript"
-      ],
-      "created_at": "2022-10-17T02:58:36Z",
-      "updated_at": "2026-05-09T13:24:09Z",
-      "url": "https://github.com/langchain-ai/langchain",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:openai,llm,chatgpt",
-        "desc:agent",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 3,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 30.0,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 10,
-        "total": 13.5,
-        "is_treasure": false
-      },
-      "heat_score": 13.5
-    },
-    {
-      "owner": "huggingface",
-      "name": "transformers",
-      "full_name": "huggingface/transformers",
-      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
-      "language": "Python",
-      "stars": 160413,
-      "forks": 33147,
-      "topics": [
-        "audio",
-        "deep-learning",
-        "deepseek",
-        "gemma",
-        "glm",
-        "hacktoberfest",
-        "llm",
-        "machine-learning",
-        "model-hub",
-        "natural-language-processing",
-        "nlp",
-        "pretrained-models",
-        "python",
-        "pytorch",
-        "pytorch-transformers",
-        "qwen",
-        "speech-recognition",
-        "transformer",
-        "vlm"
-      ],
-      "created_at": "2018-10-29T13:56:00Z",
-      "updated_at": "2026-05-09T13:30:15Z",
-      "url": "https://github.com/huggingface/transformers",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:deep-learning,llm,natural-language-processing",
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 3,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 30.0,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 10,
-        "total": 13.5,
-        "is_treasure": false
-      },
-      "heat_score": 13.5
-    },
-    {
-      "owner": "elizaOS",
-      "name": "eliza",
-      "full_name": "elizaOS/eliza",
-      "description": "Autonomous agents for everyone",
-      "language": "TypeScript",
-      "stars": 18331,
-      "forks": 5522,
-      "topics": [
-        "agent",
-        "agentic",
-        "ai",
-        "autonomous",
-        "chatbot",
-        "crypto",
-        "discord",
-        "eliza",
-        "elizaos",
-        "framework",
-        "plugins",
-        "rag",
-        "slack",
-        "swarm",
-        "telegram"
-      ],
-      "created_at": "2024-07-09T07:55:40Z",
-      "updated_at": "2026-05-09T13:03:51Z",
-      "url": "https://github.com/elizaOS/eliza",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:rag,ai,agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 6,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 25.579236873704726,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 21,
-        "total": 13.4,
-        "is_treasure": false
-      },
-      "heat_score": 13.4
-    },
-    {
-      "owner": "TransformerOptimus",
-      "name": "SuperAGI",
-      "full_name": "TransformerOptimus/SuperAGI",
-      "description": "<⚡️> SuperAGI - A dev-first open source autonomous AI agent framework. Enabling developers to build, manage & run useful autonomous agents quickly and reliably.",
-      "language": "Python",
-      "stars": 17513,
-      "forks": 2209,
-      "topics": [
-        "agents",
-        "agi",
-        "ai",
-        "artificial-general-intelligence",
-        "artificial-intelligence",
-        "autonomous-agents",
-        "gpt-4",
-        "hacktoberfest",
-        "llm",
-        "llmops",
-        "nextjs",
-        "openai",
-        "pinecone",
-        "python",
-        "superagi"
-      ],
-      "created_at": "2023-05-13T08:55:24Z",
-      "updated_at": "2026-05-09T07:38:57Z",
-      "url": "https://github.com/TransformerOptimus/SuperAGI",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:openai,artificial-intelligence,ai",
-        "desc:ai agent",
-        "lang:Python"
-      ],
-      "hn_points": 2,
-      "hn_comments": 0,
-      "hn_stories": [
-        {
-          "title": "The first 25 years of the Northwestern University SuperAging Program",
-          "points": 2,
-          "comments": 0,
-          "url": "https://news.ycombinator.com/item?id=47883166",
-          "created_at": "2026-04-23T22:42:11Z"
-        }
-      ],
-      "hn_score": 2,
-      "hn_url": "https://news.ycombinator.com/item?id=47883166",
-      "issues_activity": {
-        "recent_issues": 2,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 25.460289957813647,
-        "hn_heat": 8.671654836659334,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 13.3,
-        "is_treasure": false
-      },
-      "heat_score": 13.3
-    },
-    {
-      "owner": "FoundationAgents",
-      "name": "MetaGPT",
-      "full_name": "FoundationAgents/MetaGPT",
-      "description": "🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",
-      "language": "Python",
-      "stars": 67823,
-      "forks": 8631,
-      "topics": [
-        "agent",
-        "gpt",
-        "llm",
-        "metagpt",
-        "multi-agent"
-      ],
-      "created_at": "2023-06-30T09:04:55Z",
-      "updated_at": "2026-05-09T12:31:23Z",
-      "url": "https://github.com/FoundationAgents/MetaGPT",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:gpt,agent,llm",
-        "desc:agent",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 4,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 28.98827521657483,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 12.5,
-        "is_treasure": false
-      },
-      "heat_score": 12.5
-    },
-    {
-      "owner": "QuivrHQ",
-      "name": "quivr",
-      "full_name": "QuivrHQ/quivr",
-      "description": "Opiniated RAG for integrating GenAI in your apps 🧠   Focus on your product rather than the RAG. Easy integration in existing products with customisation!  Any LLM: GPT4, Groq, Llama. Any Vectorstore: PGVector, Faiss. Any Files. Anyway you want.",
-      "language": "Python",
-      "stars": 39139,
-      "forks": 3751,
-      "topics": [
-        "ai",
-        "api",
-        "chatbot",
-        "chatgpt",
-        "database",
-        "docker",
-        "framework",
-        "frontend",
-        "groq",
-        "html",
-        "javascript",
-        "llm",
-        "openai",
-        "postgresql",
-        "privacy",
-        "rag",
-        "react",
-        "security",
-        "typescript",
-        "vector"
-      ],
-      "created_at": "2023-05-12T23:53:30Z",
-      "updated_at": "2026-05-09T09:51:51Z",
-      "url": "https://github.com/QuivrHQ/quivr",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:openai,llm,chatgpt",
-        "desc:llm",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 27.555700993473792,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 9,
-        "total": 12.4,
-        "is_treasure": false
-      },
-      "heat_score": 12.4
-    },
-    {
-      "owner": "langchain4j",
-      "name": "langchain4j",
-      "full_name": "langchain4j/langchain4j",
-      "description": "LangChain4j is an idiomatic, open-source Java library for building LLM-powered applications on the JVM. It offers a unified API over popular LLM providers and vector stores, and makes implementing tool calling (including MCP support), agents and RAG easy. It integrates seamlessly with enterprise Java frameworks like Quarkus and Spring Boot.",
-      "language": "Java",
-      "stars": 11915,
-      "forks": 2208,
-      "topics": [
-        "anthropic",
-        "chatgpt",
-        "chroma",
-        "embeddings",
-        "gemini",
-        "gpt",
-        "huggingface",
-        "java",
-        "langchain",
-        "llama",
-        "llm",
-        "llms",
-        "milvus",
-        "ollama",
-        "onnx",
-        "openai",
-        "openai-api",
-        "pgvector",
-        "pinecone",
-        "vector-database"
-      ],
-      "created_at": "2023-06-20T15:30:29Z",
-      "updated_at": "2026-05-09T11:18:41Z",
-      "url": "https://github.com/langchain4j/langchain4j",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:openai,embeddings,chatgpt",
-        "desc:llm"
-      ],
-      "hn_points": 2,
-      "hn_comments": 0,
-      "hn_stories": [
-        {
-          "title": "A Simple Coding Agent in a Loop with LangChain4j, Jbang, and Gemini",
-          "points": 2,
-          "comments": 0,
-          "url": "https://news.ycombinator.com/item?id=47740244",
-          "created_at": "2026-04-12T14:38:25Z"
-        }
-      ],
-      "hn_score": 2,
-      "hn_url": "https://news.ycombinator.com/item?id=47740244",
-      "scores": {
-        "stars_growth": 24.456761724490928,
-        "hn_heat": 8.671654836659334,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 12.4,
-        "is_treasure": false
-      },
-      "heat_score": 12.4
-    },
-    {
-      "owner": "langchain-ai",
-      "name": "langgraph",
-      "full_name": "langchain-ai/langgraph",
-      "description": "Build resilient language agents as graphs. Available in TypeScript!",
-      "language": "Python",
-      "stars": 31602,
-      "forks": 5369,
-      "topics": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "chatgpt",
-        "deepagents",
-        "enterprise",
-        "framework",
-        "gemini",
-        "generative-ai",
-        "langchain",
-        "langgraph",
-        "llm",
-        "multiagent",
-        "open-source",
-        "openai",
-        "pydantic",
-        "python",
-        "rag"
-      ],
-      "created_at": "2023-08-09T18:33:12Z",
-      "updated_at": "2026-05-09T13:34:05Z",
-      "url": "https://github.com/langchain-ai/langgraph",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:openai,llm,chatgpt",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
-      },
-      "scores": {
-        "stars_growth": 26.99834641655255,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 10,
-        "total": 12.3,
-        "is_treasure": false
-      },
-      "heat_score": 12.3
-    },
-    {
-      "owner": "punkpeye",
-      "name": "awesome-mcp-servers",
-      "full_name": "punkpeye/awesome-mcp-servers",
-      "description": "A collection of MCP servers.",
-      "language": "",
-      "stars": 86535,
-      "forks": 9991,
-      "topics": [
-        "ai",
-        "mcp"
-      ],
-      "created_at": "2024-11-30T04:49:10Z",
-      "updated_at": "2026-05-09T13:23:16Z",
-      "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp,ai",
-        "desc:mcp"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 29.62315516998052,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 12.3,
-        "is_treasure": false
-      },
-      "heat_score": 12.3
-    },
-    {
-      "owner": "run-llama",
-      "name": "llama_index",
-      "full_name": "run-llama/llama_index",
-      "description": "LlamaIndex is the leading document agent and OCR platform",
-      "language": "Python",
-      "stars": 49258,
-      "forks": 7373,
-      "topics": [
-        "agents",
-        "application",
-        "data",
-        "fine-tuning",
-        "framework",
-        "llamaindex",
-        "llm",
-        "multi-agents",
-        "rag",
-        "vector-database"
-      ],
-      "created_at": "2022-11-02T04:24:54Z",
-      "updated_at": "2026-05-09T11:45:24Z",
-      "url": "https://github.com/run-llama/llama_index",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:fine-tuning,vector-database,rag",
-        "desc:agent",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 28.154889091346245,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 12.2,
-        "is_treasure": false
-      },
-      "heat_score": 12.2
-    },
-    {
-      "owner": "deepset-ai",
-      "name": "haystack",
-      "full_name": "deepset-ai/haystack",
-      "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems.",
-      "language": "MDX",
-      "stars": 25132,
-      "forks": 2773,
-      "topics": [
-        "agent",
-        "agents",
-        "ai",
-        "gemini",
-        "generative-ai",
-        "gpt-4",
-        "information-retrieval",
-        "large-language-models",
-        "llm",
-        "machine-learning",
-        "nlp",
-        "orchestration",
-        "python",
-        "pytorch",
-        "question-answering",
-        "rag",
-        "retrieval-augmented-generation",
-        "semantic-search",
-        "summarization",
-        "transformers"
-      ],
-      "created_at": "2019-11-14T09:05:28Z",
-      "updated_at": "2026-05-09T12:43:25Z",
-      "url": "https://github.com/deepset-ai/haystack",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:llm,nlp,machine-learning",
-        "desc:llm"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 2,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 26.401443055541495,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 10,
-        "total": 12.1,
-        "is_treasure": false
-      },
-      "heat_score": 12.1
-    },
-    {
-      "owner": "microsoft",
-      "name": "autogen",
-      "full_name": "microsoft/autogen",
-      "description": "A programming framework for agentic AI",
-      "language": "Python",
-      "stars": 57853,
-      "forks": 8728,
-      "topics": [
-        "agentic",
-        "agentic-agi",
-        "agents",
-        "ai",
-        "autogen",
-        "autogen-ecosystem",
-        "chatgpt",
-        "framework",
-        "llm-agent",
-        "llm-framework"
-      ],
-      "created_at": "2023-08-18T11:43:45Z",
-      "updated_at": "2026-05-09T13:31:04Z",
-      "url": "https://github.com/microsoft/autogen",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:ai,chatgpt",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 2,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 28.57397552861098,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 11.9,
-        "is_treasure": false
-      },
-      "heat_score": 11.9
-    },
-    {
-      "owner": "fighting41love",
-      "name": "funNLP",
-      "full_name": "fighting41love/funNLP",
-      "description": "中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库、同义词库、反义词库、否定词库、汽车品牌词库、汽车零件词库、连续英文切割、各种中文词向量、公司名字大全、古诗词库、IT词库、财经词库、成语词库、地名词库、历史名人词库、诗词词库、医学词库、饮食词库、法律词库、汽车词库、动物词库、中文聊天语料、中文谣言数据、百度中文问答数据集、句子相似度匹配算法集合、bert资源、文本生成&摘要相关工具、cocoNLP信息抽取工具、国内电话号码正则匹配、清华大学XLORE:中英文跨语言百科知识图谱、清华大学人工智能技术系列报告、自然语言生成、NLU太难了系列、自动对联数据及机器人、用户名黑名单列表、罪名法务名词及分类模型、微信公众号语料、cs224n深度学习自然语言处理课程、中文手写汉字识别、中文自然语言处理 语料/数据集、变量命名神器、分词语料库+代码、任务型对话英文数据集、ASR 语音数据集 + 基于深度学习的中文语音识别系统、笑声检测器、Microsoft多语言数字/单位/如日期时间识别包、中华新华字典数据库及api(包括常用歇后语、成语、词语和汉字)、文档图谱自动生成、SpaCy 中文模型、Common Voice语音识别数据集新版、神经网络关系抽取、基于bert的命名实体识别、关键词(Keyphrase)抽取包pke、基于医疗领域知识图谱的问答系统、基于依存句法与语义角色标注的事件三元组抽取、依存句法分析4万句高质量标注数据、cnocr：用来做中文OCR的Python3包、中文人物关系知识图谱项目、中文nlp竞赛项目及代码汇总、中文字符数据、speech-aligner: 从“人声语音”及其“语言文本”产生音素级别时间对齐标注的工具、AmpliGraph: 知识图谱表示学习(Python)库：知识图谱概念链接预测、Scattertext 文本可视化(python)、语言/知识表示工具：BERT & ERNIE、中文对比英文自然语言处理NLP的区别综述、Synonyms中文近义词工具包、HarvestText领域自适应文本挖掘工具（新词发现-情感分析-实体链接等）、word2word：(Python)方便易用的多语言词-词对集：62种语言/3,564个多语言对、语音识别语料生成工具：从具有音频/字幕的在线视频创建自动语音识别(ASR)语料库、构建医疗实体识别的模型（包含词典和语料标注）、单文档非监督的关键词抽取、Kashgari中使用gpt-2语言模型、开源的金融投资数据提取工具、文本自动摘要库TextTeaser: 仅支持英文、人民日报语料处理工具集、一些关于自然语言的基本模型、基于14W歌曲知识库的问答尝试--功能包括歌词接龙and已知歌词找歌曲以及歌曲歌手歌词三角关系的问答、基于Siamese bilstm模型的相似句子判定模型并提供训练数据集和测试数据集、用Transformer编解码模型实现的根据Hacker News文章标题自动生成评论、用BERT进行序列标记和文本分类的模板代码、LitBank：NLP数据集——支持自然语言处理和计算人文学科任务的100部带标记英文小说语料、百度开源的基准信息抽取系统、虚假新闻数据集、Facebook: LAMA语言模型分析，提供Transformer-XL/BERT/ELMo/GPT预训练语言模型的统一访问接口、CommonsenseQA：面向常识的英文QA挑战、中文知识图谱资料、数据及工具、各大公司内部里大牛分享的技术文档 PDF 或者 PPT、自然语言生成SQL语句（英文）、中文NLP数据增强（EDA）工具、英文NLP数据增强工具 、基于医药知识图谱的智能问答系统、京东商品知识图谱、基于mongodb存储的军事领域知识图谱问答项目、基于远监督的中文关系抽取、语音情感分析、中文ULMFiT-情感分析-文本分类-语料及模型、一个拍照做题程序、世界各国大规模人名库、一个利用有趣中文语料库 qingyun 训练出来的中文聊天机器人、中文聊天机器人seqGAN、省市区镇行政区划数据带拼音标注、教育行业新闻语料库包含自动文摘功能、开放了对话机器人-知识图谱-语义理解-自然语言处理工具及数据、中文知识图谱：基于百度百科中文页面-抽取三元组信息-构建中文知识图谱、masr: 中文语音识别-提供预训练模型-高识别率、Python音频数据增广库、中文全词覆盖BERT及两份阅读理解数据、ConvLab：开源多域端到端对话系统平台、中文自然语言处理数据集、基于最新版本rasa搭建的对话系统、基于TensorFlow和BERT的管道式实体及关系抽取、一个小型的证券知识图谱/知识库、复盘所有NLP比赛的TOP方案、OpenCLaP：多领域开源中文预训练语言模型仓库、UER：基于不同语料+编码器+目标任务的中文预训练模型仓库、中文自然语言处理向量合集、基于金融-司法领域(兼有闲聊性质)的聊天机器人、g2pC：基于上下文的汉语读音自动标记模块、Zincbase 知识图谱构建工具包、诗歌质量评价/细粒度情感诗歌语料库、快速转化「中文数字」和「阿拉伯数字」、百度知道问答语料库、基于知识图谱的问答系统、jieba_fast 加速版的jieba、正则表达式教程、中文阅读理解数据集、基于BERT等最新语言模型的抽取式摘要提取、Python利用深度学习进行文本摘要的综合指南、知识图谱深度学习相关资料整理、维基大规模平行文本语料、StanfordNLP 0.2.0：纯Python版自然语言处理包、NeuralNLP-NeuralClassifier：腾讯开源深度学习文本分类工具、端到端的封闭域对话系统、中文命名实体识别：NeuroNER vs. BertNER、新闻事件线索抽取、2019年百度的三元组抽取比赛：“科学空间队”源码、基于依存句法的开放域文本知识三元组抽取和知识库构建、中文的GPT2训练代码、ML-NLP - 机器学习(Machine Learning)NLP面试中常考到的知识点和代码实现、nlp4han:中文自然语言处理工具集(断句/分词/词性标注/组块/句法分析/语义分析/NER/N元语法/HMM/代词消解/情感分析/拼写检查、XLM：Facebook的跨语言预训练语言模型、用基于BERT的微调和特征提取方法来进行知识图谱百度百科人物词条属性抽取、中文自然语言处理相关的开放任务-数据集-当前最佳结果、CoupletAI - 基于CNN+Bi-LSTM+Attention 的自动对对联系统、抽象知识图谱、MiningZhiDaoQACorpus - 580万百度知道问答数据挖掘项目、brat rapid annotation tool: 序列标注工具、大规模中文知识图谱数据：1.4亿实体、数据增强在机器翻译及其他nlp任务中的应用及效果、allennlp阅读理解:支持多种数据和模型、PDF表格数据提取工具 、 Graphbrain：AI开源软件库和科研工具，目的是促进自动意义提取和文本理解以及知识的探索和推断、简历自动筛选系统、基于命名实体识别的简历自动摘要、中文语言理解测评基准，包括代表性的数据集&基准模型&语料库&排行榜、树洞 OCR 文字识别 、从包含表格的扫描图片中识别表格和文字、语声迁移、Python口语自然语言处理工具集(英文)、 similarity：相似度计算工具包，java编写、海量中文预训练ALBERT模型 、Transformers 2.0 、基于大规模音频数据集Audioset的音频增强 、Poplar：网页版自然语言标注工具、图片文字去除，可用于漫画翻译 、186种语言的数字叫法库、Amazon发布基于知识的人-人开放领域对话数据集 、中文文本纠错模块代码、繁简体转换 、 Python实现的多种文本可读性评价指标、类似于人名/地名/组织机构名的命名体识别数据集 、东南大学《知识图谱》研究生课程(资料)、. 英文拼写检查库 、 wwsearch是企业微信后台自研的全文检索引擎、CHAMELEON：深度学习新闻推荐系统元架构 、 8篇论文梳理BERT相关模型进展与反思、DocSearch：免费文档搜索引擎、 LIDA：轻量交互式对话标注工具 、aili - the fastest in-memory index in the East 东半球最快并发索引 、知识图谱车音工作项目、自然语言生成资源大全 、中日韩分词库mecab的Python接口库、中文文本摘要/关键词提取、汉字字符特征提取器 (featurizer)，提取汉字的特征（发音特征、字形特征）用做深度学习的特征、中文生成任务基准测评 、中文缩写数据集、中文任务基准测评 - 代表性的数据集-基准(预训练)模型-语料库-baseline-工具包-排行榜、PySS3：面向可解释AI的SS3文本分类器机器可视化工具 、中文NLP数据集列表、COPE - 格律诗编辑程序、doccano：基于网页的开源协同多语言文本标注工具 、PreNLP：自然语言预处理库、简单的简历解析器，用来从简历中提取关键信息、用于中文闲聊的GPT2模型：GPT2-chitchat、基于检索聊天机器人多轮响应选择相关资源列表(Leaderboards、Datasets、Papers)、(Colab)抽象文本摘要实现集锦(教程 、词语拼音数据、高效模糊搜索工具、NLP数据增广资源集、微软对话机器人框架 、 GitHub Typo Corpus：大规模GitHub多语言拼写错误/语法错误数据集、TextCluster：短文本聚类预处理模块 Short text cluster、面向语音识别的中文文本规范化、BLINK：最先进的实体链接库、BertPunc：基于BERT的最先进标点修复模型、Tokenizer：快速、可定制的文本词条化库、中文语言理解测评基准，包括代表性的数据集、基准(预训练)模型、语料库、排行榜、spaCy 医学文本挖掘与信息提取 、 NLP任务示例项目代码集、 python拼写检查库、chatbot-list - 行业内关于智能客服、聊天机器人的应用和架构、算法分享和介绍、语音质量评价指标(MOSNet, BSSEval, STOI, PESQ, SRMR)、 用138GB语料训练的法文RoBERTa预训练语言模型 、BERT-NER-Pytorch：三种不同模式的BERT中文NER实验、无道词典 - 有道词典的命令行版本，支持英汉互查和在线查询、2019年NLP亮点回顾、 Chinese medical dialogue data 中文医疗对话数据集 、最好的汉字数字(中文数字)-阿拉伯数字转换工具、 基于百科知识库的中文词语多词义/义项获取与特定句子词语语义消歧、awesome-nlp-sentiment-analysis - 情感分析、情绪原因识别、评价对象和评价词抽取、LineFlow：面向所有深度学习框架的NLP数据高效加载器、中文医学NLP公开资源整理 、MedQuAD：(英文)医学问答数据集、将自然语言数字串解析转换为整数和浮点数、Transfer Learning in Natural Language Processing (NLP) 、面向语音识别的中文/英文发音辞典、Tokenizers：注重性能与多功能性的最先进分词器、CLUENER 细粒度命名实体识别 Fine Grained Named Entity Recognition、 基于BERT的中文命名实体识别、中文谣言数据库、NLP数据集/基准任务大列表、nlp相关的一些论文及代码, 包括主题模型、词向量(Word Embedding)、命名实体识别(NER)、文本分类(Text Classificatin)、文本生成(Text Generation)、文本相似性(Text Similarity)计算等，涉及到各种与nlp相关的算法，基于keras和tensorflow 、Python文本挖掘/NLP实战示例、 Blackstone：面向非结构化法律文本的spaCy pipeline和NLP模型通过同义词替换实现文本“变脸” 、中文 预训练 ELECTREA 模型: 基于对抗学习 pretrain Chinese Model 、albert-chinese-ner - 用预训练语言模型ALBERT做中文NER 、基于GPT2的特定主题文本生成/文本增广、开源预训练语言模型合集、多语言句向量包、编码、标记和实现：一种可控高效的文本生成方法、 英文脏话大列表 、attnvis：GPT2、BERT等transformer语言模型注意力交互可视化、CoVoST：Facebook发布的多语种语音-文本翻译语料库，包括11种语言(法语、德语、荷兰语、俄语、西班牙语、意大利语、土耳其语、波斯语、瑞典语、蒙古语和中文)的语音、文字转录及英文译文、Jiagu自然语言处理工具 - 以BiLSTM等模型为基础，提供知识图谱关系抽取 中文分词 词性标注 命名实体识别 情感分析 新词发现 关键词 文本摘要 文本聚类等功能、用unet实现对文档表格的自动检测，表格重建、NLP事件提取文献资源列表 、 金融领域自然语言处理研究资源大列表、CLUEDatasetSearch - 中英文NLP数据集：搜索所有中文NLP数据集，附常用英文NLP数据集 、medical_NER - 中文医学知识图谱命名实体识别 、(哈佛)讲因果推理的免费书、知识图谱相关学习资料/数据集/工具资源大列表、Forte：灵活强大的自然语言处理pipeline工具集 、Python字符串相似性算法库、PyLaia：面向手写文档分析的深度学习工具包、TextFooler：针对文本分类/推理的对抗文本生成模块、Haystack：灵活、强大的可扩展问答(QA)框架、中文关键短语抽取工具",
-      "language": "Python",
-      "stars": 80534,
-      "forks": 15199,
-      "topics": [],
-      "created_at": "2018-08-21T11:20:39Z",
-      "updated_at": "2026-05-09T13:24:43Z",
-      "url": "https://github.com/fighting41love/funNLP",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 29.435882410558747,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 11.8,
-        "is_treasure": false
-      },
-      "heat_score": 11.8
-    },
-    {
-      "owner": "crewAIInc",
-      "name": "crewAI",
-      "full_name": "crewAIInc/crewAI",
-      "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
-      "language": "Python",
-      "stars": 50981,
-      "forks": 7048,
-      "topics": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "aiagentframework",
-        "llms"
-      ],
-      "created_at": "2023-10-27T03:26:59Z",
-      "updated_at": "2026-05-09T13:31:53Z",
-      "url": "https://github.com/crewAIInc/crewAI",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:ai",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 1,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 28.24447667910219,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 11.7,
-        "is_treasure": false
-      },
-      "heat_score": 11.7
-    },
-    {
-      "owner": "awslabs",
-      "name": "mcp",
-      "full_name": "awslabs/mcp",
-      "description": "Open source MCP Servers for AWS",
-      "language": "Python",
-      "stars": 9008,
-      "forks": 1510,
-      "topics": [
-        "aws",
-        "mcp",
-        "mcp-client",
-        "mcp-clients",
-        "mcp-host",
-        "mcp-server",
-        "mcp-servers",
-        "mcp-tools",
-        "modelcontextprotocol"
-      ],
-      "created_at": "2025-03-21T00:39:00Z",
-      "updated_at": "2026-05-09T11:26:01Z",
-      "url": "https://github.com/awslabs/mcp",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp",
-        "desc:mcp",
-        "lang:Python"
-      ],
-      "hn_points": 2,
-      "hn_comments": 0,
-      "hn_stories": [
-        {
-          "title": "Rapidly Scaffold Agents, MCP Servers, APIs, Websites on AWS",
-          "points": 2,
-          "comments": 0,
-          "url": "https://news.ycombinator.com/item?id=47737710",
-          "created_at": "2026-04-12T09:41:09Z"
-        }
-      ],
-      "hn_score": 2,
-      "hn_url": "https://news.ycombinator.com/item?id=47737710",
-      "scores": {
-        "stars_growth": 23.728038911702182,
-        "hn_heat": 8.671654836659334,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 11.7,
-        "is_treasure": false
-      },
-      "heat_score": 11.7
-    },
-    {
-      "owner": "openai",
-      "name": "openai-agents-python",
-      "full_name": "openai/openai-agents-python",
-      "description": "A lightweight, powerful framework for multi-agent workflows",
-      "language": "Python",
-      "stars": 26100,
-      "forks": 4005,
-      "topics": [
-        "agents",
-        "ai",
-        "framework",
-        "llm",
-        "openai",
-        "python"
-      ],
-      "created_at": "2025-03-11T03:42:36Z",
-      "updated_at": "2026-05-09T13:09:55Z",
-      "url": "https://github.com/openai/openai-agents-python",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:openai,ai,llm",
-        "desc:agent",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 4,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 26.499919862506214,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 11.5,
-        "is_treasure": false
-      },
-      "heat_score": 11.5
-    },
-    {
-      "owner": "pathwaycom",
-      "name": "pathway",
-      "full_name": "pathwaycom/pathway",
-      "description": "Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.",
-      "language": "Python",
-      "stars": 63293,
-      "forks": 1636,
-      "topics": [
-        "batch-processing",
-        "data-analytics",
-        "data-pipelines",
-        "data-processing",
-        "dataflow",
-        "etl",
-        "etl-framework",
-        "iot-analytics",
-        "kafka",
-        "machine-learning-algorithms",
-        "pathway",
-        "python",
-        "real-time",
-        "rust",
-        "stream-processing",
-        "streaming",
-        "time-series-analysis"
-      ],
-      "created_at": "2022-11-27T13:01:14Z",
-      "updated_at": "2026-05-09T13:16:50Z",
-      "url": "https://github.com/pathwaycom/pathway",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:llm",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
-      },
-      "scores": {
-        "stars_growth": 28.808150233958944,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 11.5,
-        "is_treasure": false
-      },
-      "heat_score": 11.5
-    },
-    {
-      "owner": "mastra-ai",
-      "name": "mastra",
-      "full_name": "mastra-ai/mastra",
-      "description": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
-      "language": "TypeScript",
-      "stars": 23709,
-      "forks": 2035,
-      "topics": [
-        "agents",
-        "ai",
-        "chatbots",
-        "evals",
-        "javascript",
-        "llm",
-        "mcp",
-        "nextjs",
-        "nodejs",
-        "reactjs",
-        "tts",
-        "typescript",
-        "workflows"
-      ],
-      "created_at": "2024-08-06T20:44:31Z",
-      "updated_at": "2026-05-09T12:13:13Z",
-      "url": "https://github.com/mastra-ai/mastra",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp,ai,llm",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 4,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 26.24956652389934,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 11.4,
-        "is_treasure": false
-      },
-      "heat_score": 11.4
-    },
-    {
-      "owner": "neuml",
-      "name": "txtai",
-      "full_name": "neuml/txtai",
-      "description": "💡 All-in-one AI framework for semantic search, LLM orchestration and language model workflows",
-      "language": "Python",
-      "stars": 12478,
-      "forks": 809,
-      "topics": [
-        "agents",
-        "ai",
-        "ai-agents",
-        "embeddings",
-        "information-retrieval",
-        "language-model",
-        "large-language-models",
-        "llm",
-        "nlp",
-        "python",
-        "rag",
-        "retrieval-augmented-generation",
-        "search",
-        "search-engine",
-        "semantic-search",
-        "sentence-embeddings",
-        "transformers",
-        "txtai",
-        "vector-database",
-        "vector-search"
-      ],
-      "created_at": "2020-08-09T19:14:59Z",
-      "updated_at": "2026-05-09T03:01:03Z",
-      "url": "https://github.com/neuml/txtai",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:llm,embeddings,vector-database",
-        "desc:llm",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 24.577057361034743,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 10,
-        "total": 11.3,
-        "is_treasure": false
-      },
-      "heat_score": 11.3
-    },
-    {
-      "owner": "humanlayer",
-      "name": "12-factor-agents",
-      "full_name": "humanlayer/12-factor-agents",
-      "description": "What are the principles we can use to build LLM-powered software that is actually good enough to put in the hands of production customers?",
-      "language": "TypeScript",
-      "stars": 19708,
-      "forks": 1493,
-      "topics": [
-        "12-factor",
-        "12-factor-agents",
-        "agents",
-        "ai",
-        "context-window",
-        "framework",
-        "llms",
-        "memory",
-        "orchestration",
-        "prompt-engineering",
-        "rag"
-      ],
-      "created_at": "2025-03-30T22:10:39Z",
-      "updated_at": "2026-05-09T13:30:10Z",
-      "url": "https://github.com/humanlayer/12-factor-agents",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:prompt-engineering,rag,ai",
-        "desc:llm",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 1,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 25.767965155342804,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 11.2,
-        "is_treasure": false
-      },
-      "heat_score": 11.2
-    },
-    {
-      "owner": "sgl-project",
-      "name": "sglang",
-      "full_name": "sgl-project/sglang",
-      "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
-      "language": "Python",
-      "stars": 27548,
-      "forks": 5796,
-      "topics": [
-        "attention",
-        "blackwell",
-        "cuda",
-        "deepseek",
-        "diffusion",
-        "glm",
-        "gpt-oss",
-        "inference",
-        "llama",
-        "llm",
-        "minimax",
-        "moe",
-        "qwen",
-        "qwen-image",
-        "reinforcement-learning",
-        "transformer",
-        "vlm",
-        "wan"
-      ],
-      "created_at": "2024-01-08T04:15:52Z",
-      "updated_at": "2026-05-09T13:28:41Z",
-      "url": "https://github.com/sgl-project/sglang",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:llama,inference,transformer",
-        "desc:multimodal",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 26.640611894594176,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 11.1,
-        "is_treasure": false
-      },
-      "heat_score": 11.1
-    },
-    {
-      "owner": "zai-org",
-      "name": "Open-AutoGLM",
-      "full_name": "zai-org/Open-AutoGLM",
-      "description": "An Open Phone Agent Model & Framework. Unlocking the AI Phone for Everyone",
-      "language": "Python",
-      "stars": 25228,
-      "forks": 3939,
-      "topics": [
-        "agent",
-        "phone-use-agent"
-      ],
-      "created_at": "2025-12-08T09:23:44Z",
-      "updated_at": "2026-05-09T11:15:25Z",
-      "url": "https://github.com/zai-org/Open-AutoGLM",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:agent",
-        "desc:agent",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "issues_activity": {
-        "recent_issues": 1,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 26.411377280047386,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 11.0,
-        "is_treasure": false
-      },
-      "heat_score": 11.0
-    },
-    {
-      "owner": "microsoft",
-      "name": "BitNet",
-      "full_name": "microsoft/BitNet",
-      "description": "Official inference framework for 1-bit LLMs",
-      "language": "Python",
-      "stars": 38906,
-      "forks": 3537,
-      "topics": [],
-      "created_at": "2024-08-05T09:07:38Z",
-      "updated_at": "2026-05-09T12:48:44Z",
-      "url": "https://github.com/microsoft/BitNet",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:inference",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 27.540142548893584,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 11.0,
-        "is_treasure": false
-      },
-      "heat_score": 11.0
-    },
-    {
-      "owner": "microsoft",
-      "name": "playwright-mcp",
-      "full_name": "microsoft/playwright-mcp",
-      "description": "Playwright MCP server",
-      "language": "TypeScript",
-      "stars": 32247,
-      "forks": 2647,
-      "topics": [
-        "mcp",
-        "playwright"
-      ],
-      "created_at": "2025-03-21T17:48:36Z",
-      "updated_at": "2026-05-09T13:32:54Z",
-      "url": "https://github.com/microsoft/playwright-mcp",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp",
-        "desc:mcp",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 27.050993214793284,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 10.8,
-        "is_treasure": false
-      },
-      "heat_score": 10.8
-    },
-    {
-      "owner": "casdoor",
-      "name": "casdoor",
-      "full_name": "casdoor/casdoor",
-      "description": "An open-source Agent-first Identity and Access Management (IAM) /LLM MCP & agent gateway and auth server with web UI supporting OpenClaw, MCP, OAuth, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, TOTP, MFA, Face ID, Google Workspace, Azure AD",
-      "language": "Go",
-      "stars": 13574,
-      "forks": 1672,
-      "topics": [
-        "agent",
-        "agentic-ai",
-        "agi",
         "ai-gateway",
-        "auth",
-        "authentication",
-        "iam",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "cline",
+        "codex",
+        "copilot",
+        "cursor",
+        "deepseek",
+        "free-ai",
+        "gemini",
+        "gemini-cli",
         "llm",
-        "mcp",
-        "mcp-gateway",
-        "mfa",
-        "oauth",
-        "oidc",
-        "openclaw",
-        "radius",
-        "saml",
-        "scim",
-        "single-sign-on",
-        "sso",
-        "webauthn"
+        "llm-gateway",
+        "openai",
+        "openai-proxy",
+        "qwen",
+        "token-saver"
       ],
-      "created_at": "2020-10-22T14:40:03Z",
-      "updated_at": "2026-05-09T13:35:21Z",
-      "url": "https://github.com/casdoor/casdoor",
-      "source": "github-search",
+      "created_at": "2026-01-05T02:59:30Z",
+      "updated_at": "2026-05-09T14:56:42Z",
       "ai_reasons": [
-        "topics:mcp,agent,llm",
-        "desc:llm"
+        "topics:llm,chatgpt,openai",
+        "desc:gpt"
       ],
       "hn_points": 0,
       "hn_comments": 0,
       "hn_stories": [],
-      "scores": {
-        "stars_growth": 24.79641749177842,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 10.8,
-        "is_treasure": false
-      },
-      "heat_score": 10.8
-    },
-    {
-      "owner": "0x4m4",
-      "name": "hexstrike-ai",
-      "full_name": "0x4m4/hexstrike-ai",
-      "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
-      "language": "Python",
-      "stars": 8639,
-      "forks": 1870,
-      "topics": [
-        "0x4m4",
-        "ai",
-        "ai-agents",
-        "ai-cybersecurity",
-        "ai-hacking",
-        "ai-penetration-testing",
-        "ai-security-tool",
-        "artificial-intelligence",
-        "ctf-tools",
-        "generative-ai",
-        "hexstrike",
-        "kali-linux",
-        "kali-tools",
-        "llm",
-        "llm-integration",
-        "mcp",
-        "mcp-server",
-        "mcp-tools",
-        "pentesting",
-        "pentesting-tools"
-      ],
-      "created_at": "2025-07-10T17:53:18Z",
-      "updated_at": "2026-05-09T13:24:55Z",
-      "url": "https://github.com/0x4m4/hexstrike-ai",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:llm,artificial-intelligence,generative-ai",
-        "desc:gpt",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 23.619061939719398,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 9,
-        "total": 10.8,
-        "is_treasure": false
-      },
-      "heat_score": 10.8
-    },
-    {
-      "owner": "github",
-      "name": "github-mcp-server",
-      "full_name": "github/github-mcp-server",
-      "description": "GitHub's official MCP Server",
-      "language": "Go",
-      "stars": 29648,
-      "forks": 4143,
-      "topics": [
-        "github",
-        "mcp",
-        "mcp-server"
-      ],
-      "created_at": "2025-03-04T16:42:04Z",
-      "updated_at": "2026-05-09T13:35:01Z",
-      "url": "https://github.com/github/github-mcp-server",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp",
-        "desc:mcp"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 26.832036994612757,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 10.7,
-        "is_treasure": false
-      },
-      "heat_score": 10.7
-    },
-    {
-      "owner": "pydantic",
-      "name": "pydantic-ai",
-      "full_name": "pydantic/pydantic-ai",
-      "description": "AI Agent Framework, the Pydantic way",
-      "language": "Python",
-      "stars": 16949,
-      "forks": 2045,
-      "topics": [
-        "agent-framework",
-        "genai",
-        "llm",
-        "pydantic",
-        "python"
-      ],
-      "created_at": "2024-06-21T15:55:04Z",
-      "updated_at": "2026-05-09T11:29:38Z",
-      "url": "https://github.com/pydantic/pydantic-ai",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:llm",
-        "desc:ai agent",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 1,
+        "recent_issues": 7,
         "avg_reactions": 0.0
       },
       "scores": {
-        "stars_growth": 25.37499617490317,
+        "stars_growth": 87.88477245771847,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 10.6,
+        "topic_potential": 17,
+        "total": 37.7,
         "is_treasure": false
       },
-      "heat_score": 10.6
+      "heat_score": 37.7,
+      "rank": 9
     },
     {
-      "owner": "llmware-ai",
-      "name": "llmware",
-      "full_name": "llmware-ai/llmware",
-      "description": "Unified framework for building enterprise RAG pipelines with small, specialized models",
-      "language": "Python",
-      "stars": 14863,
-      "forks": 2937,
-      "topics": [
-        "agents",
-        "generative-ai-tools",
-        "llamacpp",
-        "llm",
-        "onnx",
-        "openvino",
-        "parsing",
-        "retrieval-augmented-generation",
-        "small-specialized-models"
-      ],
-      "created_at": "2023-09-29T15:19:06Z",
-      "updated_at": "2026-05-09T06:19:48Z",
-      "url": "https://github.com/llmware-ai/llmware",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:llm",
-        "desc:rag",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 25.032792436798868,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 10.5,
-        "is_treasure": false
-      },
-      "heat_score": 10.5
-    },
-    {
-      "owner": "GLips",
-      "name": "Figma-Context-MCP",
-      "full_name": "GLips/Figma-Context-MCP",
-      "description": "MCP server to provide Figma layout information to AI coding agents like Cursor",
-      "language": "TypeScript",
-      "stars": 14687,
-      "forks": 1157,
-      "topics": [
-        "ai",
-        "cursor",
-        "figma",
-        "mcp",
-        "typescript"
-      ],
-      "created_at": "2025-02-13T02:55:06Z",
-      "updated_at": "2026-05-09T13:07:47Z",
-      "url": "https://github.com/GLips/Figma-Context-MCP",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp,ai",
-        "desc:mcp",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 25.00175426700375,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 10.5,
-        "is_treasure": false
-      },
-      "heat_score": 10.5
-    },
-    {
-      "owner": "activepieces",
-      "name": "activepieces",
-      "full_name": "activepieces/activepieces",
-      "description": "AI Agents & MCPs & AI Workflow Automation • (~400 MCP servers for AI agents) • AI Automation / AI Agent with MCPs • AI Workflows & AI Agents • MCPs for AI Agents",
-      "language": "TypeScript",
-      "stars": 22119,
-      "forks": 3629,
-      "topics": [
-        "ai-agent",
-        "ai-agent-tools",
-        "ai-agents",
-        "ai-agents-framework",
-        "mcp",
-        "mcp-server",
-        "mcp-tools",
-        "mcps",
-        "n8n-alternative",
-        "no-code-automation",
-        "workflow",
-        "workflow-automation",
-        "workflows"
-      ],
-      "created_at": "2022-12-03T02:52:46Z",
-      "updated_at": "2026-05-09T13:02:39Z",
-      "url": "https://github.com/activepieces/activepieces",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:ai-agent,mcp",
-        "desc:ai agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 26.068688092934398,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 10.4,
-        "is_treasure": false
-      },
-      "heat_score": 10.4
-    },
-    {
-      "owner": "HKUDS",
-      "name": "RAG-Anything",
-      "full_name": "HKUDS/RAG-Anything",
-      "description": "\"RAG-Anything: All-in-One RAG Framework\"",
-      "language": "Python",
-      "stars": 19983,
-      "forks": 2283,
-      "topics": [
-        "multi-modal-rag",
-        "retrieval-augmented-generation"
-      ],
-      "created_at": "2025-06-06T06:47:29Z",
-      "updated_at": "2026-05-09T13:27:33Z",
-      "url": "https://github.com/HKUDS/RAG-Anything",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:rag",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 25.804072113160167,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 10.3,
-        "is_treasure": false
-      },
-      "heat_score": 10.3
-    },
-    {
-      "owner": "mrdbourke",
-      "name": "machine-learning-roadmap",
-      "full_name": "mrdbourke/machine-learning-roadmap",
-      "description": "A roadmap connecting many of the most important concepts in machine learning, how to learn them and what tools to use to perform them.",
-      "language": "",
-      "stars": 7853,
-      "forks": 1173,
-      "topics": [
-        "data",
-        "data-science",
-        "deep-learning",
-        "machine-learning"
-      ],
-      "created_at": "2020-07-09T07:07:47Z",
-      "updated_at": "2026-05-07T08:00:23Z",
-      "url": "https://github.com/mrdbourke/machine-learning-roadmap",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:machine-learning,deep-learning",
-        "desc:machine learning"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 23.370525082327735,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 10.2,
-        "is_treasure": false
-      },
-      "heat_score": 10.2
-    },
-    {
-      "owner": "QwenLM",
-      "name": "Qwen-Agent",
-      "full_name": "QwenLM/Qwen-Agent",
-      "description": "Agent framework and applications built upon Qwen>=3.0, featuring Function Calling, MCP, Code Interpreter, RAG, Chrome extension, etc.",
-      "language": "Python",
-      "stars": 16285,
-      "forks": 1599,
-      "topics": [],
-      "created_at": "2023-09-22T02:24:56Z",
-      "updated_at": "2026-05-09T11:29:39Z",
-      "url": "https://github.com/QwenLM/Qwen-Agent",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:rag",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 25.270864632856537,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 10.1,
-        "is_treasure": false
-      },
-      "heat_score": 10.1
-    },
-    {
-      "owner": "raga-ai-hub",
-      "name": "RagaAI-Catalyst",
-      "full_name": "raga-ai-hub/RagaAI-Catalyst",
-      "description": "Python SDK for Agent AI Observability, Monitoring and Evaluation Framework. Includes features like agent, llm and tools tracing, debugging multi-agentic system, self-hosted dashboard and advanced analytics with timeline and execution graph view ",
-      "language": "Python",
-      "stars": 16155,
-      "forks": 3609,
-      "topics": [
-        "agentic-ai",
-        "agentic-ai-development",
-        "agentneo",
-        "agents",
-        "ai-agent-monitoring",
-        "ai-application-debugging",
-        "ai-evaluation-tools",
-        "ai-performance-optimization",
-        "ai-tool-interaction-monitoring",
-        "llm-testing",
-        "llm-tracing",
-        "llmops"
-      ],
-      "created_at": "2024-08-26T12:13:15Z",
-      "updated_at": "2026-05-09T11:24:34Z",
-      "url": "https://github.com/raga-ai-hub/RagaAI-Catalyst",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:llm",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 25.249981135242415,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 10.1,
-        "is_treasure": false
-      },
-      "heat_score": 10.1
-    },
-    {
-      "owner": "doccano",
-      "name": "doccano",
-      "full_name": "doccano/doccano",
-      "description": "Open source annotation tool for machine learning practitioners.",
-      "language": "Python",
-      "stars": 10641,
-      "forks": 1832,
-      "topics": [
-        "annotation-tool",
-        "data-labeling",
-        "dataset",
-        "datasets",
-        "machine-learning",
-        "natural-language-processing",
-        "nuxt",
-        "nuxtjs",
-        "python",
-        "text-annotation",
-        "vue",
-        "vuejs"
-      ],
-      "created_at": "2018-05-09T06:10:05Z",
-      "updated_at": "2026-05-08T20:30:19Z",
-      "url": "https://github.com/doccano/doccano",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:natural-language-processing,machine-learning",
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 24.162118540687647,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 10.1,
-        "is_treasure": false
-      },
-      "heat_score": 10.1
-    },
-    {
-      "owner": "EpistasisLab",
-      "name": "tpot",
-      "full_name": "EpistasisLab/tpot",
-      "description": "A Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming.",
-      "language": "Jupyter Notebook",
-      "stars": 10049,
-      "forks": 1564,
-      "topics": [
-        "adsp",
-        "ag066833",
-        "aiml",
-        "alzheimer",
-        "alzheimers",
-        "automated-machine-learning",
-        "automation",
-        "automl",
-        "data-science",
-        "feature-engineering",
-        "gradient-boosting",
-        "hyperparameter-optimization",
-        "machine-learning",
-        "model-selection",
-        "nia",
-        "parameter-tuning",
-        "python",
-        "random-forest",
-        "scikit-learn",
-        "u01ag066833"
-      ],
-      "created_at": "2015-11-03T21:08:40Z",
-      "updated_at": "2026-05-08T06:23:50Z",
-      "url": "https://github.com/EpistasisLab/tpot",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:machine-learning",
-        "desc:machine learning",
-        "lang:Jupyter Notebook"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 24.012975513237816,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 10.1,
-        "is_treasure": false
-      },
-      "heat_score": 10.1
-    },
-    {
-      "owner": "mcp-use",
-      "name": "mcp-use",
-      "full_name": "mcp-use/mcp-use",
-      "description": "The fullstack MCP framework to develop MCP Apps for ChatGPT / Claude & MCP Servers for AI Agents.",
-      "language": "TypeScript",
-      "stars": 9913,
-      "forks": 1271,
-      "topics": [
-        "agentic-framework",
-        "ai",
-        "apps-sdk",
-        "chatgpt",
-        "claude-code",
-        "llms",
-        "mcp",
-        "mcp-apps",
-        "mcp-client",
-        "mcp-gateway",
-        "mcp-host",
-        "mcp-inspector",
-        "mcp-server",
-        "mcp-servers",
-        "mcp-tools",
-        "mcp-ui",
-        "model-context-protocol",
-        "modelcontextprotocol",
-        "openclaw",
-        "skills"
-      ],
-      "created_at": "2025-03-28T10:06:31Z",
-      "updated_at": "2026-05-09T12:28:46Z",
-      "url": "https://github.com/mcp-use/mcp-use",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:mcp,model-context-protocol,ai",
-        "desc:chatgpt",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 23.97747266095079,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 10.0,
-        "is_treasure": false
-      },
-      "heat_score": 10.0
-    },
-    {
-      "owner": "Trusted-AI",
-      "name": "adversarial-robustness-toolbox",
-      "full_name": "Trusted-AI/adversarial-robustness-toolbox",
-      "description": "Adversarial Robustness Toolbox (ART) - Python Library for Machine Learning Security - Evasion, Poisoning, Extraction, Inference - Red and Blue Teams",
-      "language": "Python",
-      "stars": 5979,
-      "forks": 1319,
-      "topics": [
-        "adversarial-attacks",
-        "adversarial-examples",
-        "adversarial-machine-learning",
-        "ai",
-        "artificial-intelligence",
-        "attack",
-        "blue-team",
-        "evasion",
-        "extraction",
-        "inference",
-        "machine-learning",
-        "poisoning",
-        "privacy",
-        "python",
-        "red-team",
-        "trusted-ai",
-        "trustworthy-ai"
-      ],
-      "created_at": "2018-03-15T14:40:43Z",
-      "updated_at": "2026-05-08T07:12:15Z",
-      "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:machine-learning,artificial-intelligence,inference",
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 22.660187421640163,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 10.0,
-        "is_treasure": false
-      },
-      "heat_score": 10.0
-    },
-    {
-      "owner": "clips",
-      "name": "pattern",
-      "full_name": "clips/pattern",
-      "description": "Web mining module for Python, with tools for scraping, natural language processing, machine learning, network analysis and visualization.",
-      "language": "Python",
-      "stars": 8859,
-      "forks": 1560,
-      "topics": [
-        "machine-learning",
-        "natural-language-processing",
-        "network-analysis",
-        "python",
-        "sentiment-analysis",
-        "web-mining",
-        "wordnet"
-      ],
-      "created_at": "2011-05-03T15:29:01Z",
-      "updated_at": "2026-05-03T09:21:44Z",
-      "url": "https://github.com/clips/pattern",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:natural-language-processing,machine-learning",
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 23.684581759258837,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 9.9,
-        "is_treasure": false
-      },
-      "heat_score": 9.9
-    },
-    {
-      "owner": "hangwin",
-      "name": "mcp-chrome",
-      "full_name": "hangwin/mcp-chrome",
-      "description": "Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.",
-      "language": "TypeScript",
-      "stars": 11568,
-      "forks": 1036,
-      "topics": [],
-      "created_at": "2025-06-09T09:07:06Z",
-      "updated_at": "2026-05-09T12:10:44Z",
-      "url": "https://github.com/hangwin/mcp-chrome",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:claude",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 24.37975375056195,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 9.8,
-        "is_treasure": false
-      },
-      "heat_score": 9.8
-    },
-    {
-      "owner": "BeehiveInnovations",
-      "name": "pal-mcp-server",
-      "full_name": "BeehiveInnovations/pal-mcp-server",
-      "description": "The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter / Azure / Grok / Ollama / Custom Model / All Of The Above] working as one.",
-      "language": "Python",
-      "stars": 11523,
-      "forks": 994,
-      "topics": [],
-      "created_at": "2025-06-08T15:36:50Z",
-      "updated_at": "2026-05-09T06:11:51Z",
-      "url": "https://github.com/BeehiveInnovations/pal-mcp-server",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:openai",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 24.36959833059192,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 9.7,
-        "is_treasure": false
-      },
-      "heat_score": 9.7
-    },
-    {
-      "owner": "guess-js",
-      "name": "guess",
-      "full_name": "guess-js/guess",
-      "description": "🔮 Libraries & tools for enabling Machine Learning driven user-experiences on the web",
-      "language": "TypeScript",
-      "stars": 7120,
-      "forks": 200,
-      "topics": [
-        "hacktoberfest",
-        "machine-learning",
-        "performance",
-        "prefetch",
-        "prerender",
-        "web-performance"
-      ],
-      "created_at": "2018-04-02T01:58:19Z",
-      "updated_at": "2026-05-03T01:30:01Z",
-      "url": "https://github.com/guess-js/guess",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:machine-learning",
-        "desc:machine learning",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 23.115225837089124,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 9.7,
-        "is_treasure": false
-      },
-      "heat_score": 9.7
-    },
-    {
-      "owner": "modelcontextprotocol",
-      "name": "inspector",
-      "full_name": "modelcontextprotocol/inspector",
-      "description": "Visual testing tool for MCP servers",
-      "language": "TypeScript",
-      "stars": 9699,
-      "forks": 1300,
-      "topics": [],
-      "created_at": "2024-10-03T21:47:42Z",
-      "updated_at": "2026-05-09T09:51:44Z",
-      "url": "https://github.com/modelcontextprotocol/inspector",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:mcp",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 23.920609628523824,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 9.6,
-        "is_treasure": false
-      },
-      "heat_score": 9.6
-    },
-    {
-      "owner": "polyaxon",
-      "name": "polyaxon",
-      "full_name": "polyaxon/polyaxon",
-      "description": "MLOps Tools For Managing & Orchestrating The Machine Learning LifeCycle",
-      "language": "",
-      "stars": 3706,
-      "forks": 324,
-      "topics": [
-        "artificial-intelligence",
-        "caffe",
-        "data-science",
-        "deep-learning",
-        "hyperparameter-optimization",
-        "jupyter",
-        "jupyterlab",
-        "k8s",
-        "keras",
-        "kubernetes",
-        "machine-learning",
-        "ml",
-        "mlops",
-        "mxnet",
-        "notebook",
-        "pipelines",
-        "pytorch",
-        "reinforcement-learning",
-        "tensorflow",
-        "workflow"
-      ],
-      "created_at": "2016-12-26T12:48:47Z",
-      "updated_at": "2026-05-07T00:26:08Z",
-      "url": "https://github.com/polyaxon/polyaxon",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:artificial-intelligence,machine-learning,deep-learning",
-        "desc:machine learning"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 21.414116916204758,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 9.5,
-        "is_treasure": false
-      },
-      "heat_score": 9.5
-    },
-    {
-      "owner": "firmai",
-      "name": "financial-machine-learning",
-      "full_name": "firmai/financial-machine-learning",
-      "description": "A curated list of practical financial machine learning tools and applications.",
-      "language": "Python",
-      "stars": 8549,
-      "forks": 1394,
-      "topics": [
-        "algorithmic-trading",
-        "cryptocurrency",
-        "finance",
-        "investment",
-        "quant",
-        "quantitative-finance",
-        "stock-market",
-        "trading-strategies"
-      ],
-      "created_at": "2019-03-21T21:00:35Z",
-      "updated_at": "2026-05-09T13:21:11Z",
-      "url": "https://github.com/firmai/financial-machine-learning",
-      "source": "github-search",
-      "ai_reasons": [
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 23.591776196915053,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 9.4,
-        "is_treasure": false
-      },
-      "heat_score": 9.4
-    },
-    {
-      "owner": "hudson-and-thames",
-      "name": "mlfinlab",
-      "full_name": "hudson-and-thames/mlfinlab",
-      "description": "MlFinLab helps portfolio managers and traders who want to leverage the power of machine learning by providing reproducible, interpretable, and easy to use tools. ",
-      "language": "Python",
-      "stars": 4709,
-      "forks": 1252,
-      "topics": [
-        "algorithmic-trading",
-        "finance",
-        "financial-machine-learning",
-        "investing",
-        "machine-learning",
-        "portfolio-management",
-        "portfolio-optimization",
-        "python",
-        "quantitative-finance",
-        "research",
-        "trading"
-      ],
-      "created_at": "2019-02-13T16:57:25Z",
-      "updated_at": "2026-05-09T00:49:36Z",
-      "url": "https://github.com/hudson-and-thames/mlfinlab",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:machine-learning",
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 22.038106300813165,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 9.3,
-        "is_treasure": false
-      },
-      "heat_score": 9.3
-    },
-    {
-      "owner": "DistrictDataLabs",
-      "name": "yellowbrick",
-      "full_name": "DistrictDataLabs/yellowbrick",
-      "description": "Visual analysis and diagnostic tools to facilitate machine learning model selection.",
-      "language": "Python",
-      "stars": 4397,
-      "forks": 568,
-      "topics": [
-        "anaconda",
-        "estimator",
-        "machine-learning",
-        "matplotlib",
-        "model-selection",
-        "python",
-        "scikit-learn",
-        "visual-analysis",
-        "visualization",
-        "visualizer"
-      ],
-      "created_at": "2016-05-18T14:12:17Z",
-      "updated_at": "2026-05-07T17:37:40Z",
-      "url": "https://github.com/DistrictDataLabs/yellowbrick",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:machine-learning",
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 21.85951236331237,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 9.2,
-        "is_treasure": false
-      },
-      "heat_score": 9.2
-    },
-    {
-      "owner": "Machine-Learning-Tokyo",
-      "name": "Interactive_Tools",
-      "full_name": "Machine-Learning-Tokyo/Interactive_Tools",
-      "description": "Interactive Tools for Machine Learning, Deep Learning and Math",
-      "language": "",
-      "stars": 2821,
-      "forks": 325,
-      "topics": [
-        "deep-learning",
-        "interactive-tools",
-        "machine-learning"
-      ],
-      "created_at": "2019-04-29T23:24:38Z",
-      "updated_at": "2026-05-08T20:55:00Z",
-      "url": "https://github.com/Machine-Learning-Tokyo/Interactive_Tools",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:machine-learning,deep-learning",
-        "desc:machine learning"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 20.70332407392108,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 9.2,
-        "is_treasure": false
-      },
-      "heat_score": 9.2
-    },
-    {
-      "owner": "nidhaloff",
-      "name": "igel",
-      "full_name": "nidhaloff/igel",
-      "description": "a delightful machine learning tool that allows you to train, test, and use models without writing code",
-      "language": "Python",
-      "stars": 3138,
-      "forks": 207,
-      "topics": [
-        "artificial-intelligence",
-        "automation",
-        "automl",
-        "automl-experiments",
-        "data-analysis",
-        "data-science",
-        "hacktoberfest",
-        "hacktoberfest2021",
-        "machine-learning",
-        "machine-learning-algorithms",
-        "machine-learning-library",
-        "machinelearning",
-        "neural-network",
-        "neural-networks",
-        "preprocessing",
-        "scikit-learn",
-        "scikitlearn-machine-learning",
-        "sklearn"
-      ],
-      "created_at": "2020-08-27T20:54:59Z",
-      "updated_at": "2026-04-29T14:25:49Z",
-      "url": "https://github.com/nidhaloff/igel",
-      "source": "github-search",
-      "ai_reasons": [
-        "topics:machine-learning,artificial-intelligence",
-        "desc:machine learning",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "scores": {
-        "stars_growth": 20.980729670661127,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 8.8,
-        "is_treasure": false
-      },
-      "heat_score": 8.8
-    },
-    {
-      "owner": "mljs",
-      "name": "ml",
-      "full_name": "mljs/ml",
-      "description": "Machine learning tools in JavaScript",
+      "owner": "browserbase",
+      "name": "skills",
+      "full_name": "browserbase/skills",
+      "description": "Claude Agent SDK with a web browsing tool",
       "language": "JavaScript",
-      "stars": 2711,
-      "forks": 212,
-      "topics": [
-        "javascript",
-        "machine-learning",
-        "ml"
-      ],
-      "created_at": "2014-10-27T13:04:38Z",
-      "updated_at": "2026-04-15T08:59:44Z",
-      "url": "https://github.com/mljs/ml",
-      "source": "github-search",
+      "stars_added": 1621,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "1,621 stars this week",
+      "stars": 2894,
+      "forks": 191,
+      "topics": [],
+      "created_at": "2025-10-12T08:44:05Z",
+      "updated_at": "2026-05-09T15:00:25Z",
       "ai_reasons": [
-        "topics:machine-learning",
-        "desc:machine learning"
+        "desc:claude"
       ],
       "hn_points": 0,
       "hn_comments": 0,
       "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
       "scores": {
-        "stars_growth": 20.599720218569978,
+        "stars_growth": 86.78025172629233,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 8.7,
+        "topic_potential": 0,
+        "total": 34.7,
         "is_treasure": false
       },
-      "heat_score": 8.7
+      "heat_score": 34.7,
+      "rank": 10
     }
   ]
 }

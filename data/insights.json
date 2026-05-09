@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-05-09T15:00:26.264466+00:00",
-  "mode": "daily",
+  "generated_at": "2026-05-09T15:07:05.032956+00:00",
+  "mode": "weekly",
   "headline": {
     "project": {
-      "full_name": "bytedance/UI-TARS-desktop",
-      "name": "UI-TARS-desktop",
-      "owner": "bytedance",
-      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
-      "stars": 31160,
-      "stars_added": 549,
-      "heat_score": 37.7,
-      "url": "https://github.com/bytedance/UI-TARS-desktop",
+      "full_name": "InsForge/InsForge",
+      "name": "InsForge",
+      "owner": "InsForge",
+      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+      "stars": 9186,
+      "stars_added": 1201,
+      "heat_score": 50.4,
+      "url": "https://github.com/InsForge/InsForge",
       "topics": [
-        "agent",
-        "agent-tars",
-        "browser-use",
-        "computer-use",
-        "cowork"
+        "ai",
+        "ai-agents",
+        "coding",
+        "deno",
+        "embeddings"
       ],
       "language": "TypeScript",
       "is_treasure": false
     },
-    "why_hot": "🔥 UI-TARS-desktop 今日爆火：单日新增 549⭐、r/LocalLLaMA 热议、方向：agent/agent-tars/browser-use",
+    "why_hot": "🔥 InsForge 今日爆火：单日新增 1201⭐、r/MachineLearning 热议、方向：ai/ai-agents/coding",
     "hn_url": "",
-    "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1r1fnon/uitars_desktop_agent_this_actually_looks/"
+    "reddit_url": "https://reddit.com/r/MachineLearning/comments/1r02y6y/p_a_python_library_processing_geospatial_data_for/"
   },
   "dark_horses": [
     {
@@ -58,8 +58,8 @@
         ],
         "url": "https://github.com/AtomicBot-ai/atomic-llama-cpp-turboquant"
       },
-      "insight": "💎 atomic-llama-cpp-turboquant — llama.cpp fork with TurboQuant WHT-rotated KV cache & weight，仅 84⭐，社区讨论热度 537 分",
-      "community_heat": 537,
+      "insight": "💎 atomic-llama-cpp-turboquant — llama.cpp fork with TurboQuant WHT-rotated KV cache & weight，仅 84⭐，社区讨论热度 540 分",
+      "community_heat": 540,
       "hn_url": "",
       "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1t6se6r/multitoken_prediction_mtp_for_llamacpp_gemma_4/"
     },
@@ -69,12 +69,12 @@
         "name": "ds4",
         "owner": "antirez",
         "description": "DeepSeek 4 Flash local inference engine for Metal",
-        "stars": 3504,
+        "stars": 3515,
         "language": "C",
         "topics": [],
         "url": "https://github.com/antirez/ds4"
       },
-      "insight": "💎 ds4 — DeepSeek 4 Flash local inference engine for Metal，仅 3504⭐，社区讨论热度 483 分",
+      "insight": "💎 ds4 — DeepSeek 4 Flash local inference engine for Metal，仅 3515⭐，社区讨论热度 483 分",
       "community_heat": 483,
       "hn_url": "https://news.ycombinator.com/item?id=48050751",
       "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1t72tk9/ds4_a_deepseek_4_flash_specific_inference_engine/"
@@ -110,8 +110,8 @@
         ],
         "url": "https://github.com/lemonade-sdk/lemonade"
       },
-      "insight": "💎 lemonade — Lemonade helps users discover and run local AI apps by servi，仅 3871⭐，社区讨论热度 345 分",
-      "community_heat": 345,
+      "insight": "💎 lemonade — Lemonade helps users discover and run local AI apps by servi，仅 3871⭐，社区讨论热度 354 分",
+      "community_heat": 354,
       "hn_url": "",
       "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1t7g70j/vllm_rocm_has_been_added_to_lemonade_as_an/"
     },
@@ -161,21 +161,31 @@
       "trend": "Agent 框架 / MCP 协议",
       "description": "Agent 框架与 MCP 协议类项目集中爆发，AI 工具互联互通和自主任务执行成为当前焦点",
       "representative_projects": [
-        "UI-TARS-desktop",
-        "hello-agents",
-        "agentmemory"
+        "InsForge",
+        "ruflo",
+        "TradingAgents"
       ],
-      "match_count": 8
+      "match_count": 12
     },
     {
       "trend": "AI 编程与开发工具",
       "description": "AI 编程工具生态加速成熟，开发者工作流正在被重新定义",
       "representative_projects": [
-        "9router",
-        "agentmemory",
-        "easy-vibe"
+        "ruflo",
+        "jcode",
+        "9router"
       ],
       "match_count": 6
+    },
+    {
+      "trend": "RAG 与知识检索",
+      "description": "RAG 与知识检索技术持续演进，企业级知识管理需求驱动创新",
+      "representative_projects": [
+        "InsForge",
+        "ruflo",
+        "cocoindex"
+      ],
+      "match_count": 4
     }
   ]
 }
