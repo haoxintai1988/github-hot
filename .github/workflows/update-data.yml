@@ -26,12 +26,12 @@ jobs:
       - name: Fetch daily data
         run: python scripts/fetch.py daily
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Fetch weekly data
         run: python scripts/fetch.py weekly
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Commit updated data
         run: |
