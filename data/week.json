@@ -1,244 +1,55 @@
 {
-  "generated_at": "2026-05-09T15:07:05.032956+00:00",
+  "generated_at": "2026-05-09T15:13:43.741650+00:00",
   "mode": "weekly",
   "total_projects": 10,
   "projects": [
     {
-      "owner": "InsForge",
-      "name": "InsForge",
-      "full_name": "InsForge/InsForge",
-      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
-      "language": "TypeScript",
-      "stars_added": 1201,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "1,201 stars this week",
-      "stars": 9186,
-      "forks": 755,
-      "topics": [
-        "ai",
-        "ai-agents",
-        "coding",
-        "deno",
-        "embeddings",
-        "insforge",
-        "nextjs",
-        "oauth2",
-        "pgvector",
-        "postgresql",
-        "realtime",
-        "vectors",
-        "websockets"
-      ],
-      "created_at": "2025-07-29T05:56:00Z",
-      "updated_at": "2026-05-09T14:55:11Z",
-      "ai_reasons": [
-        "topics:embeddings,ai",
-        "desc:agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 293,
-      "reddit_comments": 109,
-      "reddit_posts": [
-        {
-          "subreddit": "MachineLearning",
-          "title": "[P] A Python library processing geospatial data for GNNs with PyTorch Geometric",
-          "ups": 293,
-          "comments": 11,
-          "url": "https://reddit.com/r/MachineLearning/comments/1r02y6y/p_a_python_library_processing_geospatial_data_for/",
-          "created_utc": 1770640234.0
-        },
-        {
-          "subreddit": "MachineLearning",
-          "title": "[N] Pondering how many of the papers at AI conferences are just AI generated garbage.",
-          "ups": 177,
-          "comments": 65,
-          "url": "https://reddit.com/r/MachineLearning/comments/1od3j63/n_pondering_how_many_of_the_papers_at_ai/",
-          "created_utc": 1761125120.0
-        },
-        {
-          "subreddit": "MachineLearning",
-          "title": "[P] Sample Forge - Research tool for deterministic inference and convergent sampling parameters in large language models.",
-          "ups": 4,
-          "comments": 0,
-          "url": "https://reddit.com/r/MachineLearning/comments/1nrvlle/p_sample_forge_research_tool_for_deterministic/",
-          "created_utc": 1758980620.0
-        },
-        {
-          "subreddit": "MachineLearning",
-          "title": "[P] Looking for datasets/tools for testing document forgery detection in medical claims",
-          "ups": 4,
-          "comments": 2,
-          "url": "https://reddit.com/r/MachineLearning/comments/1mtekhm/p_looking_for_datasetstools_for_testing_document/",
-          "created_utc": 1755499325.0
-        },
-        {
-          "subreddit": "MachineLearning",
-          "title": "[P] Built a comprehensive NLP system with multilingual sentiment analysis and document based QA .. feedback welcome",
-          "ups": 5,
-          "comments": 0,
-          "url": "https://reddit.com/r/MachineLearning/comments/1kvfn00/p_built_a_comprehensive_nlp_system_with/",
-          "created_utc": 1748214361.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "MTPLX | 2.24x faster TPS | The native MTP inference engine for Apple Silicon",
-          "ups": 74,
-          "comments": 57,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1t3zuvy/mtplx_224x_faster_tps_the_native_mtp_inference/",
-          "created_utc": 1777941072.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "Opus 4.7 Max subscriber. Switching to Kimi 2.6",
-          "ups": 261,
-          "comments": 109,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1srd2cc/opus_47_max_subscriber_switching_to_kimi_26/",
-          "created_utc": 1776744864.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "Kimi K2.6-Code-Preview, Opus 4.7, GLM 5.1, Minimax M2.7 and more tested in coding",
-          "ups": 66,
-          "comments": 30,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1sno8ba/kimi_k26codepreview_opus_47_glm_51_minimax_m27/",
-          "created_utc": 1776393313.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "Creating Pi Extension with Pi and Qwen3.5 27B",
-          "ups": 7,
-          "comments": 1,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1shpinc/creating_pi_extension_with_pi_and_qwen35_27b/",
-          "created_utc": 1775834268.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "Sorry for the novice question, but, does anyone know which apps and AI-related things got hit/potentially hit by this LiteLLM malware attack that just happened? And which ones don't use it and thus seem like they should probably be unaffected by it?",
-          "ups": 7,
-          "comments": 3,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1s3elyv/sorry_for_the_novice_question_but_does_anyone/",
-          "created_utc": 1774453950.0
-        },
-        {
-          "subreddit": "singularity",
-          "title": "Three new models added to the LLM Creative Short Story-Writing Benchmark",
-          "ups": 41,
-          "comments": 25,
-          "url": "https://reddit.com/r/singularity/comments/1qwagyw/three_new_models_added_to_the_llm_creative_short/",
-          "created_utc": 1770262794.0
-        },
-        {
-          "subreddit": "singularity",
-          "title": "Suno partners with Warner Music Group, this is why this sucks.",
-          "ups": 44,
-          "comments": 16,
-          "url": "https://reddit.com/r/singularity/comments/1p6tb5u/suno_partners_with_warner_music_group_this_is_why/",
-          "created_utc": 1764116627.0
-        },
-        {
-          "subreddit": "singularity",
-          "title": "\"Drugmakers Hail Early Wins in AI-Driven Transformation of Manufacturing\"",
-          "ups": 18,
-          "comments": 4,
-          "url": "https://reddit.com/r/singularity/comments/1n10j4a/drugmakers_hail_early_wins_in_aidriven/",
-          "created_utc": 1756248759.0
-        },
-        {
-          "subreddit": "singularity",
-          "title": "GPT4.5 creative writing skills",
-          "ups": 17,
-          "comments": 17,
-          "url": "https://reddit.com/r/singularity/comments/1izsvxn/gpt45_creative_writing_skills/",
-          "created_utc": 1740696637.0
-        },
-        {
-          "subreddit": "singularity",
-          "title": "AI Alignment and Technological Risk: Is Alignment Solvable?",
-          "ups": 1,
-          "comments": 15,
-          "url": "https://reddit.com/r/singularity/comments/1iyo3sg/ai_alignment_and_technological_risk_is_alignment/",
-          "created_utc": 1740578293.0
-        }
-      ],
-      "reddit_subreddit": "MachineLearning",
-      "reddit_url": "https://reddit.com/r/MachineLearning/comments/1r02y6y/p_a_python_library_processing_geospatial_data_for/",
-      "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 83.26188509052643,
-        "hn_heat": 0,
-        "reddit_heat": 75.53590502668835,
-        "topic_potential": 13,
-        "total": 50.4,
-        "is_treasure": false
-      },
-      "heat_score": 50.4,
-      "rank": 1
-    },
-    {
-      "owner": "fspecii",
-      "name": "ace-step-ui",
-      "full_name": "fspecii/ace-step-ui",
-      "description": "🎵 The Ultimate Open Source Suno Alternative - Professional UI for ACE-Step 1.5 AI Music Generation. Free, local, unlimited. Stop paying for Suno!",
+      "owner": "browserbase",
+      "name": "skills",
+      "full_name": "browserbase/skills",
+      "description": "Claude Agent SDK with a web browsing tool",
       "language": "JavaScript",
-      "stars_added": 1122,
+      "stars_added": 1621,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,122 stars this week",
-      "stars": 3474,
-      "forks": 492,
-      "topics": [
-        "ace-step",
-        "ai",
-        "ai-music",
-        "local-first",
-        "music",
-        "music-generation",
-        "open-source",
-        "react",
-        "suno-alternative",
-        "typescript"
-      ],
-      "created_at": "2026-02-04T01:09:45Z",
-      "updated_at": "2026-05-09T14:55:40Z",
+      "raw_stars_text": "1,621 stars this week",
+      "stars": 2895,
+      "forks": 191,
+      "topics": [],
+      "created_at": "2025-10-12T08:44:05Z",
+      "updated_at": "2026-05-09T15:07:54Z",
       "ai_reasons": [
-        "topics:ai"
+        "desc:claude"
       ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 188,
-      "reddit_comments": 50,
-      "reddit_posts": [
+      "hn_points": 134,
+      "hn_comments": 56,
+      "hn_stories": [
         {
-          "subreddit": "LocalLLaMA",
-          "title": "1 Day Left Until ACE-Step 1.5 — Open-Source Music Gen That Runs on &lt;4GB VRAM  Open suno alternative (and yes, i made this frontend)",
-          "ups": 188,
-          "comments": 50,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1qtqspu/1_day_left_until_acestep_15_opensource_music_gen/",
-          "created_utc": 1770025652.0
+          "title": "Show HN: Libretto – Making AI browser automations deterministic",
+          "points": 134,
+          "comments": 56,
+          "url": "https://news.ycombinator.com/item?id=47780971",
+          "created_at": "2026-04-15T15:57:54Z"
         }
       ],
-      "reddit_subreddit": "LocalLLaMA",
-      "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1qtqspu/1_day_left_until_acestep_15_opensource_music_gen/",
+      "hn_score": 134,
+      "hn_url": "https://news.ycombinator.com/item?id=47780971",
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.2
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 82.46371646089413,
-        "hn_heat": 0,
-        "reddit_heat": 66.83758462966317,
-        "topic_potential": 13,
-        "total": 48.3,
+        "stars_growth": 86.78025172629233,
+        "hn_heat": 64.73323356399894,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 50.9,
         "is_treasure": false
       },
-      "heat_score": 48.3,
-      "rank": 2
+      "heat_score": 50.9,
+      "rank": 1
     },
     {
       "owner": "mattpocock",
@@ -249,11 +60,11 @@
       "stars_added": 14928,
       "source": "github-trending-weekly",
       "raw_stars_text": "14,928 stars this week",
-      "stars": 67637,
-      "forks": 5820,
+      "stars": 67643,
+      "forks": 5822,
       "topics": [],
       "created_at": "2026-02-03T11:15:53Z",
-      "updated_at": "2026-05-09T14:58:22Z",
+      "updated_at": "2026-05-09T15:10:44Z",
       "ai_reasons": [
         "desc:claude"
       ],
@@ -286,7 +97,7 @@
         "is_treasure": false
       },
       "heat_score": 46.5,
-      "rank": 3
+      "rank": 2
     },
     {
       "owner": "ruvnet",
@@ -297,8 +108,8 @@
       "stars_added": 12226,
       "source": "github-trending-weekly",
       "raw_stars_text": "12,226 stars this week",
-      "stars": 47479,
-      "forks": 5258,
+      "stars": 47488,
+      "forks": 5260,
       "topics": [
         "agentic-ai",
         "agentic-framework",
@@ -322,7 +133,7 @@
         "swarm-intelligence"
       ],
       "created_at": "2025-06-02T21:24:20Z",
-      "updated_at": "2026-05-09T15:00:30Z",
+      "updated_at": "2026-05-09T15:10:23Z",
       "ai_reasons": [
         "topics:ai-agent,model-context-protocol",
         "desc:rag",
@@ -345,19 +156,19 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 6,
+        "recent_issues": 5,
         "avg_reactions": 0.0
       },
       "scores": {
         "stars_growth": 100,
         "hn_heat": 9.931176739741858,
         "reddit_heat": 0,
-        "topic_potential": 12,
-        "total": 44.3,
+        "topic_potential": 10,
+        "total": 44.0,
         "is_treasure": false
       },
-      "heat_score": 44.3,
-      "rank": 4
+      "heat_score": 44.0,
+      "rank": 3
     },
     {
       "owner": "TauricResearch",
@@ -368,8 +179,8 @@
       "stars_added": 12981,
       "source": "github-trending-weekly",
       "raw_stars_text": "12,981 stars this week",
-      "stars": 72299,
-      "forks": 14041,
+      "stars": 72303,
+      "forks": 14043,
       "topics": [
         "agent",
         "finance",
@@ -378,7 +189,7 @@
         "trading"
       ],
       "created_at": "2024-12-28T03:31:08Z",
-      "updated_at": "2026-05-09T15:01:52Z",
+      "updated_at": "2026-05-09T15:08:50Z",
       "ai_reasons": [
         "topics:llm,agent",
         "desc:llm",
@@ -413,7 +224,7 @@
         "is_treasure": false
       },
       "heat_score": 43.4,
-      "rank": 5
+      "rank": 4
     },
     {
       "owner": "1jehuang",
@@ -424,7 +235,7 @@
       "stars_added": 2925,
       "source": "github-trending-weekly",
       "raw_stars_text": "2,925 stars this week",
-      "stars": 5260,
+      "stars": 5263,
       "forks": 523,
       "topics": [
         "ai",
@@ -439,9 +250,9 @@
         "tui"
       ],
       "created_at": "2026-01-05T09:43:36Z",
-      "updated_at": "2026-05-09T14:52:59Z",
+      "updated_at": "2026-05-09T15:10:43Z",
       "ai_reasons": [
-        "topics:llm,ai,mcp",
+        "topics:mcp,llm,openai",
         "desc:agent",
         "lang:Rust"
       ],
@@ -474,86 +285,7 @@
         "is_treasure": false
       },
       "heat_score": 43.2,
-      "rank": 6
-    },
-    {
-      "owner": "cocoindex-io",
-      "name": "cocoindex",
-      "full_name": "cocoindex-io/cocoindex",
-      "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
-      "language": "Python",
-      "stars_added": 1909,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "1,909 stars this week",
-      "stars": 9264,
-      "forks": 692,
-      "topics": [
-        "agentic-data-framework",
-        "ai",
-        "ai-agents",
-        "change-data-capture",
-        "codebase-intelligence",
-        "context-engineering",
-        "data-engineering",
-        "data-indexing",
-        "data-processing",
-        "etl",
-        "help-wanted",
-        "indexing",
-        "knowledge-graph",
-        "llm",
-        "long-horizon-agent",
-        "python",
-        "rag",
-        "real-time",
-        "rust",
-        "semantic-search"
-      ],
-      "created_at": "2025-03-03T23:03:09Z",
-      "updated_at": "2026-05-09T14:59:51Z",
-      "ai_reasons": [
-        "topics:llm,rag,ai",
-        "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 5,
-      "reddit_comments": 0,
-      "reddit_posts": [
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "CocoIndex 0.3.1 - Open-Source Data Engine for Dynamic Context Engineering",
-          "ups": 2,
-          "comments": 0,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1pfi3m1/cocoindex_031_opensource_data_engine_for_dynamic/",
-          "created_utc": 1765001404.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "GitHub - cocoindex-io/cocoindex: 🥥 CocoIndex - Build RAG pipeline like LEGO, with incremental update",
-          "ups": 5,
-          "comments": 0,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1j9iqzw/github_cocoindexiococoindex_cocoindex_build_rag/",
-          "created_utc": 1741782027.0
-        }
-      ],
-      "reddit_subreddit": "LocalLLaMA",
-      "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1pfi3m1/cocoindex_031_opensource_data_engine_for_dynamic/",
-      "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
-      },
-      "scores": {
-        "stars_growth": 88.6991872864561,
-        "hn_heat": 0,
-        "reddit_heat": 13.426949530018378,
-        "topic_potential": 9,
-        "total": 39.5,
-        "is_treasure": false
-      },
-      "heat_score": 39.5,
-      "rank": 7
+      "rank": 5
     },
     {
       "owner": "virattt",
@@ -564,11 +296,11 @@
       "stars_added": 3278,
       "source": "github-trending-weekly",
       "raw_stars_text": "3,278 stars this week",
-      "stars": 24989,
+      "stars": 24990,
       "forks": 3042,
       "topics": [],
       "created_at": "2025-10-14T21:02:00Z",
-      "updated_at": "2026-05-09T14:57:27Z",
+      "updated_at": "2026-05-09T15:07:44Z",
       "ai_reasons": [
         "desc:agent",
         "lang:TypeScript"
@@ -592,7 +324,7 @@
         "is_treasure": false
       },
       "heat_score": 38.0,
-      "rank": 8
+      "rank": 6
     },
     {
       "owner": "decolua",
@@ -603,7 +335,7 @@
       "stars_added": 1781,
       "source": "github-trending-weekly",
       "raw_stars_text": "1,781 stars this week",
-      "stars": 6231,
+      "stars": 6235,
       "forks": 1133,
       "topics": [
         "ai-agents",
@@ -628,9 +360,9 @@
         "token-saver"
       ],
       "created_at": "2026-01-05T02:59:30Z",
-      "updated_at": "2026-05-09T14:56:42Z",
+      "updated_at": "2026-05-09T15:10:07Z",
       "ai_reasons": [
-        "topics:llm,chatgpt,openai",
+        "topics:llm,openai,chatgpt",
         "desc:gpt"
       ],
       "hn_points": 0,
@@ -652,24 +384,46 @@
         "is_treasure": false
       },
       "heat_score": 37.7,
-      "rank": 9
+      "rank": 7
     },
     {
-      "owner": "browserbase",
-      "name": "skills",
-      "full_name": "browserbase/skills",
-      "description": "Claude Agent SDK with a web browsing tool",
-      "language": "JavaScript",
-      "stars_added": 1621,
+      "owner": "cocoindex-io",
+      "name": "cocoindex",
+      "full_name": "cocoindex-io/cocoindex",
+      "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
+      "language": "Python",
+      "stars_added": 1909,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,621 stars this week",
-      "stars": 2894,
-      "forks": 191,
-      "topics": [],
-      "created_at": "2025-10-12T08:44:05Z",
-      "updated_at": "2026-05-09T15:00:25Z",
+      "raw_stars_text": "1,909 stars this week",
+      "stars": 9266,
+      "forks": 692,
+      "topics": [
+        "agentic-data-framework",
+        "ai",
+        "ai-agents",
+        "change-data-capture",
+        "codebase-intelligence",
+        "context-engineering",
+        "data-engineering",
+        "data-indexing",
+        "data-processing",
+        "etl",
+        "help-wanted",
+        "indexing",
+        "knowledge-graph",
+        "llm",
+        "long-horizon-agent",
+        "python",
+        "rag",
+        "real-time",
+        "rust",
+        "semantic-search"
+      ],
+      "created_at": "2025-03-03T23:03:09Z",
+      "updated_at": "2026-05-09T15:05:35Z",
       "ai_reasons": [
-        "desc:claude"
+        "topics:rag,llm,ai",
+        "lang:Python"
       ],
       "hn_points": 0,
       "hn_comments": 0,
@@ -682,14 +436,117 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 86.78025172629233,
+        "stars_growth": 88.6991872864561,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 34.7,
+        "topic_potential": 9,
+        "total": 36.8,
         "is_treasure": false
       },
-      "heat_score": 34.7,
+      "heat_score": 36.8,
+      "rank": 8
+    },
+    {
+      "owner": "InsForge",
+      "name": "InsForge",
+      "full_name": "InsForge/InsForge",
+      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+      "language": "TypeScript",
+      "stars_added": 1201,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "1,201 stars this week",
+      "stars": 9187,
+      "forks": 755,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "coding",
+        "deno",
+        "embeddings",
+        "insforge",
+        "nextjs",
+        "oauth2",
+        "pgvector",
+        "postgresql",
+        "realtime",
+        "vectors",
+        "websockets"
+      ],
+      "created_at": "2025-07-29T05:56:00Z",
+      "updated_at": "2026-05-09T15:07:16Z",
+      "ai_reasons": [
+        "topics:embeddings,ai",
+        "desc:agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 5,
+        "avg_reactions": 0.0
+      },
+      "scores": {
+        "stars_growth": 83.26188509052643,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 13,
+        "total": 35.3,
+        "is_treasure": false
+      },
+      "heat_score": 35.3,
+      "rank": 9
+    },
+    {
+      "owner": "fspecii",
+      "name": "ace-step-ui",
+      "full_name": "fspecii/ace-step-ui",
+      "description": "🎵 The Ultimate Open Source Suno Alternative - Professional UI for ACE-Step 1.5 AI Music Generation. Free, local, unlimited. Stop paying for Suno!",
+      "language": "JavaScript",
+      "stars_added": 1122,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "1,122 stars this week",
+      "stars": 3475,
+      "forks": 492,
+      "topics": [
+        "ace-step",
+        "ai",
+        "ai-music",
+        "local-first",
+        "music",
+        "music-generation",
+        "open-source",
+        "react",
+        "suno-alternative",
+        "typescript"
+      ],
+      "created_at": "2026-02-04T01:09:45Z",
+      "updated_at": "2026-05-09T15:04:15Z",
+      "ai_reasons": [
+        "topics:ai"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 5,
+        "avg_reactions": 0.2
+      },
+      "scores": {
+        "stars_growth": 82.46371646089413,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 13,
+        "total": 34.9,
+        "is_treasure": false
+      },
+      "heat_score": 34.9,
       "rank": 10
     }
   ]

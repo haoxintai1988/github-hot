@@ -1,52 +1,8 @@
 {
-  "generated_at": "2026-05-09T15:07:05.032956+00:00",
+  "generated_at": "2026-05-09T15:13:43.741581+00:00",
   "mode": "weekly",
-  "summary": "本周 AI 热点对水利行业的启示：LLM / RAG 知识库、Agent 智能体框架、数据处理 / 数据治理。LLM / RAG 知识库 方向值得深入调研，可纳入下阶段技术选型评估。",
+  "summary": "本周 AI 热点对水利行业的启示：Agent 智能体框架、LLM / RAG 知识库、数据处理 / 数据治理。Agent 智能体框架 方向值得深入调研，可纳入下阶段技术选型评估。",
   "recommendations": [
-    {
-      "tech_direction": "LLM / RAG 知识库",
-      "keywords": [
-        "llm",
-        "rag",
-        "large-language-model",
-        "chatgpt",
-        "langchain"
-      ],
-      "water_scenarios": [
-        "水利知识库智能问答",
-        "防汛预案自动生成",
-        "水利工程报告辅助编写",
-        "水务业务智能客服",
-        "水利法规/标准合规审查"
-      ],
-      "hot_projects": [
-        {
-          "name": "InsForge",
-          "full_name": "InsForge/InsForge",
-          "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storag",
-          "stars": 9186,
-          "heat_score": 50.4,
-          "url": "https://github.com/InsForge/InsForge"
-        },
-        {
-          "name": "ruflo",
-          "full_name": "ruvnet/ruflo",
-          "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
-          "stars": 47479,
-          "heat_score": 44.3,
-          "url": "https://github.com/ruvnet/ruflo"
-        },
-        {
-          "name": "TradingAgents",
-          "full_name": "TauricResearch/TradingAgents",
-          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-          "stars": 72299,
-          "heat_score": 43.4,
-          "url": "https://github.com/TauricResearch/TradingAgents"
-        }
-      ],
-      "suggestion": "可基于 InsForge、ruflo、TradingAgents 构建水利领域知识问答系统。LLM / RAG 知识库 技术日趋成熟，建议将水利工程规范、防汛预案、历史案例等文档结构化后接入 RAG 系统，实现业务知识即时检索和方案生成。"
-    },
     {
       "tech_direction": "Agent 智能体框架",
       "keywords": [
@@ -65,31 +21,75 @@
       ],
       "hot_projects": [
         {
-          "name": "InsForge",
-          "full_name": "InsForge/InsForge",
-          "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storag",
-          "stars": 9186,
-          "heat_score": 50.4,
-          "url": "https://github.com/InsForge/InsForge"
+          "name": "skills",
+          "full_name": "browserbase/skills",
+          "description": "Claude Agent SDK with a web browsing tool",
+          "stars": 2895,
+          "heat_score": 50.9,
+          "url": "https://github.com/browserbase/skills"
         },
         {
           "name": "ruflo",
           "full_name": "ruvnet/ruflo",
           "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
-          "stars": 47479,
-          "heat_score": 44.3,
+          "stars": 47488,
+          "heat_score": 44.0,
           "url": "https://github.com/ruvnet/ruflo"
         },
         {
           "name": "TradingAgents",
           "full_name": "TauricResearch/TradingAgents",
           "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-          "stars": 72299,
+          "stars": 72303,
           "heat_score": 43.4,
           "url": "https://github.com/TauricResearch/TradingAgents"
         }
       ],
-      "suggestion": "可参考 InsForge、ruflo、TradingAgents 架构设计水利多智能体协同系统。Agent 智能体框架 是当前最大热点，水利领域「闸泵阀联动」「防汛应急响应」天然适配多 Agent 协同架构。建议先从单一场景 Agent 做起，逐步构建跨系统的智能体协同调度体系。"
+      "suggestion": "可参考 skills、ruflo、TradingAgents 架构设计水利多智能体协同系统。Agent 智能体框架 是当前最大热点，水利领域「闸泵阀联动」「防汛应急响应」天然适配多 Agent 协同架构。建议先从单一场景 Agent 做起，逐步构建跨系统的智能体协同调度体系。"
+    },
+    {
+      "tech_direction": "LLM / RAG 知识库",
+      "keywords": [
+        "llm",
+        "rag",
+        "large-language-model",
+        "chatgpt",
+        "langchain"
+      ],
+      "water_scenarios": [
+        "水利知识库智能问答",
+        "防汛预案自动生成",
+        "水利工程报告辅助编写",
+        "水务业务智能客服",
+        "水利法规/标准合规审查"
+      ],
+      "hot_projects": [
+        {
+          "name": "ruflo",
+          "full_name": "ruvnet/ruflo",
+          "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
+          "stars": 47488,
+          "heat_score": 44.0,
+          "url": "https://github.com/ruvnet/ruflo"
+        },
+        {
+          "name": "TradingAgents",
+          "full_name": "TauricResearch/TradingAgents",
+          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+          "stars": 72303,
+          "heat_score": 43.4,
+          "url": "https://github.com/TauricResearch/TradingAgents"
+        },
+        {
+          "name": "jcode",
+          "full_name": "1jehuang/jcode",
+          "description": "Coding Agent Harness",
+          "stars": 5263,
+          "heat_score": 43.2,
+          "url": "https://github.com/1jehuang/jcode"
+        }
+      ],
+      "suggestion": "可基于 ruflo、TradingAgents、jcode 构建水利领域知识问答系统。LLM / RAG 知识库 技术日趋成熟，建议将水利工程规范、防汛预案、历史案例等文档结构化后接入 RAG 系统，实现业务知识即时检索和方案生成。"
     },
     {
       "tech_direction": "数据处理 / 数据治理",
@@ -109,31 +109,31 @@
       ],
       "hot_projects": [
         {
-          "name": "InsForge",
-          "full_name": "InsForge/InsForge",
-          "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storag",
-          "stars": 9186,
-          "heat_score": 50.4,
-          "url": "https://github.com/InsForge/InsForge"
-        },
-        {
           "name": "ruflo",
           "full_name": "ruvnet/ruflo",
           "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
-          "stars": 47479,
-          "heat_score": 44.3,
+          "stars": 47488,
+          "heat_score": 44.0,
           "url": "https://github.com/ruvnet/ruflo"
         },
         {
           "name": "cocoindex",
           "full_name": "cocoindex-io/cocoindex",
           "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
-          "stars": 9264,
-          "heat_score": 39.5,
+          "stars": 9266,
+          "heat_score": 36.8,
           "url": "https://github.com/cocoindex-io/cocoindex"
+        },
+        {
+          "name": "InsForge",
+          "full_name": "InsForge/InsForge",
+          "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storag",
+          "stars": 9187,
+          "heat_score": 35.3,
+          "url": "https://github.com/InsForge/InsForge"
         }
       ],
-      "suggestion": "可参考 InsForge、ruflo、cocoindex 优化水利数据治理流水线。数据处理 / 数据治理 工具可加速水利多源数据（水雨情、工情、气象、遥感）的汇聚治理，为上层 AI 应用提供高质量数据底座。"
+      "suggestion": "可参考 ruflo、cocoindex、InsForge 优化水利数据治理流水线。数据处理 / 数据治理 工具可加速水利多源数据（水雨情、工情、气象、遥感）的汇聚治理，为上层 AI 应用提供高质量数据底座。"
     },
     {
       "tech_direction": "边缘端 AI 部署",
@@ -156,16 +156,16 @@
           "name": "ruflo",
           "full_name": "ruvnet/ruflo",
           "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
-          "stars": 47479,
-          "heat_score": 44.3,
+          "stars": 47488,
+          "heat_score": 44.0,
           "url": "https://github.com/ruvnet/ruflo"
         },
         {
           "name": "cocoindex",
           "full_name": "cocoindex-io/cocoindex",
           "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
-          "stars": 9264,
-          "heat_score": 39.5,
+          "stars": 9266,
+          "heat_score": 36.8,
           "url": "https://github.com/cocoindex-io/cocoindex"
         }
       ],

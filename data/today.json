@@ -1,98 +1,8 @@
 {
-  "generated_at": "2026-05-09T15:00:26.264971+00:00",
+  "generated_at": "2026-05-09T15:10:44.790170+00:00",
   "mode": "daily",
   "total_projects": 5,
   "projects": [
-    {
-      "owner": "bytedance",
-      "name": "UI-TARS-desktop",
-      "full_name": "bytedance/UI-TARS-desktop",
-      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
-      "language": "TypeScript",
-      "stars_added": 549,
-      "source": "github-trending-daily",
-      "raw_stars_text": "549 stars today",
-      "stars": 31160,
-      "forks": 3094,
-      "topics": [
-        "agent",
-        "agent-tars",
-        "browser-use",
-        "computer-use",
-        "cowork",
-        "gui-agent",
-        "gui-operator",
-        "mcp",
-        "mcp-server",
-        "multimodal",
-        "tars",
-        "ui-tars",
-        "vision",
-        "vlm"
-      ],
-      "created_at": "2025-01-19T09:04:43Z",
-      "updated_at": "2026-05-09T14:48:36Z",
-      "ai_reasons": [
-        "topics:mcp,multimodal,agent",
-        "desc:ai agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 12,
-      "reddit_comments": 14,
-      "reddit_posts": [
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "UI-TARS desktop agent - this actually looks interesting as it comes with it's own local model",
-          "ups": 10,
-          "comments": 14,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1r1fnon/uitars_desktop_agent_this_actually_looks/",
-          "created_utc": 1770763170.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "State of open-source computer using agents (2025)?",
-          "ups": 4,
-          "comments": 4,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1kwzrh4/state_of_opensource_computer_using_agents_2025/",
-          "created_utc": 1748382147.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "Thoughts on UI-TARS-desktop?",
-          "ups": 12,
-          "comments": 6,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1ias21p/thoughts_on_uitarsdesktop/",
-          "created_utc": 1737929554.0
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "title": "UI-TARS doesn't yet support Linux, Can someone recommend a similar option for GUI and autonomous web browsing?",
-          "ups": 9,
-          "comments": 5,
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1ibiinr/uitars_doesnt_yet_support_linux_can_someone/",
-          "created_utc": 1738008120.0
-        }
-      ],
-      "reddit_subreddit": "LocalLLaMA",
-      "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1r1fnon/uitars_desktop_agent_this_actually_looks/",
-      "issues_activity": {
-        "recent_issues": 2,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 74.08274047275609,
-        "hn_heat": 0,
-        "reddit_heat": 38.20120544050285,
-        "topic_potential": 3,
-        "total": 37.7,
-        "is_treasure": false
-      },
-      "heat_score": 37.7,
-      "rank": 1
-    },
     {
       "owner": "decolua",
       "name": "9router",
@@ -102,7 +12,7 @@
       "stars_added": 980,
       "source": "github-trending-daily",
       "raw_stars_text": "980 stars today",
-      "stars": 6231,
+      "stars": 6232,
       "forks": 1133,
       "topics": [
         "ai-agents",
@@ -127,9 +37,9 @@
         "token-saver"
       ],
       "created_at": "2026-01-05T02:59:30Z",
-      "updated_at": "2026-05-09T14:56:42Z",
+      "updated_at": "2026-05-09T15:04:49Z",
       "ai_reasons": [
-        "topics:openai,chatgpt,llm",
+        "topics:llm,chatgpt,openai",
         "desc:gpt"
       ],
       "hn_points": 0,
@@ -151,7 +61,7 @@
         "is_treasure": false
       },
       "heat_score": 34.9,
-      "rank": 2
+      "rank": 1
     },
     {
       "owner": "datawhalechina",
@@ -162,7 +72,7 @@
       "stars_added": 1162,
       "source": "github-trending-daily",
       "raw_stars_text": "1,162 stars today",
-      "stars": 45497,
+      "stars": 45512,
       "forks": 5514,
       "topics": [
         "agent",
@@ -171,9 +81,9 @@
         "tutorial"
       ],
       "created_at": "2025-09-07T09:50:24Z",
-      "updated_at": "2026-05-09T14:55:41Z",
+      "updated_at": "2026-05-09T15:08:12Z",
       "ai_reasons": [
-        "topics:rag,llm,agent",
+        "topics:llm,agent,rag",
         "lang:Python"
       ],
       "hn_points": 0,
@@ -195,6 +105,61 @@
         "is_treasure": false
       },
       "heat_score": 34.5,
+      "rank": 2
+    },
+    {
+      "owner": "bytedance",
+      "name": "UI-TARS-desktop",
+      "full_name": "bytedance/UI-TARS-desktop",
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "language": "TypeScript",
+      "stars_added": 549,
+      "source": "github-trending-daily",
+      "raw_stars_text": "549 stars today",
+      "stars": 31166,
+      "forks": 3095,
+      "topics": [
+        "agent",
+        "agent-tars",
+        "browser-use",
+        "computer-use",
+        "cowork",
+        "gui-agent",
+        "gui-operator",
+        "mcp",
+        "mcp-server",
+        "multimodal",
+        "tars",
+        "ui-tars",
+        "vision",
+        "vlm"
+      ],
+      "created_at": "2025-01-19T09:04:43Z",
+      "updated_at": "2026-05-09T15:08:11Z",
+      "ai_reasons": [
+        "topics:multimodal,agent,mcp",
+        "desc:ai agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 2,
+        "avg_reactions": 0.0
+      },
+      "scores": {
+        "stars_growth": 74.08274047275609,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 3,
+        "total": 30.1,
+        "is_treasure": false
+      },
+      "heat_score": 30.1,
       "rank": 3
     },
     {
@@ -206,7 +171,7 @@
       "stars_added": 518,
       "source": "github-trending-daily",
       "raw_stars_text": "518 stars today",
-      "stars": 3165,
+      "stars": 3171,
       "forks": 323,
       "topics": [
         "agentmemory",
@@ -224,7 +189,7 @@
         "openclaw"
       ],
       "created_at": "2026-02-25T07:32:52Z",
-      "updated_at": "2026-05-09T14:54:39Z",
+      "updated_at": "2026-05-09T15:07:14Z",
       "ai_reasons": [
         "topics:ai",
         "lang:TypeScript"
@@ -259,7 +224,7 @@
       "stars_added": 294,
       "source": "github-trending-daily",
       "raw_stars_text": "294 stars today",
-      "stars": 8288,
+      "stars": 8294,
       "forks": 848,
       "topics": [
         "agent",
@@ -284,9 +249,9 @@
         "workflow"
       ],
       "created_at": "2025-12-28T16:45:28Z",
-      "updated_at": "2026-05-09T14:57:00Z",
+      "updated_at": "2026-05-09T15:07:44Z",
       "ai_reasons": [
-        "topics:mcp,openai,gpt"
+        "topics:gpt,mcp,agent"
       ],
       "hn_points": 0,
       "hn_comments": 0,
