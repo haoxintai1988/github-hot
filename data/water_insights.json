@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-09T13:37:51.884854+00:00",
-  "mode": "weekly",
-  "summary": "本周 AI 热点对水利行业的启示：Agent 智能体框架、LLM / RAG 知识库、数据处理 / 数据治理。Agent 智能体框架 方向值得深入调研，可纳入下阶段技术选型评估。",
+  "generated_at": "2026-05-09T15:00:26.264971+00:00",
+  "mode": "daily",
+  "summary": "今日 AI 热点对水利行业的启示：Agent 智能体框架、LLM / RAG 知识库、边缘端 AI 部署。建议重点关注 Agent 智能体框架。",
   "recommendations": [
     {
       "tech_direction": "Agent 智能体框架",
@@ -21,31 +21,31 @@
       ],
       "hot_projects": [
         {
-          "name": "skills",
-          "full_name": "browserbase/skills",
-          "description": "Claude Agent SDK with a web browsing tool",
-          "stars": 2886,
-          "heat_score": 50.9,
-          "url": "https://github.com/browserbase/skills"
+          "name": "UI-TARS-desktop",
+          "full_name": "bytedance/UI-TARS-desktop",
+          "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+          "stars": 31160,
+          "heat_score": 37.7,
+          "url": "https://github.com/bytedance/UI-TARS-desktop"
         },
         {
-          "name": "ruflo",
-          "full_name": "ruvnet/ruflo",
-          "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
-          "stars": 47402,
-          "heat_score": 44.0,
-          "url": "https://github.com/ruvnet/ruflo"
+          "name": "9router",
+          "full_name": "decolua/9router",
+          "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via ",
+          "stars": 6231,
+          "heat_score": 34.9,
+          "url": "https://github.com/decolua/9router"
         },
         {
-          "name": "TradingAgents",
-          "full_name": "TauricResearch/TradingAgents",
-          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-          "stars": 72254,
-          "heat_score": 43.4,
-          "url": "https://github.com/TauricResearch/TradingAgents"
+          "name": "hello-agents",
+          "full_name": "datawhalechina/hello-agents",
+          "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
+          "stars": 45497,
+          "heat_score": 34.5,
+          "url": "https://github.com/datawhalechina/hello-agents"
         }
       ],
-      "suggestion": "可参考 skills、ruflo、TradingAgents 架构设计水利多智能体协同系统。Agent 智能体框架 是当前最大热点，水利领域「闸泵阀联动」「防汛应急响应」天然适配多 Agent 协同架构。建议先从单一场景 Agent 做起，逐步构建跨系统的智能体协同调度体系。"
+      "suggestion": "可参考 UI-TARS-desktop、9router、hello-agents 架构设计水利多智能体协同系统。Agent 智能体框架 是当前最大热点，水利领域「闸泵阀联动」「防汛应急响应」天然适配多 Agent 协同架构。建议先从单一场景 Agent 做起，逐步构建跨系统的智能体协同调度体系。"
     },
     {
       "tech_direction": "LLM / RAG 知识库",
@@ -65,75 +65,31 @@
       ],
       "hot_projects": [
         {
-          "name": "ruflo",
-          "full_name": "ruvnet/ruflo",
-          "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
-          "stars": 47402,
-          "heat_score": 44.0,
-          "url": "https://github.com/ruvnet/ruflo"
+          "name": "9router",
+          "full_name": "decolua/9router",
+          "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via ",
+          "stars": 6231,
+          "heat_score": 34.9,
+          "url": "https://github.com/decolua/9router"
         },
         {
-          "name": "TradingAgents",
-          "full_name": "TauricResearch/TradingAgents",
-          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-          "stars": 72254,
-          "heat_score": 43.4,
-          "url": "https://github.com/TauricResearch/TradingAgents"
+          "name": "hello-agents",
+          "full_name": "datawhalechina/hello-agents",
+          "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
+          "stars": 45497,
+          "heat_score": 34.5,
+          "url": "https://github.com/datawhalechina/hello-agents"
         },
         {
-          "name": "jcode",
-          "full_name": "1jehuang/jcode",
-          "description": "Coding Agent Harness",
-          "stars": 5250,
-          "heat_score": 43.2,
-          "url": "https://github.com/1jehuang/jcode"
+          "name": "easy-vibe",
+          "full_name": "datawhalechina/easy-vibe",
+          "description": "💻 vibe coding 2026 | Your first modern programming course for beginners to master step by step.",
+          "stars": 8288,
+          "heat_score": 28.1,
+          "url": "https://github.com/datawhalechina/easy-vibe"
         }
       ],
-      "suggestion": "可基于 ruflo、TradingAgents、jcode 构建水利领域知识问答系统。LLM / RAG 知识库 技术日趋成熟，建议将水利工程规范、防汛预案、历史案例等文档结构化后接入 RAG 系统，实现业务知识即时检索和方案生成。"
-    },
-    {
-      "tech_direction": "数据处理 / 数据治理",
-      "keywords": [
-        "data",
-        "etl",
-        "pipeline",
-        "spark",
-        "flink"
-      ],
-      "water_scenarios": [
-        "水利多源异构数据治理",
-        "实时水文数据流处理",
-        "跨部门数据融合",
-        "水利数据仓库建设",
-        "历史水文数据清洗/标注"
-      ],
-      "hot_projects": [
-        {
-          "name": "ruflo",
-          "full_name": "ruvnet/ruflo",
-          "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
-          "stars": 47402,
-          "heat_score": 44.0,
-          "url": "https://github.com/ruvnet/ruflo"
-        },
-        {
-          "name": "cocoindex",
-          "full_name": "cocoindex-io/cocoindex",
-          "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
-          "stars": 9255,
-          "heat_score": 36.8,
-          "url": "https://github.com/cocoindex-io/cocoindex"
-        },
-        {
-          "name": "InsForge",
-          "full_name": "InsForge/InsForge",
-          "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storag",
-          "stars": 9175,
-          "heat_score": 35.3,
-          "url": "https://github.com/InsForge/InsForge"
-        }
-      ],
-      "suggestion": "可参考 ruflo、cocoindex、InsForge 优化水利数据治理流水线。数据处理 / 数据治理 工具可加速水利多源数据（水雨情、工情、气象、遥感）的汇聚治理，为上层 AI 应用提供高质量数据底座。"
+      "suggestion": "可基于 9router、hello-agents、easy-vibe 构建水利领域知识问答系统。LLM / RAG 知识库 技术日趋成熟，建议将水利工程规范、防汛预案、历史案例等文档结构化后接入 RAG 系统，实现业务知识即时检索和方案生成。"
     },
     {
       "tech_direction": "边缘端 AI 部署",
@@ -153,31 +109,15 @@
       ],
       "hot_projects": [
         {
-          "name": "ruflo",
-          "full_name": "ruvnet/ruflo",
-          "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
-          "stars": 47402,
-          "heat_score": 44.0,
-          "url": "https://github.com/ruvnet/ruflo"
-        },
-        {
-          "name": "cocoindex",
-          "full_name": "cocoindex-io/cocoindex",
-          "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
-          "stars": 9255,
-          "heat_score": 36.8,
-          "url": "https://github.com/cocoindex-io/cocoindex"
-        },
-        {
-          "name": "ds4",
-          "full_name": "antirez/ds4",
-          "description": "DeepSeek 4 Flash local inference engine for Metal",
-          "stars": 3362,
-          "heat_score": 30.6,
-          "url": "https://github.com/antirez/ds4"
+          "name": "UI-TARS-desktop",
+          "full_name": "bytedance/UI-TARS-desktop",
+          "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+          "stars": 31160,
+          "heat_score": 37.7,
+          "url": "https://github.com/bytedance/UI-TARS-desktop"
         }
       ],
-      "suggestion": "可用 ruflo、cocoindex、ds4 实现水利边缘端轻量化 AI 部署。边缘端 AI 部署 技术使 AI 模型可部署到水利现场的边缘设备上，无需依赖网络连接即可运行推理，适合水库、闸泵站等野外站点。"
+      "suggestion": "可用 UI-TARS-desktop 实现水利边缘端轻量化 AI 部署。边缘端 AI 部署 技术使 AI 模型可部署到水利现场的边缘设备上，无需依赖网络连接即可运行推理，适合水库、闸泵站等野外站点。"
     },
     {
       "tech_direction": "多模态 AI",
@@ -197,111 +137,15 @@
       ],
       "hot_projects": [
         {
-          "name": "transformers",
-          "full_name": "huggingface/transformers",
-          "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and ",
-          "stars": 160413,
-          "heat_score": 13.5,
-          "url": "https://github.com/huggingface/transformers"
-        },
-        {
-          "name": "haystack",
-          "full_name": "deepset-ai/haystack",
-          "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modula",
-          "stars": 25132,
-          "heat_score": 12.1,
-          "url": "https://github.com/deepset-ai/haystack"
-        },
-        {
-          "name": "sglang",
-          "full_name": "sgl-project/sglang",
-          "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
-          "stars": 27548,
-          "heat_score": 11.1,
-          "url": "https://github.com/sgl-project/sglang"
+          "name": "UI-TARS-desktop",
+          "full_name": "bytedance/UI-TARS-desktop",
+          "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+          "stars": 31160,
+          "heat_score": 37.7,
+          "url": "https://github.com/bytedance/UI-TARS-desktop"
         }
       ],
-      "suggestion": "可结合 transformers、haystack、sglang 增强水利多源数据融合分析能力。多模态 AI 技术能同时理解遥感影像、视频监控画面和文本报告，实现图文互查、影像是问答，提升防汛会商的信息聚合效率。"
-    },
-    {
-      "tech_direction": "计算机视觉",
-      "keywords": [
-        "computer-vision",
-        "object-detection",
-        "yolo",
-        "segmentation",
-        "image-classification"
-      ],
-      "water_scenarios": [
-        "河道漂浮物智能识别",
-        "水位标尺自动读数",
-        "堤坝裂缝/渗漏视觉检测",
-        "水库周界入侵智能识别",
-        "闸门启闭状态视频监控"
-      ],
-      "hot_projects": [
-        {
-          "name": "pattern",
-          "full_name": "clips/pattern",
-          "description": "Web mining module for Python, with tools for scraping, natural language processing, machine learning, network analysis a",
-          "stars": 8859,
-          "heat_score": 9.9,
-          "url": "https://github.com/clips/pattern"
-        },
-        {
-          "name": "inspector",
-          "full_name": "modelcontextprotocol/inspector",
-          "description": "Visual testing tool for MCP servers",
-          "stars": 9699,
-          "heat_score": 9.6,
-          "url": "https://github.com/modelcontextprotocol/inspector"
-        },
-        {
-          "name": "yellowbrick",
-          "full_name": "DistrictDataLabs/yellowbrick",
-          "description": "Visual analysis and diagnostic tools to facilitate machine learning model selection.",
-          "stars": 4397,
-          "heat_score": 9.2,
-          "url": "https://github.com/DistrictDataLabs/yellowbrick"
-        }
-      ],
-      "suggestion": "可引入 pattern、inspector、yellowbrick 提升水利视觉监控精度。计算机视觉 方向当前发展迅速，建议在水库/河道重点监控点部署，实现漂浮物自动识别和告警，替代人工巡检，提高异常发现时效性。"
-    },
-    {
-      "tech_direction": "时间序列预测",
-      "keywords": [
-        "time-series",
-        "forecasting",
-        "prophet",
-        "prediction",
-        "regression"
-      ],
-      "water_scenarios": [
-        "水文站流量预测",
-        "降雨径流预报",
-        "水库入库流量预测",
-        "城市内涝风险预警",
-        "地下水水位趋势预测"
-      ],
-      "hot_projects": [
-        {
-          "name": "funNLP",
-          "full_name": "fighting41love/funNLP",
-          "description": "中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库",
-          "stars": 80534,
-          "heat_score": 11.8,
-          "url": "https://github.com/fighting41love/funNLP"
-        },
-        {
-          "name": "pathway",
-          "full_name": "pathwaycom/pathway",
-          "description": "Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.",
-          "stars": 63293,
-          "heat_score": 11.5,
-          "url": "https://github.com/pathwaycom/pathway"
-        }
-      ],
-      "suggestion": "可借鉴 funNLP、pathway 提升水文预报模型精度。时间序列预测 方向的新模型架构可直接应用于水库入库流量预测、城市内涝预警等场景，建议对比现有 LSTM 模型评估精度提升。"
+      "suggestion": "可结合 UI-TARS-desktop 增强水利多源数据融合分析能力。多模态 AI 技术能同时理解遥感影像、视频监控画面和文本报告，实现图文互查、影像是问答，提升防汛会商的信息聚合效率。"
     }
   ]
 }

@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """GitHub AI Hot Monitor - Main Data Pipeline
 
-Fetches trending AI projects from GitHub and cross-validates with
-Hacker News and Reddit discussion heat. Outputs JSON data files.
+Two-stream architecture:
+  Stream A (Hot List): GitHub Trending → AI filter → Top 5/10 →
+                       HN Algolia + Reddit exact-name search → Score → Rank
+  Stream B (Dark Horses): HN top stories + Reddit hot posts →
+                          Reverse-extract GitHub refs → Low stars, high buzz → Treasure
 
-Sources (all real data, never fabricated):
+Data sources (all real data, never fabricated):
   1. GitHub Trending page (HTML parse) - daily/weekly trending repos
-  2. GitHub Search API - AI topic/term search
-  3. HN Firebase API - top stories reverse matching
-  4. HN Algolia API - forward search for project mentions
-  5. Reddit search API - 3 AI subreddits cross-validation
+  2. HN Firebase API - top stories reverse matching (dark horses)
+  3. HN Algolia API - forward search by project name (hot list cross-validation)
+  4. Reddit search API - forward search by project name (hot list cross-validation)
+  5. Reddit hot posts - reverse GitHub ref extraction (dark horses)
   6. GitHub Issues API - activity signal
 """
 
@@ -53,15 +56,6 @@ AI_TOPICS = [
     "chatgpt", "langchain", "agent", "multi-agent", "mcp",
     "text-to-image", "stable-diffusion", "multimodal", "speech-recognition",
     "computer-vision", "reinforcement-learning", "mlops",
-]
-
-# AI-related GitHub search queries
-AI_SEARCH_QUERIES = [
-    "ai agent framework stars:>50",
-    "llm framework stars:>50",
-    "rag framework stars:>50",
-    "mcp server stars:>50",
-    "machine learning tool stars:>50",
 ]
 
 # AI classification signals
@@ -222,47 +216,6 @@ def _parse_count_string(text):
     if not match:
         return 0
     return int(match.group(1).replace(",", ""))
-
-
-# ── Source 2: GitHub Search API ────────────────────────────────────────────
-
-def github_search_ai_repos():
-    """Search GitHub for AI repos by multiple queries. Returns list of repo dicts."""
-    all_repos = []
-    seen = set()
-
-    for query in AI_SEARCH_QUERIES:
-        url = "https://api.github.com/search/repositories"
-        params = {"q": query, "sort": "stars", "order": "desc", "per_page": 15}
-        resp = api_get(url, params=params, headers=API_HEADERS)
-        if not resp:
-            continue
-
-        data = resp.json()
-        for item in data.get("items", []):
-            fid = item["full_name"]
-            if fid in seen:
-                continue
-            seen.add(fid)
-
-            all_repos.append({
-                "owner": item["owner"]["login"],
-                "name": item["name"],
-                "full_name": fid,
-                "description": item.get("description") or "",
-                "language": item.get("language") or "",
-                "stars": item.get("stargazers_count", 0),
-                "forks": item.get("forks_count", 0),
-                "topics": item.get("topics", []),
-                "created_at": item.get("created_at", ""),
-                "updated_at": item.get("updated_at", ""),
-                "url": item.get("html_url", ""),
-                "source": "github-search",
-            })
-        time.sleep(1.5)  # Rate limit courtesy
-
-    log.info("GitHub Search: %d unique repos", len(all_repos))
-    return all_repos
 
 
 def enrich_repo_details(repo):
@@ -462,7 +415,17 @@ def reddit_search_project(full_name):
             seen_urls.add(p["url"])
             deduped.append(p)
 
-    return {"reddit_ups": max_ups, "reddit_comments": max_comments, "reddit_posts": deduped}
+    # Primary subreddit (where the most upvoted post came from)
+    primary_subreddit = ""
+    if deduped and deduped[0].get("subreddit"):
+        primary_subreddit = deduped[0]["subreddit"]
+
+    return {
+        "reddit_ups": max_ups,
+        "reddit_comments": max_comments,
+        "reddit_posts": deduped,
+        "reddit_subreddit": primary_subreddit,
+    }
 
 
 def reddit_search_top_ai_posts(limit=50):
@@ -611,166 +574,205 @@ def is_ai_project(repo):
 
 # ── Main Pipeline ──────────────────────────────────────────────────────────
 
-def merge_and_deduplicate(trending_repos, search_repos, hn_refs, reddit_refs):
-    """Merge all sources, deduplicate by full_name, enrich with cross-source data."""
-    merged = {}  # full_name -> repo dict
-
-    def get_key(r):
-        return r.get("full_name", f"{r.get('owner', '')}/{r.get('name', '')}").lower()
-
-    # Add GitHub Trending repos
-    for r in trending_repos:
-        key = get_key(r)
-        merged[key] = dict(r)
-
-    # Add GitHub Search repos
-    for r in search_repos:
-        key = get_key(r)
-        if key in merged:
-            merged[key].update({k: v for k, v in r.items() if v})
-        else:
-            merged[key] = dict(r)
-
-    # Add HN refs
-    for r in hn_refs:
-        key = get_key(r)
-        if key in merged:
-            merged[key]["hn_score"] = r.get("hn_score", 0)
-            merged[key]["hn_comments"] = r.get("hn_comments", 0)
-            merged[key]["hn_title"] = r.get("hn_title", "")
-            merged[key]["hn_url"] = r.get("hn_url", "")
-            if r.get("source"):
-                merged[key]["hn_source"] = r["source"]
-        else:
-            merged[key] = dict(r)
-
-    # Add Reddit refs
-    for r in reddit_refs:
-        key = get_key(r)
-        if key in merged:
-            merged[key]["reddit_ups"] = max(
-                merged[key].get("reddit_ups", 0), r.get("reddit_ups", 0)
-            )
-            merged[key]["reddit_subreddit"] = r.get("reddit_subreddit", "")
-        else:
-            merged[key] = dict(r)
-
-    return list(merged.values())
+def _build_dark_horse_entry(repo, community_heat):
+    """Build a dark horse insight entry from a repo dict."""
+    return {
+        "project": {
+            "full_name": repo.get("full_name", ""),
+            "name": repo.get("name", ""),
+            "owner": repo.get("owner", ""),
+            "description": repo.get("description", ""),
+            "stars": repo.get("stars", 0),
+            "language": repo.get("language", ""),
+            "topics": repo.get("topics", []),
+            "url": f"https://github.com/{repo.get('full_name', '')}",
+        },
+        "insight": (
+            f"💎 {repo.get('name', '')} — "
+            f"{repo.get('description', '')[:60]}，"
+            f"仅 {repo.get('stars', 0)}⭐，"
+            f"社区讨论热度 {community_heat:.0f} 分"
+        ),
+        "community_heat": community_heat,
+        "hn_url": repo.get("hn_url", ""),
+        "reddit_url": repo.get("reddit_url", ""),
+    }
 
 
 def run_pipeline(mode="daily"):
-    """Run the full data pipeline for the given mode (daily/weekly)."""
+    """Run the two-stream pipeline.
+
+    Stream A (Hot List): GitHub Trending → AI filter → Top 5/10 →
+                         HN + Reddit exact-name search → Score → Rank
+    Stream B (Dark Horses): HN + Reddit hot posts → extract GitHub refs →
+                            enrich → filter low-star high-buzz → treasure list
+    """
     log.info("=== Starting pipeline: mode=%s ===", mode)
 
-    # 1. Fetch GitHub Trending
+    # ══════════════════════════════════════════════════════════════════════
+    # Stream A: Hot List
+    # ══════════════════════════════════════════════════════════════════════
+
+    # A1. GitHub Trending
     trending = parse_github_trending(since=mode)
     if not trending:
         log.error("No trending repos found, aborting")
         return False
+    log.info("A1: %d trending repos fetched", len(trending))
 
-    # 2. Fetch GitHub Search results
-    search_repos = github_search_ai_repos()
-
-    # 3. Fetch HN top stories and extract GitHub refs (Path A)
-    hn_stories = hn_fetch_top_stories(limit=150)
-    hn_refs = hn_extract_github_refs(hn_stories)
-
-    # 4. Fetch Reddit top posts and extract GitHub refs
-    reddit_refs = reddit_search_top_ai_posts(limit=50)
-
-    # 5. Merge all sources
-    all_repos = merge_and_deduplicate(trending, search_repos, hn_refs, reddit_refs)
-    log.info("Merged: %d unique repos before AI filter", len(all_repos))
-
-    # 6. Enrich repos with full API details
-    # Without GITHUB_TOKEN, skip this entirely — too rate-limited.
-    # Trending page already gives us stars_added + description + language.
+    # A2. Enrich trending repos with GitHub API (topics, total stars)
     if GITHUB_TOKEN:
-        for i, repo in enumerate(all_repos):
-            source = repo.get("source", "")
-            if source in {"github-trending-daily", "github-trending-weekly", "hn-firebase", "hn-show"} or not repo.get("stars"):
-                repo = enrich_repo_details(repo)
-                all_repos[i] = repo
+        for i, repo in enumerate(trending):
+            trending[i] = enrich_repo_details(repo)
             time.sleep(0.15)
+        log.info("A2: enriched %d repos with API details", len(trending))
     else:
-        log.info("No GITHUB_TOKEN: skipping GitHub API enrichment (rate limit: 60/hr)")
-        # For trending repos, stars_added is already set from page parsing
-        # For other sources, set total stars to 0 if unknown (honesty over fabrication)
-        for repo in all_repos:
-            if not repo.get("stars"):
-                repo["stars"] = 0
+        for repo in trending:
+            repo.setdefault("stars", 0)
+            repo.setdefault("topics", [])
+        log.info("A2: no token, skipped API enrichment")
 
-    # 7. AI classification
-    ai_repos = []
-    for repo in all_repos:
+    # A3. Filter to AI projects only
+    ai_trending = []
+    for repo in trending:
         is_ai, reasons = is_ai_project(repo)
         if is_ai:
             repo["ai_reasons"] = reasons
-            ai_repos.append(repo)
+            ai_trending.append(repo)
         else:
-            log.debug("Excluded non-AI: %s (reasons: %s)", repo.get("full_name"), reasons)
+            log.debug("Excluded non-AI: %s", repo.get("full_name"))
+    log.info("A3: %d/%d AI-filtered", len(ai_trending), len(trending))
 
-    log.info("AI filter: %d/%d repos passed", len(ai_repos), len(all_repos))
+    # A4. Select top N by stars_added
+    top_n = 5 if mode == "daily" else 10
+    ai_trending.sort(key=lambda r: r.get("stars_added", 0), reverse=True)
+    hot_list = ai_trending[:top_n]
+    log.info("A4: top %d candidates selected", len(hot_list))
 
-    # 8. HN forward search — only for top 25 candidates (no-token optimization)
-    # Sort by a rough heuristic first: stars_added + existing hn_score
-    ai_repos.sort(key=lambda r: r.get("stars_added", 0) + r.get("hn_score", 0) * 5, reverse=True)
-    hn_search_count = 25 if not GITHUB_TOKEN else len(ai_repos)
-    for i, repo in enumerate(ai_repos):
-        if i >= hn_search_count:
-            break
-        if not repo.get("hn_score"):
-            hn_data = hn_search_project(repo["name"], repo["full_name"], mode=mode)
-            repo["hn_points"] = hn_data.get("hn_points", 0)
-            repo["hn_comments"] = max(
-                repo.get("hn_comments", 0), hn_data.get("hn_comments", 0)
-            )
-            repo["hn_stories"] = hn_data.get("hn_stories", [])
-            if hn_data["hn_points"] > 0:
-                repo["hn_score"] = max(
-                    repo.get("hn_score", 0), hn_data["hn_points"]
-                )
-                if not repo.get("hn_url") and hn_data["hn_stories"]:
-                    repo["hn_url"] = hn_data["hn_stories"][0]["url"]
-        time.sleep(0.2)
+    # A5. HN + Reddit forward search for every candidate
+    for repo in hot_list:
+        # HN Algolia exact-name search
+        hn_data = hn_search_project(repo["name"], repo["full_name"], mode=mode)
+        repo["hn_points"] = hn_data.get("hn_points", 0)
+        repo["hn_comments"] = hn_data.get("hn_comments", 0)
+        repo["hn_stories"] = hn_data.get("hn_stories", [])
+        if hn_data["hn_points"] > 0:
+            repo["hn_score"] = hn_data["hn_points"]
+            if hn_data["hn_stories"]:
+                repo["hn_url"] = hn_data["hn_stories"][0]["url"]
 
-    # 9. Reddit forward search removed — noisy results, constant 429 rate limiting
-    # Reddit signal comes from reddit_search_top_ai_posts() (hot posts extraction) only
+        # Reddit exact-name search
+        rd_data = reddit_search_project(repo["full_name"])
+        repo["reddit_ups"] = rd_data.get("reddit_ups", 0)
+        repo["reddit_comments"] = rd_data.get("reddit_comments", 0)
+        repo["reddit_posts"] = rd_data.get("reddit_posts", [])
+        if rd_data.get("reddit_ups", 0) > 0:
+            repo["reddit_subreddit"] = rd_data.get("reddit_subreddit", "")
+            if rd_data.get("reddit_posts"):
+                repo["reddit_url"] = rd_data["reddit_posts"][0].get("url", "")
 
-    # 9. GitHub Issues activity — needs token, skip entirely otherwise
+        log.info("A5: %s → HN=%dpts Reddit=%dups",
+                 repo["full_name"], repo.get("hn_points", 0), repo.get("reddit_ups", 0))
+        time.sleep(0.5)
+
+    # A6. Issues activity (optional, needs token)
     if GITHUB_TOKEN:
-        for repo in ai_repos[:30]:
-            activity = get_repo_issues_activity(repo["full_name"])
-            repo["issues_activity"] = activity
-    else:
-        log.info("No GITHUB_TOKEN: skipping Issues activity (needs API)")
+        for repo in hot_list:
+            repo["issues_activity"] = get_repo_issues_activity(repo["full_name"])
 
-    # 10. Score all projects
+    # A7. Score and rank
     scorer = Scorer()
-    for repo in ai_repos:
+    for repo in hot_list:
         repo["scores"] = scorer.compute(repo)
         repo["heat_score"] = repo["scores"]["total"]
 
-    # Sort by heat score descending
-    ai_repos.sort(key=lambda r: r["heat_score"], reverse=True)
+    hot_list.sort(key=lambda r: r["heat_score"], reverse=True)
+    for i, repo in enumerate(hot_list):
+        repo["rank"] = i + 1
 
-    # 11. Generate insights
+    log.info("A7: scored and ranked. Top: %s (%.1f)",
+             hot_list[0]["full_name"] if hot_list else "none",
+             hot_list[0]["heat_score"] if hot_list else 0)
+
+    # ══════════════════════════════════════════════════════════════════════
+    # Stream B: Dark Horses (from HN + Reddit reverse extraction)
+    # ══════════════════════════════════════════════════════════════════════
+
+    # B1. HN top stories → extract GitHub refs
+    hn_stories = hn_fetch_top_stories(limit=150)
+    hn_refs = hn_extract_github_refs(hn_stories)
+
+    # B2. Reddit hot posts → extract GitHub refs
+    reddit_refs = reddit_search_top_ai_posts(limit=50)
+
+    # B3. Merge HN + Reddit refs, track cross-platform signal
+    dh_candidates = {}
+    for r in hn_refs:
+        key = r["full_name"].lower()
+        dh_candidates[key] = dict(r)
+
+    for r in reddit_refs:
+        key = r["full_name"].lower()
+        if key in dh_candidates:
+            dh_candidates[key]["reddit_ups"] = r.get("reddit_ups", 0)
+            dh_candidates[key]["reddit_subreddit"] = r.get("reddit_subreddit", "")
+            dh_candidates[key]["reddit_url"] = r.get("reddit_url", "")
+            dh_candidates[key]["has_both"] = True
+        else:
+            dh_candidates[key] = dict(r)
+
+    log.info("B3: %d dark horse candidates (HN=%d, Reddit=%d)",
+             len(dh_candidates), len(hn_refs), len(reddit_refs))
+
+    # B4. Enrich candidates with GitHub API, filter for treasure criteria
+    hot_names = {r["full_name"].lower() for r in hot_list}
+    dark_horses = []
+
+    for key, candidate in dh_candidates.items():
+        if key in hot_names:
+            continue  # Already on the hot list, skip
+
+        if GITHUB_TOKEN:
+            candidate = enrich_repo_details(candidate)
+            time.sleep(0.15)
+        else:
+            candidate.setdefault("stars", 0)
+
+        stars = candidate.get("stars", 999999)
+        hn_heat = candidate.get("hn_score", 0) or candidate.get("hn_points", 0)
+        reddit_heat = candidate.get("reddit_ups", 0)
+        community_heat = max(hn_heat, reddit_heat)
+
+        # Treasure threshold: community buzz > 25 AND stars < 5000
+        if community_heat > 25 and stars < 5000:
+            dark_horses.append(_build_dark_horse_entry(candidate, community_heat))
+
+    dark_horses.sort(key=lambda r: r["community_heat"], reverse=True)
+    dark_horses = dark_horses[:5]
+    log.info("B4: %d dark horses identified", len(dark_horses))
+
+    # ══════════════════════════════════════════════════════════════════════
+    # Generate insights, water recommendations, and save
+    # ══════════════════════════════════════════════════════════════════════
+
+    # Generate AI insights
     insight_gen = InsightGenerator()
-    insights = insight_gen.generate(ai_repos, mode=mode)
+    insights = insight_gen.generate(hot_list, mode=mode)
+    insights["dark_horses"] = dark_horses  # Override with Stream B results
 
-    # 12. Generate water conservancy recommendations
+    # Generate water conservancy recommendations
     water_mapper = WaterMapper()
-    water_insights = water_mapper.generate(ai_repos, mode=mode)
+    water_insights = water_mapper.generate(hot_list, mode=mode)
 
-    # 13. Save output
+    # Save outputs
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     output_key = "today" if mode == "daily" else "week"
     output_data = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "mode": mode,
-        "total_projects": len(ai_repos),
-        "projects": ai_repos,
+        "total_projects": len(hot_list),
+        "projects": hot_list,
     }
     with open(DATA_DIR / f"{output_key}.json", "w", encoding="utf-8") as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
@@ -781,21 +783,21 @@ def run_pipeline(mode="daily"):
     with open(DATA_DIR / "water_insights.json", "w", encoding="utf-8") as f:
         json.dump(water_insights, f, ensure_ascii=False, indent=2)
 
-    # Meta
     meta = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
-        "total_ai_projects": len(ai_repos),
+        "total_ai_projects": len(hot_list),
         "sources": {
             "github_trending": len(trending),
-            "github_search": len(search_repos),
             "hn_refs": len(hn_refs),
             "reddit_refs": len(reddit_refs),
         },
+        "dark_horses": len(dark_horses),
     }
     with open(DATA_DIR / "meta.json", "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=2)
 
-    log.info("=== Pipeline complete: %d AI projects saved ===", len(ai_repos))
+    log.info("=== Pipeline complete: %d hot + %d dark horses ===",
+             len(hot_list), len(dark_horses))
     return True
 
 

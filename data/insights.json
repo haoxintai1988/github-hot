@@ -1,45 +1,158 @@
 {
-  "generated_at": "2026-05-09T13:37:51.882715+00:00",
-  "mode": "weekly",
+  "generated_at": "2026-05-09T15:00:26.264466+00:00",
+  "mode": "daily",
   "headline": {
     "project": {
-      "full_name": "browserbase/skills",
-      "name": "skills",
-      "owner": "browserbase",
-      "description": "Claude Agent SDK with a web browsing tool",
-      "stars": 2886,
-      "stars_added": 1621,
-      "heat_score": 50.9,
-      "url": "https://github.com/browserbase/skills",
-      "topics": [],
-      "language": "JavaScript",
+      "full_name": "bytedance/UI-TARS-desktop",
+      "name": "UI-TARS-desktop",
+      "owner": "bytedance",
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "stars": 31160,
+      "stars_added": 549,
+      "heat_score": 37.7,
+      "url": "https://github.com/bytedance/UI-TARS-desktop",
+      "topics": [
+        "agent",
+        "agent-tars",
+        "browser-use",
+        "computer-use",
+        "cowork"
+      ],
+      "language": "TypeScript",
       "is_treasure": false
     },
-    "why_hot": "🔥 skills 今日爆火：单日新增 1621⭐、HN 134 分热议",
-    "hn_url": "https://news.ycombinator.com/item?id=47780971",
-    "reddit_url": ""
+    "why_hot": "🔥 UI-TARS-desktop 今日爆火：单日新增 549⭐、r/LocalLLaMA 热议、方向：agent/agent-tars/browser-use",
+    "hn_url": "",
+    "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1r1fnon/uitars_desktop_agent_this_actually_looks/"
   },
   "dark_horses": [
     {
       "project": {
-        "full_name": "regent-vcs/re_gent",
-        "name": "re_gent",
-        "owner": "regent-vcs",
-        "description": "Git for AI coding agents.",
-        "stars": 232,
-        "language": "Go",
+        "full_name": "AtomicBot-ai/atomic-llama-cpp-turboquant",
+        "name": "atomic-llama-cpp-turboquant",
+        "owner": "AtomicBot-ai",
+        "description": "llama.cpp fork with TurboQuant WHT-rotated KV cache & weight compression + Gemma 4 MTP speculative decoding for ~30-50% throughput gains",
+        "stars": 84,
+        "language": "C++",
         "topics": [
-          "ai-agent",
-          "claude-code",
-          "developer-tools",
-          "devtools",
-          "golang"
+          "apple-silicon",
+          "cpp",
+          "cuda",
+          "gemma",
+          "gemma3",
+          "gguf",
+          "kv-cache-compression",
+          "llama-cpp",
+          "llm-inference",
+          "local-llm",
+          "low-bit-quantization",
+          "metal",
+          "mtp",
+          "multi-token-prediction",
+          "on-device-ai",
+          "quantization",
+          "speculative-decoding",
+          "turboquant",
+          "vulkan",
+          "walsh-hadamard"
         ],
-        "url": "https://github.com/regent-vcs/re_gent"
+        "url": "https://github.com/AtomicBot-ai/atomic-llama-cpp-turboquant"
       },
-      "insight": "💎 re_gent — Git for AI coding agents.，仅 232⭐，HN 讨论热度 109 分",
-      "community_heat": 62.010984150972234,
-      "hn_url": "https://news.ycombinator.com/item?id=48063548",
+      "insight": "💎 atomic-llama-cpp-turboquant — llama.cpp fork with TurboQuant WHT-rotated KV cache & weight，仅 84⭐，社区讨论热度 537 分",
+      "community_heat": 537,
+      "hn_url": "",
+      "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1t6se6r/multitoken_prediction_mtp_for_llamacpp_gemma_4/"
+    },
+    {
+      "project": {
+        "full_name": "antirez/ds4",
+        "name": "ds4",
+        "owner": "antirez",
+        "description": "DeepSeek 4 Flash local inference engine for Metal",
+        "stars": 3504,
+        "language": "C",
+        "topics": [],
+        "url": "https://github.com/antirez/ds4"
+      },
+      "insight": "💎 ds4 — DeepSeek 4 Flash local inference engine for Metal，仅 3504⭐，社区讨论热度 483 分",
+      "community_heat": 483,
+      "hn_url": "https://news.ycombinator.com/item?id=48050751",
+      "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1t72tk9/ds4_a_deepseek_4_flash_specific_inference_engine/"
+    },
+    {
+      "project": {
+        "full_name": "lemonade-sdk/lemonade",
+        "name": "lemonade",
+        "owner": "lemonade-sdk",
+        "description": "Lemonade helps users discover and run local AI apps by serving optimized LLMs right from their own GPUs and NPUs. Join our discord: https://discord.gg/5xXzkMu8Zk",
+        "stars": 3871,
+        "language": "C++",
+        "topics": [
+          "ai",
+          "amd",
+          "genai",
+          "gpu",
+          "llama",
+          "llm",
+          "llm-inference",
+          "local-server",
+          "mcp",
+          "mcp-server",
+          "mistral",
+          "npu",
+          "onnxruntime",
+          "openai-api",
+          "qwen",
+          "radeon",
+          "rocm",
+          "ryzen",
+          "vulkan"
+        ],
+        "url": "https://github.com/lemonade-sdk/lemonade"
+      },
+      "insight": "💎 lemonade — Lemonade helps users discover and run local AI apps by servi，仅 3871⭐，社区讨论热度 345 分",
+      "community_heat": 345,
+      "hn_url": "",
+      "reddit_url": "https://reddit.com/r/LocalLLaMA/comments/1t7g70j/vllm_rocm_has_been_added_to_lemonade_as_an/"
+    },
+    {
+      "project": {
+        "full_name": "wojtczyk/trust",
+        "name": "trust",
+        "owner": "wojtczyk",
+        "description": "TRUST – Coding Rust like it's 1989",
+        "stars": 180,
+        "language": "Rust",
+        "topics": [
+          "cargo",
+          "ide",
+          "ratatui",
+          "retro",
+          "rust",
+          "terminal",
+          "tui"
+        ],
+        "url": "https://github.com/wojtczyk/trust"
+      },
+      "insight": "💎 trust — TRUST – Coding Rust like it's 1989，仅 180⭐，社区讨论热度 156 分",
+      "community_heat": 156,
+      "hn_url": "https://news.ycombinator.com/item?id=48045939",
+      "reddit_url": ""
+    },
+    {
+      "project": {
+        "full_name": "crosspoint-reader/crosspoint-reader",
+        "name": "crosspoint-reader",
+        "owner": "crosspoint-reader",
+        "description": "Firmware for the Xteink X4 e-paper display reader",
+        "stars": 4395,
+        "language": "C",
+        "topics": [],
+        "url": "https://github.com/crosspoint-reader/crosspoint-reader"
+      },
+      "insight": "💎 crosspoint-reader — Firmware for the Xteink X4 e-paper display reader，仅 4395⭐，社区讨论热度 153 分",
+      "community_heat": 153,
+      "hn_url": "https://news.ycombinator.com/item?id=48021901",
       "reddit_url": ""
     }
   ],
@@ -48,31 +161,21 @@
       "trend": "Agent 框架 / MCP 协议",
       "description": "Agent 框架与 MCP 协议类项目集中爆发，AI 工具互联互通和自主任务执行成为当前焦点",
       "representative_projects": [
-        "skills",
-        "ruflo",
-        "TradingAgents"
+        "UI-TARS-desktop",
+        "hello-agents",
+        "agentmemory"
       ],
-      "match_count": 43
-    },
-    {
-      "trend": "RAG 与知识检索",
-      "description": "RAG 与知识检索技术持续演进，企业级知识管理需求驱动创新",
-      "representative_projects": [
-        "ruflo",
-        "cocoindex",
-        "InsForge"
-      ],
-      "match_count": 21
+      "match_count": 8
     },
     {
       "trend": "AI 编程与开发工具",
       "description": "AI 编程工具生态加速成熟，开发者工作流正在被重新定义",
       "representative_projects": [
-        "skills",
-        "ruflo",
-        "jcode"
+        "9router",
+        "agentmemory",
+        "easy-vibe"
       ],
-      "match_count": 9
+      "match_count": 6
     }
   ]
 }
