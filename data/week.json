@@ -1,33 +1,41 @@
 {
-  "generated_at": "2026-05-10T07:57:03.073726+00:00",
+  "generated_at": "2026-05-10T15:43:17.800381+00:00",
   "mode": "weekly",
-  "total_projects": 9,
+  "total_projects": 10,
   "projects": [
     {
-      "owner": "browserbase",
-      "name": "skills",
-      "full_name": "browserbase/skills",
-      "description": "Browserbase's official collection of agent skills to access the web.",
-      "language": "JavaScript",
-      "stars_added": 1554,
+      "owner": "Hmbown",
+      "name": "DeepSeek-TUI",
+      "full_name": "Hmbown/DeepSeek-TUI",
+      "description": "Coding agent for DeepSeek models that runs in your terminal",
+      "language": "Rust",
+      "stars_added": 21613,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,554 stars this week",
+      "raw_stars_text": "21,613 stars this week",
       "ai_reasons": [
-        "desc:agent"
+        "desc:agent",
+        "lang:Rust"
       ],
-      "hn_points": 134,
-      "hn_comments": 56,
+      "hn_points": 9,
+      "hn_comments": 0,
       "hn_stories": [
         {
-          "title": "Show HN: Libretto – Making AI browser automations deterministic",
-          "points": 134,
-          "comments": 56,
-          "url": "https://news.ycombinator.com/item?id=47780971",
-          "created_at": "2026-04-15T15:57:54Z"
+          "title": "Terminal coding agent for DeepSeek V4",
+          "points": 3,
+          "comments": 0,
+          "url": "https://news.ycombinator.com/item?id=48042201",
+          "created_at": "2026-05-06T21:36:10Z"
+        },
+        {
+          "title": "DeepSeek: Thinking with Visual Primitives [pdf]",
+          "points": 9,
+          "comments": 0,
+          "url": "https://news.ycombinator.com/item?id=47967370",
+          "created_at": "2026-04-30T19:49:40Z"
         }
       ],
-      "hn_score": 134,
-      "hn_url": "https://news.ycombinator.com/item?id=47780971",
+      "hn_score": 9,
+      "hn_url": "https://news.ycombinator.com/item?id=48042201",
       "reddit_ups": 0,
       "reddit_comments": 0,
       "reddit_posts": [],
@@ -36,14 +44,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 86.28497800564763,
-        "hn_heat": 64.73323356399894,
+        "stars_growth": 100,
+        "hn_heat": 18.174949765661676,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 50.7,
+        "total": 44.5,
         "is_treasure": false
       },
-      "heat_score": 50.7,
+      "heat_score": 44.5,
       "rank": 1
     },
     {
@@ -222,6 +230,40 @@
       "rank": 5
     },
     {
+      "owner": "VectifyAI",
+      "name": "PageIndex",
+      "full_name": "VectifyAI/PageIndex",
+      "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+      "language": "Python",
+      "stars_added": 4250,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "4,250 stars this week",
+      "ai_reasons": [
+        "desc:rag",
+        "lang:Python"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 98.09233130618715,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 39.2,
+        "is_treasure": false
+      },
+      "heat_score": 39.2,
+      "rank": 6
+    },
+    {
       "owner": "virattt",
       "name": "dexter",
       "full_name": "virattt/dexter",
@@ -253,7 +295,7 @@
         "is_treasure": false
       },
       "heat_score": 37.7,
-      "rank": 6
+      "rank": 7
     },
     {
       "owner": "decolua",
@@ -286,53 +328,19 @@
         "is_treasure": false
       },
       "heat_score": 36.9,
-      "rank": 7
-    },
-    {
-      "owner": "InsForge",
-      "name": "InsForge",
-      "full_name": "InsForge/InsForge",
-      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
-      "language": "TypeScript",
-      "stars_added": 1270,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "1,270 stars this week",
-      "ai_reasons": [
-        "desc:agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
-      },
-      "scores": {
-        "stars_growth": 83.9172165396088,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 33.6,
-        "is_treasure": false
-      },
-      "heat_score": 33.6,
       "rank": 8
     },
     {
-      "owner": "Q00",
-      "name": "ouroboros",
-      "full_name": "Q00/ouroboros",
-      "description": "Agent OS: Stop prompting. Start specifying.",
+      "owner": "LearningCircuit",
+      "name": "local-deep-research",
+      "full_name": "LearningCircuit/local-deep-research",
+      "description": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "language": "Python",
-      "stars_added": 759,
+      "stars_added": 2494,
       "source": "github-trending-weekly",
-      "raw_stars_text": "759 stars this week",
+      "raw_stars_text": "2,494 stars this week",
       "ai_reasons": [
-        "desc:agent",
+        "desc:llama",
         "lang:Python"
       ],
       "hn_points": 0,
@@ -346,15 +354,49 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 77.87967867374309,
+        "stars_growth": 91.83612697877317,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 31.2,
+        "total": 36.7,
         "is_treasure": false
       },
-      "heat_score": 31.2,
+      "heat_score": 36.7,
       "rank": 9
+    },
+    {
+      "owner": "bytedance",
+      "name": "UI-TARS-desktop",
+      "full_name": "bytedance/UI-TARS-desktop",
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "language": "TypeScript",
+      "stars_added": 1656,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "1,656 stars this week",
+      "ai_reasons": [
+        "desc:ai agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 87.03090098389433,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 34.8,
+        "is_treasure": false
+      },
+      "heat_score": 34.8,
+      "rank": 10
     }
   ]
 }
