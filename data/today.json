@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T15:38:39.077048+00:00",
+  "generated_at": "2026-05-10T20:37:27.299455+00:00",
   "mode": "daily",
   "total_projects": 5,
   "projects": [
@@ -109,9 +109,9 @@
       "full_name": "HKUDS/AI-Trader",
       "description": "\"AI-Trader: 100% Fully-Automated Agent-Native Trading\"",
       "language": "Python",
-      "stars_added": 646,
+      "stars_added": 255,
       "source": "github-trending-daily",
-      "raw_stars_text": "646 stars today",
+      "raw_stars_text": "255 stars today",
       "ai_reasons": [
         "desc:agent",
         "lang:Python"
@@ -127,27 +127,27 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 75.9897560701977,
+        "stars_growth": 65.10416195282666,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 30.4,
+        "total": 26.0,
         "is_treasure": false
       },
-      "heat_score": 30.4,
+      "heat_score": 26.0,
       "rank": 4
     },
     {
-      "owner": "lsdefine",
-      "name": "GenericAgent",
-      "full_name": "lsdefine/GenericAgent",
-      "description": "Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption",
+      "owner": "jundot",
+      "name": "omlx",
+      "full_name": "jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
       "language": "Python",
-      "stars_added": 538,
+      "stars_added": 187,
       "source": "github-trending-daily",
-      "raw_stars_text": "538 stars today",
+      "raw_stars_text": "187 stars today",
       "ai_reasons": [
-        "desc:token",
+        "desc:llm",
         "lang:Python"
       ],
       "hn_points": 0,
@@ -161,14 +161,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 73.84554692173732,
+        "stars_growth": 61.47939701082996,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 29.5,
+        "total": 24.6,
         "is_treasure": false
       },
-      "heat_score": 29.5,
+      "heat_score": 24.6,
       "rank": 5
     }
   ]
