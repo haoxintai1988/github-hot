@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T20:37:13.378097+00:00",
+  "generated_at": "2026-05-10T07:57:03.073132+00:00",
   "mode": "weekly",
   "headline": {
     "project": {
@@ -8,14 +8,14 @@
       "owner": "browserbase",
       "description": "Browserbase's official collection of agent skills to access the web.",
       "stars": 0,
-      "stars_added": 1621,
-      "heat_score": 50.9,
+      "stars_added": 1554,
+      "heat_score": 50.7,
       "url": "https://github.com/browserbase/skills",
       "topics": [],
       "language": "JavaScript",
       "is_treasure": false
     },
-    "why_hot": "🔥 skills 今日爆火：单日新增 1621⭐、HN 134 分热议",
+    "why_hot": "🔥 skills 今日爆火：单日新增 1554⭐、HN 134 分热议",
     "hn_url": "https://news.ycombinator.com/item?id=47780971",
     "reddit_url": ""
   },
@@ -26,8 +26,8 @@
       "description": "Agent 框架与 MCP 协议类项目集中爆发，AI 工具互联互通和自主任务执行成为当前焦点",
       "representative_projects": [
         "skills",
-        "TradingAgents",
-        "ruflo"
+        "ruflo",
+        "TradingAgents"
       ],
       "match_count": 8
     },

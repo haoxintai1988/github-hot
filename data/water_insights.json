@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T20:37:13.378612+00:00",
+  "generated_at": "2026-05-10T07:57:03.073650+00:00",
   "mode": "weekly",
   "summary": "本周 AI 热点对水利行业的启示：Agent 智能体框架、LLM / RAG 知识库、数据处理 / 数据治理。Agent 智能体框架 方向值得深入调研，可纳入下阶段技术选型评估。",
   "recommendations": [
@@ -25,16 +25,8 @@
           "full_name": "browserbase/skills",
           "description": "Browserbase's official collection of agent skills to access the web.",
           "stars": 0,
-          "heat_score": 50.9,
+          "heat_score": 50.7,
           "url": "https://github.com/browserbase/skills"
-        },
-        {
-          "name": "TradingAgents",
-          "full_name": "TauricResearch/TradingAgents",
-          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-          "stars": 0,
-          "heat_score": 42.5,
-          "url": "https://github.com/TauricResearch/TradingAgents"
         },
         {
           "name": "ruflo",
@@ -43,9 +35,17 @@
           "stars": 0,
           "heat_score": 42.5,
           "url": "https://github.com/ruvnet/ruflo"
+        },
+        {
+          "name": "TradingAgents",
+          "full_name": "TauricResearch/TradingAgents",
+          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+          "stars": 0,
+          "heat_score": 42.5,
+          "url": "https://github.com/TauricResearch/TradingAgents"
         }
       ],
-      "suggestion": "可参考 skills、TradingAgents、ruflo 架构设计水利多智能体协同系统。Agent 智能体框架 是当前最大热点，水利领域「闸泵阀联动」「防汛应急响应」天然适配多 Agent 协同架构。建议先从单一场景 Agent 做起，逐步构建跨系统的智能体协同调度体系。"
+      "suggestion": "可参考 skills、ruflo、TradingAgents 架构设计水利多智能体协同系统。Agent 智能体框架 是当前最大热点，水利领域「闸泵阀联动」「防汛应急响应」天然适配多 Agent 协同架构。建议先从单一场景 Agent 做起，逐步构建跨系统的智能体协同调度体系。"
     },
     {
       "tech_direction": "LLM / RAG 知识库",
@@ -65,14 +65,6 @@
       ],
       "hot_projects": [
         {
-          "name": "TradingAgents",
-          "full_name": "TauricResearch/TradingAgents",
-          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-          "stars": 0,
-          "heat_score": 42.5,
-          "url": "https://github.com/TauricResearch/TradingAgents"
-        },
-        {
           "name": "ruflo",
           "full_name": "ruvnet/ruflo",
           "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous work",
@@ -81,15 +73,23 @@
           "url": "https://github.com/ruvnet/ruflo"
         },
         {
+          "name": "TradingAgents",
+          "full_name": "TauricResearch/TradingAgents",
+          "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+          "stars": 0,
+          "heat_score": 42.5,
+          "url": "https://github.com/TauricResearch/TradingAgents"
+        },
+        {
           "name": "InsForge",
           "full_name": "InsForge/InsForge",
           "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storag",
           "stars": 0,
-          "heat_score": 33.3,
+          "heat_score": 33.6,
           "url": "https://github.com/InsForge/InsForge"
         }
       ],
-      "suggestion": "可基于 TradingAgents、ruflo、InsForge 构建水利领域知识问答系统。LLM / RAG 知识库 技术日趋成熟，建议将水利工程规范、防汛预案、历史案例等文档结构化后接入 RAG 系统，实现业务知识即时检索和方案生成。"
+      "suggestion": "可基于 ruflo、TradingAgents、InsForge 构建水利领域知识问答系统。LLM / RAG 知识库 技术日趋成熟，建议将水利工程规范、防汛预案、历史案例等文档结构化后接入 RAG 系统，实现业务知识即时检索和方案生成。"
     },
     {
       "tech_direction": "数据处理 / 数据治理",
@@ -121,7 +121,7 @@
           "full_name": "InsForge/InsForge",
           "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storag",
           "stars": 0,
-          "heat_score": 33.3,
+          "heat_score": 33.6,
           "url": "https://github.com/InsForge/InsForge"
         }
       ],

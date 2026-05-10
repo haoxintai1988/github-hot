@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-09T20:37:13.379848+00:00",
+  "last_updated": "2026-05-10T07:57:03.074928+00:00",
   "total_ai_projects": 9,
   "sources": {
     "github_trending": 16,
-    "hn_refs": 11,
+    "hn_refs": 10,
     "reddit_refs": 0
   },
   "dark_horses": 0

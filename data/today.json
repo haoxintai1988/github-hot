@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T20:32:49.334158+00:00",
+  "generated_at": "2026-05-10T07:52:44.659688+00:00",
   "mode": "daily",
   "total_projects": 2,
   "projects": [
@@ -9,9 +9,9 @@
       "full_name": "decolua/9router",
       "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
       "language": "JavaScript",
-      "stars_added": 980,
+      "stars_added": 1031,
       "source": "github-trending-daily",
-      "raw_stars_text": "980 stars today",
+      "raw_stars_text": "1,031 stars today",
       "ai_reasons": [
         "desc:gpt"
       ],
@@ -26,14 +26,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 80.87653488488431,
+        "stars_growth": 81.4715700729535,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 32.4,
+        "total": 32.6,
         "is_treasure": false
       },
-      "heat_score": 32.4,
+      "heat_score": 32.6,
       "rank": 1
     },
     {
@@ -42,9 +42,9 @@
       "full_name": "bytedance/UI-TARS-desktop",
       "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
       "language": "TypeScript",
-      "stars_added": 549,
+      "stars_added": 552,
       "source": "github-trending-daily",
-      "raw_stars_text": "549 stars today",
+      "raw_stars_text": "552 stars today",
       "ai_reasons": [
         "desc:ai agent",
         "lang:TypeScript"
@@ -60,14 +60,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 74.08274047275609,
+        "stars_growth": 74.14660653114204,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 29.6,
+        "total": 29.7,
         "is_treasure": false
       },
-      "heat_score": 29.6,
+      "heat_score": 29.7,
       "rank": 2
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T20:37:13.378680+00:00",
+  "generated_at": "2026-05-10T07:57:03.073726+00:00",
   "mode": "weekly",
   "total_projects": 9,
   "projects": [
@@ -9,9 +9,9 @@
       "full_name": "browserbase/skills",
       "description": "Browserbase's official collection of agent skills to access the web.",
       "language": "JavaScript",
-      "stars_added": 1621,
+      "stars_added": 1554,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,621 stars this week",
+      "raw_stars_text": "1,554 stars this week",
       "ai_reasons": [
         "desc:agent"
       ],
@@ -36,14 +36,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 86.78025172629233,
+        "stars_growth": 86.28497800564763,
         "hn_heat": 64.73323356399894,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 50.9,
+        "total": 50.7,
         "is_treasure": false
       },
-      "heat_score": 50.9,
+      "heat_score": 50.7,
       "rank": 1
     },
     {
@@ -52,9 +52,9 @@
       "full_name": "mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "language": "Shell",
-      "stars_added": 14928,
+      "stars_added": 13770,
       "source": "github-trending-weekly",
-      "raw_stars_text": "14,928 stars this week",
+      "raw_stars_text": "13,770 stars this week",
       "ai_reasons": [
         "desc:claude"
       ],
@@ -90,58 +90,14 @@
       "rank": 2
     },
     {
-      "owner": "TauricResearch",
-      "name": "TradingAgents",
-      "full_name": "TauricResearch/TradingAgents",
-      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
-      "language": "Python",
-      "stars_added": 12981,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "12,981 stars this week",
-      "ai_reasons": [
-        "desc:llm",
-        "lang:Python"
-      ],
-      "hn_points": 1,
-      "hn_comments": 1,
-      "hn_stories": [
-        {
-          "title": "Show HN: TradingAgents without the API bill – run multi agents in Claude Code",
-          "points": 1,
-          "comments": 1,
-          "url": "https://news.ycombinator.com/item?id=47987347",
-          "created_at": "2026-05-02T15:39:56Z"
-        }
-      ],
-      "hn_score": 1,
-      "hn_url": "https://news.ycombinator.com/item?id=47987347",
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
-      },
-      "scores": {
-        "stars_growth": 100,
-        "hn_heat": 9.931176739741858,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 42.5,
-        "is_treasure": false
-      },
-      "heat_score": 42.5,
-      "rank": 3
-    },
-    {
       "owner": "ruvnet",
       "name": "ruflo",
       "full_name": "ruvnet/ruflo",
       "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
       "language": "TypeScript",
-      "stars_added": 12226,
+      "stars_added": 11779,
       "source": "github-trending-weekly",
-      "raw_stars_text": "12,226 stars this week",
+      "raw_stars_text": "11,779 stars this week",
       "ai_reasons": [
         "desc:rag",
         "lang:TypeScript"
@@ -175,6 +131,50 @@
         "is_treasure": false
       },
       "heat_score": 42.5,
+      "rank": 3
+    },
+    {
+      "owner": "TauricResearch",
+      "name": "TradingAgents",
+      "full_name": "TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars_added": 11541,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "11,541 stars this week",
+      "ai_reasons": [
+        "desc:llm",
+        "lang:Python"
+      ],
+      "hn_points": 1,
+      "hn_comments": 1,
+      "hn_stories": [
+        {
+          "title": "Show HN: TradingAgents without the API bill – run multi agents in Claude Code",
+          "points": 1,
+          "comments": 1,
+          "url": "https://news.ycombinator.com/item?id=47987347",
+          "created_at": "2026-05-02T15:39:56Z"
+        }
+      ],
+      "hn_score": 1,
+      "hn_url": "https://news.ycombinator.com/item?id=47987347",
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 100,
+        "hn_heat": 9.931176739741858,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 42.5,
+        "is_treasure": false
+      },
+      "heat_score": 42.5,
       "rank": 4
     },
     {
@@ -183,9 +183,9 @@
       "full_name": "1jehuang/jcode",
       "description": "Coding Agent Harness",
       "language": "Rust",
-      "stars_added": 2925,
+      "stars_added": 2710,
       "source": "github-trending-weekly",
-      "raw_stars_text": "2,925 stars this week",
+      "raw_stars_text": "2,710 stars this week",
       "ai_reasons": [
         "desc:agent",
         "lang:Rust"
@@ -211,14 +211,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 93.70697607764018,
+        "stars_growth": 92.81094215569442,
         "hn_heat": 10.942410098300419,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 40.2,
+        "total": 39.9,
         "is_treasure": false
       },
-      "heat_score": 40.2,
+      "heat_score": 39.9,
       "rank": 5
     },
     {
@@ -227,9 +227,9 @@
       "full_name": "virattt/dexter",
       "description": "An autonomous agent for deep financial research",
       "language": "TypeScript",
-      "stars_added": 3278,
+      "stars_added": 3035,
       "source": "github-trending-weekly",
-      "raw_stars_text": "3,278 stars this week",
+      "raw_stars_text": "3,035 stars this week",
       "ai_reasons": [
         "desc:agent",
         "lang:TypeScript"
@@ -245,14 +245,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 95.0442654685631,
+        "stars_growth": 94.14026072462921,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 38.0,
+        "total": 37.7,
         "is_treasure": false
       },
-      "heat_score": 38.0,
+      "heat_score": 37.7,
       "rank": 6
     },
     {
@@ -261,9 +261,9 @@
       "full_name": "decolua/9router",
       "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
       "language": "JavaScript",
-      "stars_added": 1781,
+      "stars_added": 2593,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,781 stars this week",
+      "raw_stars_text": "2,593 stars this week",
       "ai_reasons": [
         "desc:gpt"
       ],
@@ -278,14 +278,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 87.88477245771847,
+        "stars_growth": 92.29298456310244,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 35.2,
+        "total": 36.9,
         "is_treasure": false
       },
-      "heat_score": 35.2,
+      "heat_score": 36.9,
       "rank": 7
     },
     {
@@ -294,9 +294,9 @@
       "full_name": "InsForge/InsForge",
       "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
       "language": "TypeScript",
-      "stars_added": 1201,
+      "stars_added": 1270,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,201 stars this week",
+      "raw_stars_text": "1,270 stars this week",
       "ai_reasons": [
         "desc:agent",
         "lang:TypeScript"
@@ -312,14 +312,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 83.26188509052643,
+        "stars_growth": 83.9172165396088,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 33.3,
+        "total": 33.6,
         "is_treasure": false
       },
-      "heat_score": 33.3,
+      "heat_score": 33.6,
       "rank": 8
     },
     {
@@ -328,9 +328,9 @@
       "full_name": "Q00/ouroboros",
       "description": "Agent OS: Stop prompting. Start specifying.",
       "language": "Python",
-      "stars_added": 867,
+      "stars_added": 759,
       "source": "github-trending-weekly",
-      "raw_stars_text": "867 stars this week",
+      "raw_stars_text": "759 stars this week",
       "ai_reasons": [
         "desc:agent",
         "lang:Python"
@@ -346,14 +346,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 79.43970154348501,
+        "stars_growth": 77.87967867374309,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 31.8,
+        "total": 31.2,
         "is_treasure": false
       },
-      "heat_score": 31.8,
+      "heat_score": 31.2,
       "rank": 9
     }
   ]
