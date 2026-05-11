@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T20:42:22.791269+00:00",
+  "generated_at": "2026-05-11T11:59:31.229715+00:00",
   "mode": "weekly",
   "headline": {
     "project": {
@@ -8,14 +8,14 @@
       "owner": "Hmbown",
       "description": "Coding agent for DeepSeek models that runs in your terminal",
       "stars": 0,
-      "stars_added": 21613,
+      "stars_added": 22034,
       "heat_score": 44.5,
       "url": "https://github.com/Hmbown/DeepSeek-TUI",
       "topics": [],
       "language": "Rust",
       "is_treasure": false
     },
-    "why_hot": "🔥 DeepSeek-TUI 今日爆火：单日新增 21613⭐",
+    "why_hot": "🔥 DeepSeek-TUI 今日爆火：单日新增 22034⭐",
     "hn_url": "https://news.ycombinator.com/item?id=48042201",
     "reddit_url": ""
   },

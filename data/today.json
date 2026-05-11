@@ -1,23 +1,34 @@
 {
-  "generated_at": "2026-05-10T20:37:27.299455+00:00",
+  "generated_at": "2026-05-11T11:54:59.521366+00:00",
   "mode": "daily",
   "total_projects": 5,
   "projects": [
     {
-      "owner": "affaan-m",
-      "name": "everything-claude-code",
-      "full_name": "affaan-m/everything-claude-code",
-      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "language": "JavaScript",
-      "stars_added": 1011,
+      "owner": "rasbt",
+      "name": "LLMs-from-scratch",
+      "full_name": "rasbt/LLMs-from-scratch",
+      "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+      "language": "Jupyter Notebook",
+      "stars_added": 141,
       "source": "github-trending-daily",
-      "raw_stars_text": "1,011 stars today",
+      "raw_stars_text": "141 stars today",
       "ai_reasons": [
-        "desc:claude"
+        "desc:llm",
+        "lang:Jupyter Notebook"
       ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
+      "hn_points": 477,
+      "hn_comments": 50,
+      "hn_stories": [
+        {
+          "title": "Train Your Own LLM from Scratch",
+          "points": 477,
+          "comments": 50,
+          "url": "https://news.ycombinator.com/item?id=48017948",
+          "created_at": "2026-05-05T04:09:17Z"
+        }
+      ],
+      "hn_score": 477,
+      "hn_url": "https://news.ycombinator.com/item?id=48017948",
       "reddit_ups": 0,
       "reddit_comments": 0,
       "reddit_posts": [],
@@ -26,92 +37,25 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 81.2418038076158,
-        "hn_heat": 0,
+        "stars_growth": 58.1847867987486,
+        "hn_heat": 73.9973238638253,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 32.5,
+        "total": 41.8,
         "is_treasure": false
       },
-      "heat_score": 32.5,
+      "heat_score": 41.8,
       "rank": 1
     },
     {
-      "owner": "decolua",
-      "name": "9router",
-      "full_name": "decolua/9router",
-      "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
-      "language": "JavaScript",
-      "stars_added": 806,
-      "source": "github-trending-daily",
-      "raw_stars_text": "806 stars today",
-      "ai_reasons": [
-        "desc:gpt"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
-      },
-      "scores": {
-        "stars_growth": 78.58418102301734,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 31.4,
-        "is_treasure": false
-      },
-      "heat_score": 31.4,
-      "rank": 2
-    },
-    {
-      "owner": "bytedance",
-      "name": "UI-TARS-desktop",
-      "full_name": "bytedance/UI-TARS-desktop",
-      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
-      "language": "TypeScript",
-      "stars_added": 656,
-      "source": "github-trending-daily",
-      "raw_stars_text": "656 stars today",
-      "ai_reasons": [
-        "desc:ai agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 0,
-        "avg_reactions": 0
-      },
-      "scores": {
-        "stars_growth": 76.16983140164038,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 0,
-        "total": 30.5,
-        "is_treasure": false
-      },
-      "heat_score": 30.5,
-      "rank": 3
-    },
-    {
-      "owner": "HKUDS",
-      "name": "AI-Trader",
-      "full_name": "HKUDS/AI-Trader",
-      "description": "\"AI-Trader: 100% Fully-Automated Agent-Native Trading\"",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "full_name": "NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
       "language": "Python",
-      "stars_added": 255,
+      "stars_added": 1496,
       "source": "github-trending-daily",
-      "raw_stars_text": "255 stars today",
+      "raw_stars_text": "1,496 stars today",
       "ai_reasons": [
         "desc:agent",
         "lang:Python"
@@ -127,28 +71,27 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 65.10416195282666,
+        "stars_growth": 85.83868605424094,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 26.0,
+        "total": 34.3,
         "is_treasure": false
       },
-      "heat_score": 26.0,
-      "rank": 4
+      "heat_score": 34.3,
+      "rank": 2
     },
     {
-      "owner": "jundot",
-      "name": "omlx",
-      "full_name": "jundot/omlx",
-      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
-      "language": "Python",
-      "stars_added": 187,
+      "owner": "decolua",
+      "name": "9router",
+      "full_name": "decolua/9router",
+      "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
+      "language": "JavaScript",
+      "stars_added": 803,
       "source": "github-trending-daily",
-      "raw_stars_text": "187 stars today",
+      "raw_stars_text": "803 stars today",
       "ai_reasons": [
-        "desc:llm",
-        "lang:Python"
+        "desc:gpt"
       ],
       "hn_points": 0,
       "hn_comments": 0,
@@ -161,14 +104,82 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 61.47939701082996,
+        "stars_growth": 78.54045403970183,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 24.6,
+        "total": 31.4,
         "is_treasure": false
       },
-      "heat_score": 24.6,
+      "heat_score": 31.4,
+      "rank": 3
+    },
+    {
+      "owner": "bytedance",
+      "name": "UI-TARS-desktop",
+      "full_name": "bytedance/UI-TARS-desktop",
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "language": "TypeScript",
+      "stars_added": 669,
+      "source": "github-trending-daily",
+      "raw_stars_text": "669 stars today",
+      "ai_reasons": [
+        "desc:ai agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 76.39987472013073,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 30.6,
+        "is_treasure": false
+      },
+      "heat_score": 30.6,
+      "rank": 4
+    },
+    {
+      "owner": "millionco",
+      "name": "react-doctor",
+      "full_name": "millionco/react-doctor",
+      "description": "Your agent writes bad React. This catches it",
+      "language": "TypeScript",
+      "stars_added": 312,
+      "source": "github-trending-daily",
+      "raw_stars_text": "312 stars today",
+      "ai_reasons": [
+        "desc:agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 67.46434120033582,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 27.0,
+        "is_treasure": false
+      },
+      "heat_score": 27.0,
       "rank": 5
     }
   ]
