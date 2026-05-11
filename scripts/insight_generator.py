@@ -56,20 +56,23 @@ class InsightGenerator:
         return {
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "mode": mode,
-            "headline": self._generate_headline(projects),
+            "headline": self._generate_headline(projects, mode),
             "dark_horses": self._generate_dark_horses(projects),
             "trend_signals": self._generate_trend_signals(projects),
         }
 
-    def _generate_headline(self, projects: List[dict]) -> dict:
+    def _generate_headline(self, projects: List[dict], mode: str = "daily") -> dict:
         """Generate today's headline from the #1 project."""
         top = projects[0]
         scores = top.get("scores", {})
 
+        # Mode-aware label for stars added
+        star_label = "单日新增" if mode == "daily" else "本周新增"
+
         # Build the "why it's hot" sentence
         reasons = []
         if top.get("stars_added", 0) > 100:
-            reasons.append(f"单日新增 {top['stars_added']}⭐")
+            reasons.append(f"{star_label} {top['stars_added']}⭐")
         elif top.get("stars", 0) > 5000:
             reasons.append(f"累计 {top.get('stars', 0):,}⭐")
 
@@ -87,6 +90,7 @@ class InsightGenerator:
             top_topics = top["topics"][:3]
             reasons.append(f"方向：{'/'.join(top_topics)}")
 
+        time_word = "今日" if mode == "daily" else "本周"
         why = "、".join(reasons) if reasons else f"{top.get('language', '')} 项目引发关注"
 
         return {
@@ -103,7 +107,7 @@ class InsightGenerator:
                 "language": top.get("language", ""),
                 "is_treasure": scores.get("is_treasure", False),
             },
-            "why_hot": f"🔥 {top.get('name', top.get('full_name', ''))} 今日爆火：{why}",
+            "why_hot": f"🔥 {top.get('name', top.get('full_name', ''))} {time_word}爆火：{why}",
             "hn_url": top.get("hn_url", ""),
             "reddit_url": top.get("reddit_posts", [{}])[0].get("url", "") if top.get("reddit_posts") else "",
         }

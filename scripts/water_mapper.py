@@ -15,10 +15,16 @@ from typing import Dict, List
 MAPPING_TABLE = [
     {
         "tech_direction": "计算机视觉",
-        "keywords": [
+        "strong": [
+            # High-specificity terms — one hit is enough
             "computer-vision", "object-detection", "yolo", "segmentation",
-            "image-classification", "opencv", "image-recognition",
-            "visual", "detection", "tracking",
+            "image-classification", "image-recognition", "image-segmentation",
+            "pose-estimation", "ocr", "optical-character",
+        ],
+        "weak": [
+            # Lower-specificity terms — need 2+ hits across strong+weak
+            "opencv", "visual", "detection", "tracking",
+            "convolutional", "cnn", "resnet", "vision-transformer",
         ],
         "water_scenarios": [
             "河道漂浮物智能识别",
@@ -35,10 +41,16 @@ MAPPING_TABLE = [
     },
     {
         "tech_direction": "LLM / RAG 知识库",
-        "keywords": [
-            "llm", "rag", "large-language-model", "chatgpt", "langchain",
-            "retrieval-augmented", "knowledge-base", "chatbot", "qa",
-            "document", "summarization", "text-generation",
+        "strong": [
+            "llm", "rag", "large-language-model", "langchain",
+            "retrieval-augmented", "retrieval-augmented-generation",
+            "knowledge-base", "vector-database", "embedding",
+            "chatgpt", "openai", "claude", "llama",
+        ],
+        "weak": [
+            "chatbot", "qa", "summarization", "text-generation",
+            "prompt-engineering", "fine-tuning", "token",
+            "generative-ai", "nlp", "natural-language",
         ],
         "water_scenarios": [
             "水利知识库智能问答",
@@ -55,10 +67,13 @@ MAPPING_TABLE = [
     },
     {
         "tech_direction": "Agent 智能体框架",
-        "keywords": [
-            "ai-agent", "agent", "multi-agent", "workflow", "mcp",
-            "model-context-protocol", "agentic", "autonomous",
-            "orchestration", "tool-use", "swarm",
+        "strong": [
+            "ai-agent", "agent", "multi-agent", "agentic",
+            "mcp", "model-context-protocol",
+        ],
+        "weak": [
+            "workflow", "orchestration", "tool-use", "swarm",
+            "autonomous", "agent-framework",
         ],
         "water_scenarios": [
             "水利多智能体协同调度",
@@ -76,10 +91,13 @@ MAPPING_TABLE = [
     },
     {
         "tech_direction": "时间序列预测",
-        "keywords": [
-            "time-series", "forecasting", "prophet", "prediction",
-            "regression", "anomaly-detection", "temporal",
-            "lstm", "sequence", "arima", "trend",
+        "strong": [
+            "time-series", "forecasting", "prophet", "anomaly-detection",
+            "lstm", "arima", "time-series-forecasting",
+        ],
+        "weak": [
+            "prediction", "regression", "temporal", "sequence",
+            "sensor", "iot",
         ],
         "water_scenarios": [
             "水文站流量预测",
@@ -96,10 +114,13 @@ MAPPING_TABLE = [
     },
     {
         "tech_direction": "边缘端 AI 部署",
-        "keywords": [
-            "edge", "onnx", "tensorrt", "quantization", "gguf",
-            "inference", "deploy", "serverless", "tiny",
-            "efficient", "lightweight",
+        "strong": [
+            "edge", "onnx", "tensorrt", "gguf", "edge-ai",
+            "tinyml", "on-device", "embedded",
+            "quantization", "quantized",
+        ],
+        "weak": [
+            "tiny", "lightweight", "efficient",
         ],
         "water_scenarios": [
             "水库边缘侧 AI 推理",
@@ -116,10 +137,13 @@ MAPPING_TABLE = [
     },
     {
         "tech_direction": "多模态 AI",
-        "keywords": [
-            "multimodal", "vision-language", "image-text", "video",
-            "cross-modal", "visual-question-answering", "clip",
-            "blip", "grounding",
+        "strong": [
+            "multimodal", "vision-language", "visual-question-answering",
+            "clip", "blip", "cross-modal", "image-text",
+            "video-understanding", "text-to-image", "grounding",
+        ],
+        "weak": [
+            "video", "speech", "audio", "image-captioning",
         ],
         "water_scenarios": [
             "遥感影像 + 文本联合分析",
@@ -131,15 +155,19 @@ MAPPING_TABLE = [
         "suggestion_template": (
             "可结合 {projects} 增强水利多源数据融合分析能力。"
             "{direction} 技术能同时理解遥感影像、视频监控画面和文本报告，"
-            "实现图文互查、影像是问答，提升防汛会商的信息聚合效率。"
+            "实现图文互查、影像问答，提升防汛会商的信息聚合效率。"
         ),
     },
     {
         "tech_direction": "数据处理 / 数据治理",
-        "keywords": [
-            "data", "etl", "pipeline", "spark", "flink", "dataframe",
-            "streaming", "real-time", "integration", "warehouse",
-            "lake", "catalog",
+        "strong": [
+            "etl", "spark", "flink", "dataframe",
+            "data-warehouse", "data-lake", "data-pipeline",
+            "streaming", "real-time",
+        ],
+        "weak": [
+            "warehouse", "lake", "catalog", "schema",
+            "parquet", "arrow", "duckdb",
         ],
         "water_scenarios": [
             "水利多源异构数据治理",
@@ -241,18 +269,48 @@ class WaterMapper:
         }
 
     def _match_project(self, project: dict) -> List[str]:
-        """Match a project to one or more tech directions."""
-        matched = []
-        topics = {t.lower().replace(" ", "-") for t in project.get("topics", [])}
-        desc = (project.get("description", "") + " " + " ".join(topics)).lower()
-        name = project.get("name", "").lower()
-        full_search = f"{name} {desc}"
+        """Match a project to tech directions using strong/weak keyword scoring.
 
+        Uses token-boundary matching to avoid substring collisions
+        (e.g. "edge" falsely matching "knowledge").
+
+        - 1+ strong keyword match → direction matches
+        - 2+ combined (strong + weak) keyword matches → direction matches
+        - Otherwise → no match
+        """
+        import re
+
+        desc = project.get("description", "").lower()
+        name = project.get("name", "").lower()
+
+        # GitHub topics are hyphen-separated slugs; keep them as-is for
+        # exact matching (e.g. "computer-vision" ↔ "computer-vision")
+        raw_topics = [t.lower() for t in project.get("topics", [])]
+        topic_set = set(raw_topics)
+
+        # Tokenize description + name into word tokens for safe matching
+        all_text = f"{name} {desc} {' '.join(raw_topics)}"
+        tokens = set(re.split(r'[^a-z0-9]', all_text))
+        tokens.discard('')
+
+        matched = []
         for mapping in MAPPING_TABLE:
-            for kw in mapping["keywords"]:
-                if kw.lower() in full_search:
-                    matched.append(mapping["tech_direction"])
-                    break
+            strong_hits = 0
+            weak_hits = 0
+
+            for kw in mapping.get("strong", []):
+                kw_lower = kw.lower()
+                # Exact match against topic slugs, token match against text
+                if kw_lower in topic_set or kw_lower in tokens:
+                    strong_hits += 1
+
+            for kw in mapping.get("weak", []):
+                kw_lower = kw.lower()
+                if kw_lower in topic_set or kw_lower in tokens:
+                    weak_hits += 1
+
+            if strong_hits >= 1 or (strong_hits + weak_hits) >= 2:
+                matched.append(mapping["tech_direction"])
 
         return matched
 

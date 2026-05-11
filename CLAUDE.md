@@ -30,8 +30,7 @@ stars增速(0.40) + HN热度(0.25) + Reddit热度(0.20) + 话题潜力(0.15)
 - GitHub Trending 页面只给 stars_added（新增数），不给 stars 总数
 - stars 总数需 GitHub API 获取，无 Token 时为可选字段
 - HN Algolia 前向搜索带时间窗口：daily 7 天 / weekly 30 天
-- Reddit 信号来自 Search API 前向搜索 + hot posts 反向提取双路径
-- `reddit_posts` / `reddit_comments` 字段在 merge 阶段丢失，最终 today.json 仅保留 `reddit_ups` 和 `reddit_subreddit`（已知 bug，待修）
+- Reddit 信号采用三层回退搜索（full_name → repo name → "owner name"）+ Stream B hot posts 反向提取双路径，搜索结果经 URL 去重
 - 无 Token 时 pipeline 完成约需 2-3 分钟
 
 ## 红线

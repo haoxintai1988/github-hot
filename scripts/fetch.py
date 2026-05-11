@@ -371,15 +371,17 @@ def hn_search_project(name, full_name, mode="daily"):
 REDDIT_SUBREDDITS = ["MachineLearning", "LocalLLaMA", "singularity"]
 
 
-def reddit_search_project(full_name):
-    """Search Reddit for mentions of a project across AI subreddits."""
+def _reddit_search_query(query, subreddits=None):
+    """Search Reddit for a query string across subreddits. Returns (posts, max_ups, max_comments)."""
+    if subreddits is None:
+        subreddits = REDDIT_SUBREDDITS
     all_posts = []
     max_ups = 0
     max_comments = 0
 
-    for subreddit in REDDIT_SUBREDDITS:
+    for subreddit in subreddits:
         url = f"https://www.reddit.com/r/{subreddit}/search.json"
-        params = {"q": full_name, "sort": "hot", "restrict_sr": "on", "limit": 5}
+        params = {"q": query, "sort": "relevance", "restrict_sr": "on", "limit": 10}
         headers = {**HEADERS, "User-Agent": "github-hot-ai/1.0 (research project)"}
         resp = api_get(url, params=params, headers=headers)
         if not resp:
@@ -405,9 +407,50 @@ def reddit_search_project(full_name):
             max_ups = max(max_ups, ups)
             max_comments = max(max_comments, comments)
 
-        time.sleep(0.5)  # Reddit rate limit courtesy
+        time.sleep(0.5)
 
-    # Deduplicate: same URL across subreddits
+    return all_posts, max_ups, max_comments
+
+
+def reddit_search_project(full_name):
+    """Search Reddit for mentions of a project across AI subreddits.
+
+    Uses a two-fallback strategy because Reddit's search API is unreliable:
+    1. Search by full_name (e.g. "owner/repo")
+    2. If empty, fall back to searching by repo name only
+    3. If still empty, try "owner repo" (space-separated, no slash)
+    """
+    owner, _, name = full_name.partition("/")
+    all_posts = []
+    max_ups = 0
+    max_comments = 0
+
+    # Strategy 1: full_name search
+    posts, ups, comments = _reddit_search_query(full_name)
+    all_posts.extend(posts)
+    max_ups = max(max_ups, ups)
+    max_comments = max(max_comments, comments)
+
+    # Strategy 2: repo name only (Reddit search tokenizes on / so full_name often fails)
+    if not all_posts and len(name) >= 4:
+        time.sleep(0.3)
+        posts, ups, comments = _reddit_search_query(name)
+        # Filter: only keep posts whose title/url mentions the repo
+        posts = [p for p in posts if name.lower() in p["title"].lower() or name.lower() in p.get("url", "").lower()]
+        all_posts.extend(posts)
+        max_ups = max(max_ups, ups)
+        max_comments = max(max_comments, comments)
+
+    # Strategy 3: space-separated (some Reddit search versions handle this better)
+    if not all_posts and owner:
+        time.sleep(0.3)
+        posts, ups, comments = _reddit_search_query(f"{owner} {name}")
+        posts = [p for p in posts if name.lower() in p["title"].lower() or full_name.lower() in p.get("url", "").lower()]
+        all_posts.extend(posts)
+        max_ups = max(max_ups, ups)
+        max_comments = max(max_comments, comments)
+
+    # Deduplicate by URL
     seen_urls = set()
     deduped = []
     for p in all_posts:
@@ -415,10 +458,7 @@ def reddit_search_project(full_name):
             seen_urls.add(p["url"])
             deduped.append(p)
 
-    # Primary subreddit (where the most upvoted post came from)
-    primary_subreddit = ""
-    if deduped and deduped[0].get("subreddit"):
-        primary_subreddit = deduped[0]["subreddit"]
+    primary_subreddit = deduped[0]["subreddit"] if deduped else ""
 
     return {
         "reddit_ups": max_ups,
@@ -566,9 +606,13 @@ def is_ai_project(repo):
             reasons.append("excluded:non-ai")
             break
 
-    # Trending repos are pre-curated by GitHub's algorithm — lower bar
+    # Lower threshold for pre-curated sources (GitHub Trending, HN, Reddit)
     source = repo.get("source", "")
-    threshold = 2 if source.startswith("github-trending") else 3
+    threshold = 2 if (
+        source.startswith("github-trending")
+        or source.startswith("hn-")
+        or source.startswith("reddit-")
+    ) else 3
     return signals >= threshold, reasons
 
 
@@ -724,7 +768,7 @@ def run_pipeline(mode="daily"):
     log.info("B3: %d dark horse candidates (HN=%d, Reddit=%d)",
              len(dh_candidates), len(hn_refs), len(reddit_refs))
 
-    # B4. Enrich candidates with GitHub API, filter for treasure criteria
+    # B4. Enrich candidates with GitHub API, AI-filter, treasure criteria
     hot_names = {r["full_name"].lower() for r in hot_list}
     dark_horses = []
 
@@ -737,6 +781,16 @@ def run_pipeline(mode="daily"):
             time.sleep(0.15)
         else:
             candidate.setdefault("stars", 0)
+            candidate.setdefault("topics", [])
+
+        # AI filter: Stream B candidates must pass the same classifier as Stream A.
+        # HN/Reddit may discuss non-AI projects heavily; we exclude those.
+        if not candidate.get("description"):
+            candidate["description"] = candidate.get("hn_title", "") or candidate.get("reddit_title", "")
+        is_ai, _ = is_ai_project(candidate)
+        if not is_ai:
+            log.debug("B4: excluded non-AI candidate %s", key)
+            continue
 
         stars = candidate.get("stars", 999999)
         hn_heat = candidate.get("hn_score", 0) or candidate.get("hn_points", 0)
@@ -750,6 +804,38 @@ def run_pipeline(mode="daily"):
     dark_horses.sort(key=lambda r: r["community_heat"], reverse=True)
     dark_horses = dark_horses[:5]
     log.info("B4: %d dark horses identified", len(dark_horses))
+
+    # B5. Backfill Reddit data from Stream B refs into Stream A hot list
+    # Reddit search API is unreliable for forward search; Stream B's reverse
+    # extraction (hot posts → GitHub refs) is a more reliable Reddit signal.
+    # Cross-reference to fill gaps.
+    for repo in hot_list:
+        key = repo["full_name"].lower()
+        if key in dh_candidates:
+            candidate = dh_candidates[key]
+            # Only backfill if Stream A forward search found nothing
+            if repo.get("reddit_ups", 0) == 0 and candidate.get("reddit_ups", 0) > 0:
+                repo["reddit_ups"] = candidate.get("reddit_ups", 0)
+                repo["reddit_comments"] = candidate.get("reddit_comments", 0)
+                repo["reddit_subreddit"] = candidate.get("reddit_subreddit", "")
+                repo["reddit_url"] = candidate.get("reddit_url", "")
+                repo["reddit_posts"] = [{
+                    "subreddit": candidate.get("reddit_subreddit", ""),
+                    "title": candidate.get("reddit_title", ""),
+                    "ups": candidate.get("reddit_ups", 0),
+                    "comments": candidate.get("reddit_comments", 0),
+                    "url": candidate.get("reddit_url", ""),
+                }]
+                # Re-score with the new Reddit data
+                repo["scores"] = scorer.compute(repo)
+                repo["heat_score"] = repo["scores"]["total"]
+                log.info("B5: backfilled Reddit data for %s (ups=%d)",
+                         repo["full_name"], candidate.get("reddit_ups", 0))
+
+    # Re-sort after backfill
+    hot_list.sort(key=lambda r: r["heat_score"], reverse=True)
+    for i, repo in enumerate(hot_list):
+        repo["rank"] = i + 1
 
     # ══════════════════════════════════════════════════════════════════════
     # Generate insights, water recommendations, and save
