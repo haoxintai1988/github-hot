@@ -1,166 +1,44 @@
 {
-  "generated_at": "2026-05-09T15:13:43.740810+00:00",
+  "generated_at": "2026-05-11T13:11:50.204061+00:00",
   "mode": "weekly",
   "headline": {
     "project": {
-      "full_name": "browserbase/skills",
-      "name": "skills",
-      "owner": "browserbase",
-      "description": "Claude Agent SDK with a web browsing tool",
-      "stars": 2895,
-      "stars_added": 1621,
-      "heat_score": 50.9,
-      "url": "https://github.com/browserbase/skills",
+      "full_name": "Hmbown/DeepSeek-TUI",
+      "name": "DeepSeek-TUI",
+      "owner": "Hmbown",
+      "description": "Coding agent for DeepSeek models that runs in your terminal",
+      "stars": 0,
+      "stars_added": 22034,
+      "heat_score": 44.5,
+      "url": "https://github.com/Hmbown/DeepSeek-TUI",
       "topics": [],
-      "language": "JavaScript",
+      "language": "Rust",
       "is_treasure": false
     },
-    "why_hot": "🔥 skills 今日爆火：单日新增 1621⭐、HN 134 分热议",
-    "hn_url": "https://news.ycombinator.com/item?id=47780971",
+    "why_hot": "🔥 DeepSeek-TUI 今日爆火：单日新增 22034⭐",
+    "hn_url": "https://news.ycombinator.com/item?id=48042201",
     "reddit_url": ""
   },
-  "dark_horses": [
-    {
-      "project": {
-        "full_name": "antirez/ds4",
-        "name": "ds4",
-        "owner": "antirez",
-        "description": "DeepSeek 4 Flash local inference engine for Metal",
-        "stars": 3530,
-        "language": "C",
-        "topics": [],
-        "url": "https://github.com/antirez/ds4"
-      },
-      "insight": "💎 ds4 — DeepSeek 4 Flash local inference engine for Metal，仅 3530⭐，社区讨论热度 483 分",
-      "community_heat": 483,
-      "hn_url": "https://news.ycombinator.com/item?id=48050751",
-      "reddit_url": ""
-    },
-    {
-      "project": {
-        "full_name": "wojtczyk/trust",
-        "name": "trust",
-        "owner": "wojtczyk",
-        "description": "TRUST – Coding Rust like it's 1989",
-        "stars": 180,
-        "language": "Rust",
-        "topics": [
-          "cargo",
-          "ide",
-          "ratatui",
-          "retro",
-          "rust",
-          "terminal",
-          "tui"
-        ],
-        "url": "https://github.com/wojtczyk/trust"
-      },
-      "insight": "💎 trust — TRUST – Coding Rust like it's 1989，仅 180⭐，社区讨论热度 156 分",
-      "community_heat": 156,
-      "hn_url": "https://news.ycombinator.com/item?id=48045939",
-      "reddit_url": ""
-    },
-    {
-      "project": {
-        "full_name": "crosspoint-reader/crosspoint-reader",
-        "name": "crosspoint-reader",
-        "owner": "crosspoint-reader",
-        "description": "Firmware for the Xteink X4 e-paper display reader",
-        "stars": 4395,
-        "language": "C",
-        "topics": [],
-        "url": "https://github.com/crosspoint-reader/crosspoint-reader"
-      },
-      "insight": "💎 crosspoint-reader — Firmware for the Xteink X4 e-paper display reader，仅 4395⭐，社区讨论热度 153 分",
-      "community_heat": 153,
-      "hn_url": "https://news.ycombinator.com/item?id=48021901",
-      "reddit_url": ""
-    },
-    {
-      "project": {
-        "full_name": "robertdfrench/ifuncd-up",
-        "name": "ifuncd-up",
-        "owner": "robertdfrench",
-        "description": "GNU IFUNC is the real culprit behind CVE-2024-3094",
-        "stars": 55,
-        "language": "C",
-        "topics": [
-          "cve-2024-3094",
-          "dynamic-linking",
-          "dynamic-loading",
-          "elf",
-          "glibc",
-          "global-offset-table",
-          "ifunc",
-          "memes",
-          "procedure-linkage-table",
-          "relro",
-          "ssh",
-          "supply-chain",
-          "systemd",
-          "xz-utils-backdoor"
-        ],
-        "url": "https://github.com/robertdfrench/ifuncd-up"
-      },
-      "insight": "💎 ifuncd-up — GNU IFUNC is the real culprit behind CVE-2024-3094，仅 55⭐，社区讨论热度 127 分",
-      "community_heat": 127,
-      "hn_url": "https://news.ycombinator.com/item?id=48056749",
-      "reddit_url": ""
-    },
-    {
-      "project": {
-        "full_name": "regent-vcs/re_gent",
-        "name": "re_gent",
-        "owner": "regent-vcs",
-        "description": "Version-Control for AI coding agents.",
-        "stars": 242,
-        "language": "Go",
-        "topics": [
-          "ai-agent",
-          "claude-code",
-          "developer-tools",
-          "devtools",
-          "golang",
-          "version-control"
-        ],
-        "url": "https://github.com/regent-vcs/re_gent"
-      },
-      "insight": "💎 re_gent — Version-Control for AI coding agents.，仅 242⭐，社区讨论热度 110 分",
-      "community_heat": 110,
-      "hn_url": "https://news.ycombinator.com/item?id=48063548",
-      "reddit_url": ""
-    }
-  ],
+  "dark_horses": [],
   "trend_signals": [
     {
       "trend": "Agent 框架 / MCP 协议",
       "description": "Agent 框架与 MCP 协议类项目集中爆发，AI 工具互联互通和自主任务执行成为当前焦点",
       "representative_projects": [
-        "skills",
+        "DeepSeek-TUI",
         "ruflo",
         "TradingAgents"
       ],
-      "match_count": 12
+      "match_count": 7
     },
     {
       "trend": "AI 编程与开发工具",
       "description": "AI 编程工具生态加速成熟，开发者工作流正在被重新定义",
       "representative_projects": [
-        "skills",
         "ruflo",
-        "jcode"
+        "9router"
       ],
-      "match_count": 6
-    },
-    {
-      "trend": "RAG 与知识检索",
-      "description": "RAG 与知识检索技术持续演进，企业级知识管理需求驱动创新",
-      "representative_projects": [
-        "ruflo",
-        "cocoindex",
-        "InsForge"
-      ],
-      "match_count": 4
+      "match_count": 3
     }
   ]
 }

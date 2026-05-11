@@ -1,257 +1,64 @@
 {
-  "generated_at": "2026-05-09T15:10:44.790170+00:00",
+  "generated_at": "2026-05-11T13:07:17.287420+00:00",
   "mode": "daily",
   "total_projects": 5,
   "projects": [
     {
-      "owner": "decolua",
-      "name": "9router",
-      "full_name": "decolua/9router",
-      "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
-      "language": "JavaScript",
-      "stars_added": 980,
+      "owner": "rasbt",
+      "name": "LLMs-from-scratch",
+      "full_name": "rasbt/LLMs-from-scratch",
+      "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+      "language": "Jupyter Notebook",
+      "stars_added": 141,
       "source": "github-trending-daily",
-      "raw_stars_text": "980 stars today",
-      "stars": 6232,
-      "forks": 1133,
-      "topics": [
-        "ai-agents",
-        "ai-gateway",
-        "anthropic",
-        "chatgpt",
-        "claude",
-        "claude-code",
-        "cline",
-        "codex",
-        "copilot",
-        "cursor",
-        "deepseek",
-        "free-ai",
-        "gemini",
-        "gemini-cli",
-        "llm",
-        "llm-gateway",
-        "openai",
-        "openai-proxy",
-        "qwen",
-        "token-saver"
-      ],
-      "created_at": "2026-01-05T02:59:30Z",
-      "updated_at": "2026-05-09T15:04:49Z",
+      "raw_stars_text": "141 stars today",
       "ai_reasons": [
-        "topics:llm,chatgpt,openai",
-        "desc:gpt"
+        "desc:llm",
+        "lang:Jupyter Notebook"
       ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
+      "hn_points": 477,
+      "hn_comments": 50,
+      "hn_stories": [
+        {
+          "title": "Train Your Own LLM from Scratch",
+          "points": 477,
+          "comments": 50,
+          "url": "https://news.ycombinator.com/item?id=48017948",
+          "created_at": "2026-05-05T04:09:17Z"
+        }
+      ],
+      "hn_score": 477,
+      "hn_url": "https://news.ycombinator.com/item?id=48017948",
       "reddit_ups": 0,
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 7,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 80.87653488488431,
-        "hn_heat": 0,
+        "stars_growth": 58.1847867987486,
+        "hn_heat": 73.9973238638253,
         "reddit_heat": 0,
-        "topic_potential": 17,
-        "total": 34.9,
+        "topic_potential": 0,
+        "total": 41.8,
         "is_treasure": false
       },
-      "heat_score": 34.9,
+      "heat_score": 41.8,
       "rank": 1
     },
     {
-      "owner": "datawhalechina",
-      "name": "hello-agents",
-      "full_name": "datawhalechina/hello-agents",
-      "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
+      "owner": "NousResearch",
+      "name": "hermes-agent",
+      "full_name": "NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
       "language": "Python",
-      "stars_added": 1162,
+      "stars_added": 1496,
       "source": "github-trending-daily",
-      "raw_stars_text": "1,162 stars today",
-      "stars": 45512,
-      "forks": 5514,
-      "topics": [
-        "agent",
-        "llm",
-        "rag",
-        "tutorial"
-      ],
-      "created_at": "2025-09-07T09:50:24Z",
-      "updated_at": "2026-05-09T15:08:12Z",
+      "raw_stars_text": "1,496 stars today",
       "ai_reasons": [
-        "topics:llm,agent,rag",
+        "desc:agent",
         "lang:Python"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 3,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 82.87463089299601,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 9,
-        "total": 34.5,
-        "is_treasure": false
-      },
-      "heat_score": 34.5,
-      "rank": 2
-    },
-    {
-      "owner": "bytedance",
-      "name": "UI-TARS-desktop",
-      "full_name": "bytedance/UI-TARS-desktop",
-      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
-      "language": "TypeScript",
-      "stars_added": 549,
-      "source": "github-trending-daily",
-      "raw_stars_text": "549 stars today",
-      "stars": 31166,
-      "forks": 3095,
-      "topics": [
-        "agent",
-        "agent-tars",
-        "browser-use",
-        "computer-use",
-        "cowork",
-        "gui-agent",
-        "gui-operator",
-        "mcp",
-        "mcp-server",
-        "multimodal",
-        "tars",
-        "ui-tars",
-        "vision",
-        "vlm"
-      ],
-      "created_at": "2025-01-19T09:04:43Z",
-      "updated_at": "2026-05-09T15:08:11Z",
-      "ai_reasons": [
-        "topics:multimodal,agent,mcp",
-        "desc:ai agent",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 2,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 74.08274047275609,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 30.1,
-        "is_treasure": false
-      },
-      "heat_score": 30.1,
-      "rank": 3
-    },
-    {
-      "owner": "rohitg00",
-      "name": "agentmemory",
-      "full_name": "rohitg00/agentmemory",
-      "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
-      "language": "TypeScript",
-      "stars_added": 518,
-      "source": "github-trending-daily",
-      "raw_stars_text": "518 stars today",
-      "stars": 3171,
-      "forks": 323,
-      "topics": [
-        "agentmemory",
-        "agents",
-        "ai",
-        "claude",
-        "claudecode",
-        "codex",
-        "copilot",
-        "cursor",
-        "genai",
-        "harness",
-        "hermes",
-        "memory",
-        "openclaw"
-      ],
-      "created_at": "2026-02-25T07:32:52Z",
-      "updated_at": "2026-05-09T15:07:14Z",
-      "ai_reasons": [
-        "topics:ai",
-        "lang:TypeScript"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 3,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 73.40161194090317,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 3,
-        "total": 29.8,
-        "is_treasure": false
-      },
-      "heat_score": 29.8,
-      "rank": 4
-    },
-    {
-      "owner": "datawhalechina",
-      "name": "easy-vibe",
-      "full_name": "datawhalechina/easy-vibe",
-      "description": "💻 vibe coding 2026 | Your first modern programming course for beginners to master step by step.",
-      "language": "JavaScript",
-      "stars_added": 294,
-      "source": "github-trending-daily",
-      "raw_stars_text": "294 stars today",
-      "stars": 8294,
-      "forks": 848,
-      "topics": [
-        "agent",
-        "ai",
-        "coding",
-        "course",
-        "deepseek",
-        "gemini",
-        "genai",
-        "gpt",
-        "llm",
-        "low-code",
-        "mcp",
-        "nextjs",
-        "no-code",
-        "openai",
-        "programming",
-        "tutorial",
-        "vibe-coding",
-        "vibecoding",
-        "vscode",
-        "workflow"
-      ],
-      "created_at": "2025-12-28T16:45:28Z",
-      "updated_at": "2026-05-09T15:07:44Z",
-      "ai_reasons": [
-        "topics:gpt,mcp,agent"
       ],
       "hn_points": 0,
       "hn_comments": 0,
@@ -264,14 +71,115 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 66.76896606608608,
+        "stars_growth": 85.83868605424094,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 9,
-        "total": 28.1,
+        "topic_potential": 0,
+        "total": 34.3,
         "is_treasure": false
       },
-      "heat_score": 28.1,
+      "heat_score": 34.3,
+      "rank": 2
+    },
+    {
+      "owner": "bytedance",
+      "name": "UI-TARS-desktop",
+      "full_name": "bytedance/UI-TARS-desktop",
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "language": "TypeScript",
+      "stars_added": 956,
+      "source": "github-trending-daily",
+      "raw_stars_text": "956 stars today",
+      "ai_reasons": [
+        "desc:ai agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 80.58572914639234,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 32.2,
+        "is_treasure": false
+      },
+      "heat_score": 32.2,
+      "rank": 3
+    },
+    {
+      "owner": "decolua",
+      "name": "9router",
+      "full_name": "decolua/9router",
+      "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
+      "language": "JavaScript",
+      "stars_added": 942,
+      "source": "github-trending-daily",
+      "raw_stars_text": "942 stars today",
+      "ai_reasons": [
+        "desc:gpt"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 80.412705446266,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 32.2,
+        "is_treasure": false
+      },
+      "heat_score": 32.2,
+      "rank": 4
+    },
+    {
+      "owner": "millionco",
+      "name": "react-doctor",
+      "full_name": "millionco/react-doctor",
+      "description": "Your agent writes bad React. This catches it",
+      "language": "TypeScript",
+      "stars_added": 312,
+      "source": "github-trending-daily",
+      "raw_stars_text": "312 stars today",
+      "ai_reasons": [
+        "desc:agent",
+        "lang:TypeScript"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 67.46434120033582,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 27.0,
+        "is_treasure": false
+      },
+      "heat_score": 27.0,
       "rank": 5
     }
   ]

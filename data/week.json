@@ -1,38 +1,41 @@
 {
-  "generated_at": "2026-05-09T15:13:43.741650+00:00",
+  "generated_at": "2026-05-11T13:11:50.204685+00:00",
   "mode": "weekly",
   "total_projects": 10,
   "projects": [
     {
-      "owner": "browserbase",
-      "name": "skills",
-      "full_name": "browserbase/skills",
-      "description": "Claude Agent SDK with a web browsing tool",
-      "language": "JavaScript",
-      "stars_added": 1621,
+      "owner": "Hmbown",
+      "name": "DeepSeek-TUI",
+      "full_name": "Hmbown/DeepSeek-TUI",
+      "description": "Coding agent for DeepSeek models that runs in your terminal",
+      "language": "Rust",
+      "stars_added": 22034,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,621 stars this week",
-      "stars": 2895,
-      "forks": 191,
-      "topics": [],
-      "created_at": "2025-10-12T08:44:05Z",
-      "updated_at": "2026-05-09T15:07:54Z",
+      "raw_stars_text": "22,034 stars this week",
       "ai_reasons": [
-        "desc:claude"
+        "desc:agent",
+        "lang:Rust"
       ],
-      "hn_points": 134,
-      "hn_comments": 56,
+      "hn_points": 9,
+      "hn_comments": 0,
       "hn_stories": [
         {
-          "title": "Show HN: Libretto – Making AI browser automations deterministic",
-          "points": 134,
-          "comments": 56,
-          "url": "https://news.ycombinator.com/item?id=47780971",
-          "created_at": "2026-04-15T15:57:54Z"
+          "title": "Terminal coding agent for DeepSeek V4",
+          "points": 3,
+          "comments": 0,
+          "url": "https://news.ycombinator.com/item?id=48042201",
+          "created_at": "2026-05-06T21:36:10Z"
+        },
+        {
+          "title": "DeepSeek: Thinking with Visual Primitives [pdf]",
+          "points": 9,
+          "comments": 0,
+          "url": "https://news.ycombinator.com/item?id=47967370",
+          "created_at": "2026-04-30T19:49:40Z"
         }
       ],
-      "hn_score": 134,
-      "hn_url": "https://news.ycombinator.com/item?id=47780971",
+      "hn_score": 9,
+      "hn_url": "https://news.ycombinator.com/item?id=48042201",
       "reddit_ups": 0,
       "reddit_comments": 0,
       "reddit_posts": [],
@@ -41,14 +44,14 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 86.78025172629233,
-        "hn_heat": 64.73323356399894,
+        "stars_growth": 100,
+        "hn_heat": 18.174949765661676,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 50.9,
+        "total": 44.5,
         "is_treasure": false
       },
-      "heat_score": 50.9,
+      "heat_score": 44.5,
       "rank": 1
     },
     {
@@ -57,14 +60,9 @@
       "full_name": "mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "language": "Shell",
-      "stars_added": 14928,
+      "stars_added": 12722,
       "source": "github-trending-weekly",
-      "raw_stars_text": "14,928 stars this week",
-      "stars": 67643,
-      "forks": 5822,
-      "topics": [],
-      "created_at": "2026-02-03T11:15:53Z",
-      "updated_at": "2026-05-09T15:10:44Z",
+      "raw_stars_text": "12,722 stars this week",
       "ai_reasons": [
         "desc:claude"
       ],
@@ -85,57 +83,30 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 10,
-        "avg_reactions": 0.4
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
         "stars_growth": 100,
         "hn_heat": 14.142859885809544,
         "reddit_heat": 0,
-        "topic_potential": 20,
-        "total": 46.5,
+        "topic_potential": 0,
+        "total": 43.5,
         "is_treasure": false
       },
-      "heat_score": 46.5,
+      "heat_score": 43.5,
       "rank": 2
     },
     {
       "owner": "ruvnet",
       "name": "ruflo",
       "full_name": "ruvnet/ruflo",
-      "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+      "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
       "language": "TypeScript",
-      "stars_added": 12226,
+      "stars_added": 10779,
       "source": "github-trending-weekly",
-      "raw_stars_text": "12,226 stars this week",
-      "stars": 47488,
-      "forks": 5260,
-      "topics": [
-        "agentic-ai",
-        "agentic-framework",
-        "agentic-rag",
-        "agentic-workflow",
-        "agents",
-        "ai-agent",
-        "ai-assistant",
-        "ai-coding",
-        "ai-skills",
-        "anthropic-claude",
-        "autonomous-agents",
-        "claude-code",
-        "claude-code-skills",
-        "codex",
-        "mcp-server",
-        "model-context-protocol",
-        "multi-agent",
-        "multi-agent-systems",
-        "swarm",
-        "swarm-intelligence"
-      ],
-      "created_at": "2025-06-02T21:24:20Z",
-      "updated_at": "2026-05-09T15:10:23Z",
+      "raw_stars_text": "10,779 stars this week",
       "ai_reasons": [
-        "topics:ai-agent,model-context-protocol",
         "desc:rag",
         "lang:TypeScript"
       ],
@@ -156,18 +127,18 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
         "stars_growth": 100,
         "hn_heat": 9.931176739741858,
         "reddit_heat": 0,
-        "topic_potential": 10,
-        "total": 44.0,
+        "topic_potential": 0,
+        "total": 42.5,
         "is_treasure": false
       },
-      "heat_score": 44.0,
+      "heat_score": 42.5,
       "rank": 3
     },
     {
@@ -176,22 +147,10 @@
       "full_name": "TauricResearch/TradingAgents",
       "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
       "language": "Python",
-      "stars_added": 12981,
+      "stars_added": 8872,
       "source": "github-trending-weekly",
-      "raw_stars_text": "12,981 stars this week",
-      "stars": 72303,
-      "forks": 14043,
-      "topics": [
-        "agent",
-        "finance",
-        "llm",
-        "multiagent",
-        "trading"
-      ],
-      "created_at": "2024-12-28T03:31:08Z",
-      "updated_at": "2026-05-09T15:08:50Z",
+      "raw_stars_text": "8,872 stars this week",
       "ai_reasons": [
-        "topics:llm,agent",
         "desc:llm",
         "lang:Python"
       ],
@@ -212,19 +171,53 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 2,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
         "stars_growth": 100,
         "hn_heat": 9.931176739741858,
         "reddit_heat": 0,
-        "topic_potential": 6,
-        "total": 43.4,
+        "topic_potential": 0,
+        "total": 42.5,
         "is_treasure": false
       },
-      "heat_score": 43.4,
+      "heat_score": 42.5,
       "rank": 4
+    },
+    {
+      "owner": "VectifyAI",
+      "name": "PageIndex",
+      "full_name": "VectifyAI/PageIndex",
+      "description": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+      "language": "Python",
+      "stars_added": 4328,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "4,328 stars this week",
+      "ai_reasons": [
+        "desc:rag",
+        "lang:Python"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 98.3058041225437,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 39.3,
+        "is_treasure": false
+      },
+      "heat_score": 39.3,
+      "rank": 5
     },
     {
       "owner": "1jehuang",
@@ -232,27 +225,10 @@
       "full_name": "1jehuang/jcode",
       "description": "Coding Agent Harness",
       "language": "Rust",
-      "stars_added": 2925,
+      "stars_added": 2328,
       "source": "github-trending-weekly",
-      "raw_stars_text": "2,925 stars this week",
-      "stars": 5263,
-      "forks": 523,
-      "topics": [
-        "ai",
-        "claude",
-        "cli",
-        "coding-agent",
-        "llm",
-        "mcp",
-        "openai",
-        "rust",
-        "terminal",
-        "tui"
-      ],
-      "created_at": "2026-01-05T09:43:36Z",
-      "updated_at": "2026-05-09T15:10:43Z",
+      "raw_stars_text": "2,328 stars this week",
       "ai_reasons": [
-        "topics:mcp,llm,openai",
         "desc:agent",
         "lang:Rust"
       ],
@@ -273,19 +249,52 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 7,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 93.70697607764018,
+        "stars_growth": 91.02778413354311,
         "hn_heat": 10.942410098300419,
         "reddit_heat": 0,
-        "topic_potential": 20,
-        "total": 43.2,
+        "topic_potential": 0,
+        "total": 39.1,
         "is_treasure": false
       },
-      "heat_score": 43.2,
-      "rank": 5
+      "heat_score": 39.1,
+      "rank": 6
+    },
+    {
+      "owner": "decolua",
+      "name": "9router",
+      "full_name": "decolua/9router",
+      "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
+      "language": "JavaScript",
+      "stars_added": 3318,
+      "source": "github-trending-weekly",
+      "raw_stars_text": "3,318 stars this week",
+      "ai_reasons": [
+        "desc:gpt"
+      ],
+      "hn_points": 0,
+      "hn_comments": 0,
+      "hn_stories": [],
+      "reddit_ups": 0,
+      "reddit_comments": 0,
+      "reddit_posts": [],
+      "issues_activity": {
+        "recent_issues": 0,
+        "avg_reactions": 0
+      },
+      "scores": {
+        "stars_growth": 95.18662164059015,
+        "hn_heat": 0,
+        "reddit_heat": 0,
+        "topic_potential": 0,
+        "total": 38.1,
+        "is_treasure": false
+      },
+      "heat_score": 38.1,
+      "rank": 7
     },
     {
       "owner": "virattt",
@@ -293,14 +302,9 @@
       "full_name": "virattt/dexter",
       "description": "An autonomous agent for deep financial research",
       "language": "TypeScript",
-      "stars_added": 3278,
+      "stars_added": 2741,
       "source": "github-trending-weekly",
-      "raw_stars_text": "3,278 stars this week",
-      "stars": 24990,
-      "forks": 3042,
-      "topics": [],
-      "created_at": "2025-10-14T21:02:00Z",
-      "updated_at": "2026-05-09T15:07:44Z",
+      "raw_stars_text": "2,741 stars this week",
       "ai_reasons": [
         "desc:agent",
         "lang:TypeScript"
@@ -312,117 +316,31 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 4,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 95.0442654685631,
+        "stars_growth": 92.94443382849576,
         "hn_heat": 0,
         "reddit_heat": 0,
         "topic_potential": 0,
-        "total": 38.0,
+        "total": 37.2,
         "is_treasure": false
       },
-      "heat_score": 38.0,
-      "rank": 6
+      "heat_score": 37.2,
+      "rank": 8
     },
     {
-      "owner": "decolua",
-      "name": "9router",
-      "full_name": "decolua/9router",
-      "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
-      "language": "JavaScript",
-      "stars_added": 1781,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "1,781 stars this week",
-      "stars": 6235,
-      "forks": 1133,
-      "topics": [
-        "ai-agents",
-        "ai-gateway",
-        "anthropic",
-        "chatgpt",
-        "claude",
-        "claude-code",
-        "cline",
-        "codex",
-        "copilot",
-        "cursor",
-        "deepseek",
-        "free-ai",
-        "gemini",
-        "gemini-cli",
-        "llm",
-        "llm-gateway",
-        "openai",
-        "openai-proxy",
-        "qwen",
-        "token-saver"
-      ],
-      "created_at": "2026-01-05T02:59:30Z",
-      "updated_at": "2026-05-09T15:10:07Z",
-      "ai_reasons": [
-        "topics:llm,openai,chatgpt",
-        "desc:gpt"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 7,
-        "avg_reactions": 0.0
-      },
-      "scores": {
-        "stars_growth": 87.88477245771847,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 17,
-        "total": 37.7,
-        "is_treasure": false
-      },
-      "heat_score": 37.7,
-      "rank": 7
-    },
-    {
-      "owner": "cocoindex-io",
-      "name": "cocoindex",
-      "full_name": "cocoindex-io/cocoindex",
-      "description": "Incremental engine for long horizon agents 🌟 Star if you like it!",
+      "owner": "LearningCircuit",
+      "name": "local-deep-research",
+      "full_name": "LearningCircuit/local-deep-research",
+      "description": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "language": "Python",
-      "stars_added": 1909,
+      "stars_added": 2483,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,909 stars this week",
-      "stars": 9266,
-      "forks": 692,
-      "topics": [
-        "agentic-data-framework",
-        "ai",
-        "ai-agents",
-        "change-data-capture",
-        "codebase-intelligence",
-        "context-engineering",
-        "data-engineering",
-        "data-indexing",
-        "data-processing",
-        "etl",
-        "help-wanted",
-        "indexing",
-        "knowledge-graph",
-        "llm",
-        "long-horizon-agent",
-        "python",
-        "rag",
-        "real-time",
-        "rust",
-        "semantic-search"
-      ],
-      "created_at": "2025-03-03T23:03:09Z",
-      "updated_at": "2026-05-09T15:05:35Z",
+      "raw_stars_text": "2,483 stars this week",
       "ai_reasons": [
-        "topics:rag,llm,ai",
+        "desc:llama",
         "lang:Python"
       ],
       "hn_points": 0,
@@ -436,47 +354,27 @@
         "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 88.6991872864561,
+        "stars_growth": 91.78425001309456,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 9,
-        "total": 36.8,
+        "topic_potential": 0,
+        "total": 36.7,
         "is_treasure": false
       },
-      "heat_score": 36.8,
-      "rank": 8
+      "heat_score": 36.7,
+      "rank": 9
     },
     {
-      "owner": "InsForge",
-      "name": "InsForge",
-      "full_name": "InsForge/InsForge",
-      "description": "The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.",
+      "owner": "bytedance",
+      "name": "UI-TARS-desktop",
+      "full_name": "bytedance/UI-TARS-desktop",
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
       "language": "TypeScript",
-      "stars_added": 1201,
+      "stars_added": 2191,
       "source": "github-trending-weekly",
-      "raw_stars_text": "1,201 stars this week",
-      "stars": 9187,
-      "forks": 755,
-      "topics": [
-        "ai",
-        "ai-agents",
-        "coding",
-        "deno",
-        "embeddings",
-        "insforge",
-        "nextjs",
-        "oauth2",
-        "pgvector",
-        "postgresql",
-        "realtime",
-        "vectors",
-        "websockets"
-      ],
-      "created_at": "2025-07-29T05:56:00Z",
-      "updated_at": "2026-05-09T15:07:16Z",
+      "raw_stars_text": "2,191 stars this week",
       "ai_reasons": [
-        "topics:embeddings,ai",
-        "desc:agent",
+        "desc:ai agent",
         "lang:TypeScript"
       ],
       "hn_points": 0,
@@ -486,67 +384,18 @@
       "reddit_comments": 0,
       "reddit_posts": [],
       "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.0
+        "recent_issues": 0,
+        "avg_reactions": 0
       },
       "scores": {
-        "stars_growth": 83.26188509052643,
+        "stars_growth": 90.31600976084106,
         "hn_heat": 0,
         "reddit_heat": 0,
-        "topic_potential": 13,
-        "total": 35.3,
+        "topic_potential": 0,
+        "total": 36.1,
         "is_treasure": false
       },
-      "heat_score": 35.3,
-      "rank": 9
-    },
-    {
-      "owner": "fspecii",
-      "name": "ace-step-ui",
-      "full_name": "fspecii/ace-step-ui",
-      "description": "🎵 The Ultimate Open Source Suno Alternative - Professional UI for ACE-Step 1.5 AI Music Generation. Free, local, unlimited. Stop paying for Suno!",
-      "language": "JavaScript",
-      "stars_added": 1122,
-      "source": "github-trending-weekly",
-      "raw_stars_text": "1,122 stars this week",
-      "stars": 3475,
-      "forks": 492,
-      "topics": [
-        "ace-step",
-        "ai",
-        "ai-music",
-        "local-first",
-        "music",
-        "music-generation",
-        "open-source",
-        "react",
-        "suno-alternative",
-        "typescript"
-      ],
-      "created_at": "2026-02-04T01:09:45Z",
-      "updated_at": "2026-05-09T15:04:15Z",
-      "ai_reasons": [
-        "topics:ai"
-      ],
-      "hn_points": 0,
-      "hn_comments": 0,
-      "hn_stories": [],
-      "reddit_ups": 0,
-      "reddit_comments": 0,
-      "reddit_posts": [],
-      "issues_activity": {
-        "recent_issues": 5,
-        "avg_reactions": 0.2
-      },
-      "scores": {
-        "stars_growth": 82.46371646089413,
-        "hn_heat": 0,
-        "reddit_heat": 0,
-        "topic_potential": 13,
-        "total": 34.9,
-        "is_treasure": false
-      },
-      "heat_score": 34.9,
+      "heat_score": 36.1,
       "rank": 10
     }
   ]
